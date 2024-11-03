@@ -30,6 +30,8 @@ namespace ProyectoViajes.API
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IDestinationsService, DestinationsService>();
             services.AddTransient<IPointsInterestService, PointsInterestService>();
+            services.AddTransient<ITravelPackagesService, TravelPackagesService>();
+            services.AddTransient<IActivitiesService, ActivitiesService>();
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));

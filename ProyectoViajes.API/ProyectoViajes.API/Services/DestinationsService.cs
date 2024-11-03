@@ -82,7 +82,7 @@ namespace ProyectoViajes.API.Services
                 return new ResponseDto<DestinationDto>{
                     StatusCode = 404,
                     Status = false,
-                    Message = MessagesConstants.UPDATE_ERROR
+                    Message = MessagesConstants.RECORD_NOT_FOUND
                 };
             }
 
@@ -110,7 +110,7 @@ namespace ProyectoViajes.API.Services
                 return new ResponseDto<DestinationDto>{
                     StatusCode = 404,
                     Status = false,
-                    Message = MessagesConstants.DELETE_ERROR
+                    Message = MessagesConstants.RECORD_NOT_FOUND
                 };
             }
 

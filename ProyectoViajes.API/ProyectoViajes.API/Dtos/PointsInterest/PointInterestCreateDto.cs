@@ -13,11 +13,12 @@ namespace ProyectoViajes.API.Dtos.PointsInterest
         // Descripción
         [Display(Name = "descripción")]
         [StringLength(500, ErrorMessage = "La {0} debe tener menos de {1} caracteres.")]
+        [Required(ErrorMessage = "La {0} del punto de interes es obligatoria.")]
         public string Description { get; set; }
 
         // Destino Id
-        [Display(Name = "id del destino")]
-        [Required(ErrorMessage = "El {0} es requerido.")]
+        [Display(Name = "id")]
+        [Required(ErrorMessage = "El {0} del destino es requerido.")]
         public Guid DestinationId { get; set; }
     }
 }
