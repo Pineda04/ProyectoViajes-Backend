@@ -42,6 +42,7 @@ namespace ProyectoViajes.API.Database
         }
         public DbSet<HostingEntity> Hostings { get; set; }
         public DbSet<TypeHostingEntity> TypesHosting { get; set; }
+        public DbSet<TypeFlightEntity> TypesFlight { get; set; }
 
     }
 }

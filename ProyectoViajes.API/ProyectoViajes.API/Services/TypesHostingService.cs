@@ -108,7 +108,7 @@ namespace ProyectoViajes.API.Services
         }
         public async Task<ResponseDto<TypeHostingDto>> DeleteAsync(Guid id)
         {
-            var typeHostingEntity = await _context.Hostings.FirstOrDefaultAsync(t => t.Id == id);
+            var typeHostingEntity = await _context.TypesHosting.FirstOrDefaultAsync(t => t.Id == id);
 
             if (typeHostingEntity == null)
             {
@@ -120,7 +120,7 @@ namespace ProyectoViajes.API.Services
                 };
             }
 
-            _context.Hostings.Remove(typeHostingEntity);
+            _context.TypesHosting.Remove(typeHostingEntity);
             await _context.SaveChangesAsync();
 
             return new ResponseDto<TypeHostingDto>
