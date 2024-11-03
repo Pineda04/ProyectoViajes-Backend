@@ -1,5 +1,6 @@
 using AutoMapper;
 using ProyectoViajes.API.Database.Entities;
+using ProyectoViajes.API.Dtos.Flights;
 using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Dtos.TypeHostings;
 using ProyectoViajes.API.Dtos.TypesFlight;
@@ -13,6 +14,14 @@ namespace ProyectoViajes.API.Helpers
             MapsForHostings();
             MapsForTypesHosting();
             MapsForTypesFlight();
+            MapsForFlights();
+        }
+
+        private void MapsForFlights()
+        {
+            CreateMap<FlightEntity, FlightDto>();
+            CreateMap<FlightCreateDto, FlightEntity>();
+            CreateMap<FlightEditDto, FlightEntity>();
         }
 
         private void MapsForTypesFlight()
