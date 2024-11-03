@@ -1,6 +1,7 @@
 using AutoMapper;
 using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Dtos.Hostings;
+using ProyectoViajes.API.Dtos.TypeHostings;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -9,6 +10,14 @@ namespace ProyectoViajes.API.Helpers
         public AutoMapperProfile() 
         {
             MapsForHostings();
+            MapsForTypesHosting();
+        }
+
+        private void MapsForTypesHosting()
+        {
+            CreateMap<TypeHostingEntity, TypeHostingDto>();
+            CreateMap<TypeHostingCreateDto, TypeHostingEntity>();
+            CreateMap<TypeHostingEditDto, TypeHostingEntity>();
         }
 
         private void MapsForHostings()

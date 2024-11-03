@@ -1,4 +1,7 @@
-﻿namespace ProyectoViajes.API.Dtos.Hostings
+﻿using ProyectoViajes.API.Database.Entities;
+using ProyectoViajes.API.Dtos.TypeHostings;
+
+namespace ProyectoViajes.API.Dtos.Hostings
 {
     public class HostingDto
     {

@@ -29,6 +29,8 @@ namespace ProyectoViajes.API
             // Add Custom Services
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IHostingsService, HostingsService>();
+            services.AddTransient<ITypesHostingService, TypesHostingService>();
+
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));

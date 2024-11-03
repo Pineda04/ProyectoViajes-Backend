@@ -41,5 +41,7 @@ namespace ProyectoViajes.API.Database
             return base.SaveChangesAsync(cancellationToken);
         }
         public DbSet<HostingEntity> Hostings { get; set; }
+        public DbSet<TypeHostingEntity> TypesHosting { get; set; }
+
     }
 }
