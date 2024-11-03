@@ -3,6 +3,7 @@ namespace ProyectoViajes.API.Constants
     public static class MessagesConstants
     {
         public const string RECORDS_FOUND = "Registros encontrados correctamente.";
+        public const string RECORDS_NOT_FOUND = "Registros no encontrados.";
         public const string RECORD_FOUND = "Registro encontrado correctamente.";
         public const string RECORD_NOT_FOUND = "Registro no encontrado.";
         public const string CREATE_SUCCESS = "Registro creado correctamente.";

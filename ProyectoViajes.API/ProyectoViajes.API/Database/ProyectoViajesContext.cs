@@ -1,3 +1,4 @@
+using System.Drawing;
 using Microsoft.EntityFrameworkCore;
 using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Services.Interfaces;
@@ -40,5 +41,9 @@ namespace ProyectoViajes.API.Database
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
+        // Aqui iran los DbSet (les pones el nombre en plural Ever, asi como se ve el de destinos abajo)
+        public DbSet<DestinationEntity> Destinations { get; set; }
+        public DbSet<PointInterestEntity> PointsInterest { get; set; }
     }
 }
