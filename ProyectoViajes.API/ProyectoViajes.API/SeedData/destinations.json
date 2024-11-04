@@ -1,0 +1,72 @@
+[
+  {
+    "id": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "name": "Angkor Wat",
+    "description": "Un vasto complejo de templos en Camboya, famoso por su arquitectura y significado histórico.",
+    "location": "Camboya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Angkor_wat_temple.jpg"
+  },
+  {
+    "id": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "name": "Cascadas del Iguazú",
+    "description": "Impresionantes cascadas ubicadas en la frontera entre Argentina y Brasil, conocidas por su belleza natural.",
+    "location": "Argentina/Brasil",
+    "imageUrl": "https://visitchile.cl/wp-content/uploads/2022/07/Cataratas-de-Iguazu-2026.jpg"
+  },
+  {
+    "id": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "name": "Coliseo",
+    "description": "Un antiguo anfiteatro romano en Italia, famoso por su arquitectura y como símbolo de la historia de Roma.",
+    "location": "Italia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/800px-Colosseo_2020.jpg"
+  },
+  {
+    "id": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "name": "Gran Muralla China",
+    "description": "Una de las maravillas del mundo, la Gran Muralla se extiende por miles de kilómetros a través de China.",
+    "location": "China",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/800px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg"
+  },
+  {
+    "id": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "name": "Machu Picchu",
+    "description": "Una antigua ciudad inca situada en las montañas de Perú, conocida por su impresionante arquitectura y vistas panorámicas.",
+    "location": "Perú",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Machu_Picchu%2C_Peru_%282018%29.jpg"
+  },
+  {
+    "id": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "name": "Monte Fuji",
+    "description": "La montaña más alta de Japón, conocida por su forma simétrica y su importancia cultural.",
+    "location": "Japón",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Chuurei-tou_Fujiyoshida_17025277650_c59733d6ba_o.jpg/1200px-Chuurei-tou_Fujiyoshida_17025277650_c59733d6ba_o.jpg"
+  },
+  {
+    "id": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "name": "Petra",
+    "description": "Una antigua ciudad tallada en roca en Jordania, famosa por su arquitectura y el impresionante Siq, un desfiladero de acceso.",
+    "location": "Jordania",
+    "imageUrl": "https://media.traveler.es/photos/613768a3cfa50ebf3bf4d359/4:3/w_1600,h_1200,c_limit/154154.jpg"
+  },
+  {
+    "id": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "name": "Santorini",
+    "description": "Una hermosa isla en Grecia famosa por sus casas blancas, vistas al mar Egeo y espectaculares puestas de sol.",
+    "location": "Grecia",
+    "imageUrl": "https://www.islasantorini.es/wp-content/uploads/2023/05/grecia-santorini.jpg"
+  },
+  {
+    "id": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "name": "Taj Mahal",
+    "description": "Un majestuoso mausoleo de mármol blanco en India, considerado una de las joyas arquitectónicas del mundo.",
+    "location": "India",
+    "imageUrl": "https://www.ngenespanol.com/wp-content/uploads/2023/08/Taj-Mahal-770x513.jpeg"
+  },
+  {
+    "id": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "name": "Torre Eiffel",
+    "description": "Un ícono de París, Francia, la Torre Eiffel es una estructura de hierro que ofrece vistas espectaculares de la ciudad.",
+    "location": "Francia",
+    "imageUrl": "https://parispasoapasotour2183a.zapwp.com/q:intelligent/r:0/wp:0/w:1/u:https://parispasoapasotours.com/wp-content/uploads/2022/12/tour-paris-nocturno.jpg"
+  }
+]

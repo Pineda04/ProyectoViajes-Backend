@@ -1,0 +1,407 @@
+[
+  {
+    "id": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8",
+    "name": "Aventura en Angkor",
+    "description": "Descubre los templos de Angkor con un guía local y disfruta de un tour en bicicleta.",
+    "price": 450,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+  },
+  {
+    "id": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77",
+    "name": "Angkor y Cultura Khmer",
+    "description": "Sumérgete en la cultura local y visita el mercado de Siem Reap.",
+    "price": 600,
+    "duration": 4,
+    "numberPerson": 4,
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+  },
+  {
+    "id": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2",
+    "name": "Escapada a Angkor Wat",
+    "description": "Un tour privado a los templos más emblemáticos y una cena tradicional.",
+    "price": 700,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+  },
+  {
+    "id": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3",
+    "name": "Aventura en la Selva",
+    "description": "Explora Angkor Wat y sus alrededores con un recorrido por la jungla.",
+    "price": 550,
+    "duration": 5,
+    "numberPerson": 3,
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+  },
+  {
+    "id": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed",
+    "name": "Templos y Amanecer",
+    "description": "Visita los templos al amanecer y disfruta de un desayuno con vista.",
+    "price": 300,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+  },
+  {
+    "id": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74",
+    "name": "Tour a las Cataratas",
+    "description": "Un recorrido por las principales vistas de las cataratas y un paseo en bote.",
+    "price": 200,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+  },
+  {
+    "id": "7b86c8c0-04d5-4a80-a76b-6124180c6b44",
+    "name": "Aventura en Iguazú",
+    "description": "Caminata por la selva y visita a las cataratas con un guía especializado.",
+    "price": 350,
+    "duration": 2,
+    "numberPerson": 4,
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+  },
+  {
+    "id": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f",
+    "name": "Iguazú y Aventura",
+    "description": "Una experiencia completa incluyendo rafting y senderismo.",
+    "price": 600,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+  },
+  {
+    "id": "8a97f44d-21d3-419e-9174-05f509c80c09",
+    "name": "Cataratas y Cultura",
+    "description": "Visita a las comunidades locales y tour cultural en la región.",
+    "price": 400,
+    "duration": 2,
+    "numberPerson": 3,
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+  },
+  {
+    "id": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2",
+    "name": "Cataratas y Relajación",
+    "description": "Día de spa en la selva con vistas a las cataratas.",
+    "price": 500,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+  },
+  {
+    "id": "0a374e88-066c-4b25-96f7-89c7c4b5a912",
+    "name": "Coliseo y Historia",
+    "description": "Recorrido por el Coliseo y la Roma antigua con un guía especializado.",
+    "price": 250,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+  },
+  {
+    "id": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3",
+    "name": "Coliseo y Cena",
+    "description": "Visita al Coliseo y cena en un restaurante típico romano.",
+    "price": 300,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+  },
+  {
+    "id": "e307c2f4-10e5-4cfc-89d0-95f456f5e122",
+    "name": "Roma Clásica",
+    "description": "Tour por el Coliseo, el Foro Romano y el Palatino.",
+    "price": 400,
+    "duration": 4,
+    "numberPerson": 4,
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+  },
+  {
+    "id": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663",
+    "name": "Coliseo VIP",
+    "description": "Acceso especial y visita guiada al Coliseo sin colas.",
+    "price": 350,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+  },
+  {
+    "id": "b8406b18-d270-4b26-bf37-cfb70e5fcb91",
+    "name": "Roma de Noche",
+    "description": "Recorrido nocturno por el Coliseo y la ciudad iluminada.",
+    "price": 280,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+  },
+  {
+    "id": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e",
+    "name": "Muralla y Sendero",
+    "description": "Explora la Gran Muralla con un recorrido de senderismo.",
+    "price": 300,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+  },
+  {
+    "id": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b",
+    "name": "Aventura en la Muralla",
+    "description": "Un tour guiado con paradas para fotografías y almuerzo.",
+    "price": 450,
+    "duration": 5,
+    "numberPerson": 3,
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+  },
+  {
+    "id": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89",
+    "name": "Gran Muralla y Cultura",
+    "description": "Visita a una aldea local y experiencias culturales en la región.",
+    "price": 550,
+    "duration": 4,
+    "numberPerson": 2,
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+  },
+  {
+    "id": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3",
+    "name": "Sendero del Guerrero",
+    "description": "Un recorrido por secciones menos turísticas de la muralla.",
+    "price": 400,
+    "duration": 3,
+    "numberPerson": 1,
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+  },
+  {
+    "id": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7",
+    "name": "Machu Picchu Clásico",
+    "description": "Tour guiado por Machu Picchu y tiempo libre para explorar.",
+    "price": 600,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+  },
+  {
+    "id": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182",
+    "name": "Aventura Inca",
+    "description": "Caminata de dos días hacia Machu Picchu con alojamiento en ruta.",
+    "price": 900,
+    "duration": 3,
+    "numberPerson": 4,
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+  },
+  {
+    "id": "7506c7ff-517e-44a1-b98c-1da0f1be042e",
+    "name": "Machu Picchu y Valle Sagrado",
+    "description": "Tour combinado que incluye el Valle Sagrado y Machu Picchu.",
+    "price": 800,
+    "duration": 4,
+    "numberPerson": 3,
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+  },
+  {
+    "id": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2",
+    "name": "Caminata a Huayna Picchu",
+    "description": "Incluye el ascenso a Huayna Picchu con vistas panorámicas.",
+    "price": 650,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+  },
+  {
+    "id": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff",
+    "name": "Amanecer en Machu Picchu",
+    "description": "Visita a Machu Picchu al amanecer con desayuno incluido.",
+    "price": 500,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+  },
+  {
+    "id": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99",
+    "name": "Fuji y Naturaleza",
+    "description": "Excursión de un día al Monte Fuji y sus alrededores.",
+    "price": 250,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+  },
+  {
+    "id": "b1574f05-3708-4d51-a64b-7eec2be2a6a4",
+    "name": "Aventura Fuji",
+    "description": "Senderismo en el Monte Fuji con guía y almuerzo.",
+    "price": 400,
+    "duration": 2,
+    "numberPerson": 4,
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+  },
+  {
+    "id": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637",
+    "name": "Cultura y Fuji",
+    "description": "Visita a los templos cercanos y experiencia cultural en la región.",
+    "price": 350,
+    "duration": 3,
+    "numberPerson": 3,
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+  },
+  {
+    "id": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87",
+    "name": "Fuji y Onsen",
+    "description": "Disfruta de un día en el Monte Fuji y un relajante onsen.",
+    "price": 500,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+  },
+  {
+    "id": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66",
+    "name": "Petra y Aventura",
+    "description": "Recorrido guiado por Petra y senderismo en el Siq.",
+    "price": 450,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+  },
+  {
+    "id": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189",
+    "name": "Petra y Cultura",
+    "description": "Visita a las comunidades beduinas y experiencia cultural.",
+    "price": 500,
+    "duration": 3,
+    "numberPerson": 4,
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+  },
+  {
+    "id": "caa75089-8be6-4b8f-bf0e-b0c0469ef745",
+    "name": "Petra al Amanecer",
+    "description": "Visita a Petra al amanecer con desayuno incluido.",
+    "price": 300,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+  },
+  {
+    "id": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0",
+    "name": "Petra y Relax",
+    "description": "Día de relax en un hotel cercano después de la visita a Petra.",
+    "price": 600,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+  },
+  {
+    "id": "56a77546-4971-4296-9cf2-f77a06d5e8da",
+    "name": "Santorini y Playa",
+    "description": "Relájate en las playas de Santorini y disfruta de un tour por la isla.",
+    "price": 400,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+  },
+  {
+    "id": "92ef71f3-8a9f-4c62-a453-d571b8bb447b",
+    "name": "Aventura en Santorini",
+    "description": "Tour guiado por los puntos más destacados de la isla.",
+    "price": 300,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+  },
+  {
+    "id": "d10dc012-12ed-4894-9e04-b3c465b0e77e",
+    "name": "Santorini al Atardecer",
+    "description": "Disfruta de una cena con vistas al atardecer en Oia.",
+    "price": 250,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+  },
+  {
+    "id": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48",
+    "name": "Santorini y Cultura",
+    "description": "Visita a las bodegas de vino y degustación de vinos locales.",
+    "price": 350,
+    "duration": 3,
+    "numberPerson": 4,
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+  },
+  {
+    "id": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76",
+    "name": "Taj Mahal al Amanecer",
+    "description": "Visita al Taj Mahal con un guía al amanecer.",
+    "price": 300,
+    "duration": 1,
+    "numberPerson": 2,
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+  },
+  {
+    "id": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e",
+    "name": "Taj Mahal y Agra",
+    "description": "Tour por Agra incluyendo el Taj Mahal y el Fuerte de Agra.",
+    "price": 400,
+    "duration": 2,
+    "numberPerson": 4,
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+  },
+  {
+    "id": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7",
+    "name": "Taj Mahal y Cultura",
+    "description": "Visita a una comunidad local y almuerzo tradicional.",
+    "price": 500,
+    "duration": 3,
+    "numberPerson": 3,
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+  },
+  {
+    "id": "ba672a48-7e35-43c8-b048-e362f4c8a5e5",
+    "name": "Visita al Taj Mahal",
+    "description": "Tour privado por el Taj Mahal con un fotógrafo profesional.",
+    "price": 600,
+    "duration": 2,
+    "numberPerson": 1,
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+  },
+  {
+    "id": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29",
+    "name": "Torre Eiffel al Atardecer",
+    "description": "Visita a la Torre Eiffel y cena con vista al atardecer.",
+    "price": 350,
+    "duration": 2,
+    "numberPerson": 2,
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+  },
+  {
+    "id": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c",
+    "name": "Tour de la Torre Eiffel",
+    "description": "Acceso prioritario a la Torre Eiffel y visita guiada.",
+    "price": 300,
+    "duration": 1,
+    "numberPerson": 1,
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+  },
+  {
+    "id": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b",
+    "name": "Cena en la Torre Eiffel",
+    "description": "Cena en el restaurante de la Torre Eiffel con vista a París.",
+    "price": 600,
+    "duration": 3,
+    "numberPerson": 2,
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+  },
+  {
+    "id": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c",
+    "name": "Torre Eiffel y Crucero",
+    "description": "Combinación de visita a la Torre Eiffel y crucero por el Sena.",
+    "price": 450,
+    "duration": 4,
+    "numberPerson": 4,
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+  },
+  {
+    "id": "2e788f77-04c6-47cc-a79e-bd5280e2027a",
+    "name": "París Clásico",
+    "description": "Recorrido por los íconos de París, incluida la Torre Eiffel.",
+    "price": 400,
+    "duration": 3,
+    "numberPerson": 3,
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+  }
+]

@@ -20,6 +20,6 @@ namespace ProyectoViajes.API.Dtos.Destinations
         public string ImageUrl { get; set; }
 
         // Punto de interés
-        public List<PointInterestDto> PointsInterest { get; set; }
+        public IEnumerable<PointInterestDto> PointsInterest { get; set; }
     }
 }

@@ -27,8 +27,6 @@ namespace ProyectoViajes.API.Dtos.TravelPackages
         public int NumberPerson { get; set; }
 
         [Required]
-        public Guid DestinationId { get; set; }
-        
-        public List<ActivityCreateDto> Activities { get; set; } = new List<ActivityCreateDto>();
+        public Guid DestinationId { get; set; }        
     }
 }
