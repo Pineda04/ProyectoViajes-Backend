@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoViajes.API.Database;
 
@@ -11,9 +12,11 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    partial class ProyectoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20241104185032_FixTableTypesFlight")]
+    partial class FixTableTypesFlight
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,6 +164,10 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("destination_id");
 
+                    b.Property<Guid>("FlightTypeId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("type_flight_id");
+
                     b.Property<string>("Origin")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -170,10 +177,6 @@ namespace ProyectoViajes.API.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price");
-
-                    b.Property<Guid>("TypeFlightId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("type_flight_id");
 
                     b.Property<string>("UpdatedBy")
                         .HasMaxLength(100)
@@ -188,7 +191,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("DestinationId");
 
-                    b.HasIndex("TypeFlightId");
+                    b.HasIndex("FlightTypeId");
 
                     b.ToTable("flights", "dbo");
                 });
@@ -248,7 +251,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("TypeHostingId");
 
-                    b.ToTable("hostings", "dbo");
+                    b.ToTable("hosting", "dbo");
                 });
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.PointInterestEntity", b =>
@@ -462,7 +465,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasOne("ProyectoViajes.API.Database.Entities.TypeFlightEntity", "TypeFlight")
                         .WithMany()
-                        .HasForeignKey("TypeFlightId")
+                        .HasForeignKey("FlightTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

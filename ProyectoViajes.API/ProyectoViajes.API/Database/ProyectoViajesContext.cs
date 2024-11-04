@@ -1,4 +1,3 @@
-using System.Drawing;
 using Microsoft.EntityFrameworkCore;
 using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Services.Interfaces;
@@ -46,5 +45,9 @@ namespace ProyectoViajes.API.Database
         public DbSet<PointInterestEntity> PointsInterest { get; set; }
         public DbSet<ActivityEntity> Activities { get; set; }
         public DbSet<TravelPackageEntity> Travels { get; set; }
+        public DbSet<HostingEntity> Hostings { get; set; }
+        public DbSet<TypeHostingEntity> TypesHosting { get; set; }
+        public DbSet<TypeFlightEntity> TypesFlight { get; set; }
+        public DbSet<FlightEntity> Flights { get; set; }
     }
 }

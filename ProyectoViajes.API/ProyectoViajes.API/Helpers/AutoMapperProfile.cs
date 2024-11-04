@@ -4,6 +4,10 @@ using ProyectoViajes.API.Dtos.Activities;
 using ProyectoViajes.API.Dtos.Destinations;
 using ProyectoViajes.API.Dtos.PointsInterest;
 using ProyectoViajes.API.Dtos.TravelPackages;
+using ProyectoViajes.API.Dtos.Flights;
+using ProyectoViajes.API.Dtos.Hostings;
+using ProyectoViajes.API.Dtos.TypeHostings;
+using ProyectoViajes.API.Dtos.TypesFlight;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -15,6 +19,10 @@ namespace ProyectoViajes.API.Helpers
             MapsForPointsInterest();
             MapsForActivities();
             MapsForTravelPackages();
+            MapsForHostings();
+            MapsForTypesHosting();
+            MapsForTypesFlight();
+            MapsForFlights();
         }
 
         private void MapsForTravelPackages()
@@ -45,6 +53,34 @@ namespace ProyectoViajes.API.Helpers
             .ForMember(dest => dest.PointsInterest, opt => opt.MapFrom(src => src.PointsInterest));
             CreateMap<DestinationCreateDto, DestinationEntity>();
             CreateMap<DestinationEditDto, DestinationEntity>();
+        }
+
+        private void MapsForFlights()
+        {
+            CreateMap<FlightEntity, FlightDto>();
+            CreateMap<FlightCreateDto, FlightEntity>();
+            CreateMap<FlightEditDto, FlightEntity>();
+        }
+
+        private void MapsForTypesFlight()
+        {
+            CreateMap<TypeFlightEntity, TypeFlightDto>();
+            CreateMap<TypeFlightCreateDto, TypeFlightEntity>();
+            CreateMap<TypeFlightEditDto, TypeFlightEntity>(); ;
+        }
+
+        private void MapsForTypesHosting()
+        {
+            CreateMap<TypeHostingEntity, TypeHostingDto>();
+            CreateMap<TypeHostingCreateDto, TypeHostingEntity>();
+            CreateMap<TypeHostingEditDto, TypeHostingEntity>();
+        }
+
+        private void MapsForHostings()
+        {
+            CreateMap<HostingEntity, HostingDto>();
+            CreateMap<HostingCreateDto, HostingEntity>();
+            CreateMap<HostingEditDto, HostingEntity>();
         }
     }
 }
