@@ -5,10 +5,10 @@ namespace ProyectoViajes.API.Dtos.Hostings
     public class HostingCreateDto
     {
         // Tipo hospedaje id 
-        public string TypeHostingId { get; set; }
+        public Guid TypeHostingId { get; set; }
 
         // Destino id 
-        public string DestinationId { get; set; }
+        public Guid DestinationId { get; set; }
 
         // nombre
         [Display(Name = "nombre")]

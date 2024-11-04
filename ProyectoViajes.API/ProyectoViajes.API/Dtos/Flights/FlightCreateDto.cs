@@ -7,10 +7,10 @@ namespace ProyectoViajes.API.Dtos.Flights
     public class FlightCreateDto
     {
         // tipo de vuelo 
-        public string TypeFlightId { get; set; }
+        public Guid TypeFlightId { get; set; }
 
         // destino id 
-        public string DestinationId { get; set; }
+        public Guid DestinationId { get; set; }
 
         // nombre de aerolinea
         [Display(Name = "aerolinea")]

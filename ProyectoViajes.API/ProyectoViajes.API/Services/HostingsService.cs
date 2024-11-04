@@ -8,6 +8,7 @@ using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Services.Interfaces;
 
+
 namespace ProyectoViajes.API.Services
 {
     public class HostingsService : IHostingsService
@@ -20,11 +21,16 @@ namespace ProyectoViajes.API.Services
             _context = context;
             _mapper = mapper;
         }
-
+        
+        // obtener listado de hospedajes 
         public async Task<ResponseDto<List<HostingDto>>> GetHostingsListAsync()
         {
-            var hostingEntity = await _context.Hostings.ToListAsync();
-            var hostingDtos = _mapper.Map<List<HostingDto>>(hostingEntity);
+            var hostingEntities = await _context.Hostings
+                .Include(h => h.Destination)         
+                .Include(h => h.TypeHosting)        
+                .ToListAsync();
+
+            var hostingDtos = _mapper.Map<List<HostingDto>>(hostingEntities);
 
             return new ResponseDto<List<HostingDto>>
             {
@@ -34,9 +40,14 @@ namespace ProyectoViajes.API.Services
                 Data = hostingDtos
             };
         }
+
+         // obtener por id
         public async Task<ResponseDto<HostingDto>> GetHostingByIdAsync(Guid id)
         {
-            var hostingEntity = await _context.Hostings.FirstOrDefaultAsync(h => h.Id == id);
+            var hostingEntity = await _context.Hostings
+                .Include(h => h.Destination)       
+                .Include(h => h.TypeHosting)        
+                .FirstOrDefaultAsync(h => h.Id == id);
 
             if (hostingEntity == null)
             {
@@ -58,12 +69,26 @@ namespace ProyectoViajes.API.Services
                 Data = hostingDto
             };
         }
+
+        // Crear un nuevo hospedaje  
         public async Task<ResponseDto<HostingDto>> CreateAsync(HostingCreateDto dto)
         {
+            // Verificar que el destino y el tipo de hospedaje existen
+            var destinationExists = await _context.Destinations.AnyAsync(d => d.Id == dto.DestinationId);
+            var typeHostingExists = await _context.TypesHosting.AnyAsync(th => th.Id == dto.TypeHostingId);
+
+            if (!destinationExists || !typeHostingExists)
+            {
+                return new ResponseDto<HostingDto>
+                {
+                    StatusCode = 400,
+                    Status = false,
+                    Message =  "no se encontro relacion"
+                };
+            }
+
             var hostingEntity = _mapper.Map<HostingEntity>(dto);
-
             _context.Hostings.Add(hostingEntity);
-
             await _context.SaveChangesAsync();
 
             var hostingDto = _mapper.Map<HostingDto>(hostingEntity);
@@ -76,9 +101,14 @@ namespace ProyectoViajes.API.Services
                 Data = hostingDto
             };
         }
+
+        // Editar hospedaje existente
         public async Task<ResponseDto<HostingDto>> EditAsync(HostingEditDto dto, Guid id)
         {
-            var hostingEntity = await _context.Hostings.FirstOrDefaultAsync(h => h.Id == id);
+            var hostingEntity = await _context.Hostings
+                .Include(h => h.Destination)
+                .Include(h => h.TypeHosting)
+                .FirstOrDefaultAsync(h => h.Id == id);
 
             if (hostingEntity == null)
             {
@@ -90,10 +120,22 @@ namespace ProyectoViajes.API.Services
                 };
             }
 
-            _mapper.Map<HostingEditDto, HostingEntity>(dto, hostingEntity);
+            // Validar relaciones en caso de que el destino o tipo de hospedaje cambien
+            var destinationExists = await _context.Destinations.AnyAsync(d => d.Id == dto.DestinationId);
+            var typeHostingExists = await _context.TypesHosting.AnyAsync(th => th.Id == dto.TypeHostingId);
 
+            if (!destinationExists || !typeHostingExists)
+            {
+                return new ResponseDto<HostingDto>
+                {
+                    StatusCode = 400,
+                    Status = false,
+                    Message = "no se encontro relacion"
+                };
+            }
+
+            _mapper.Map(dto, hostingEntity);
             _context.Hostings.Update(hostingEntity);
-
             await _context.SaveChangesAsync();
 
             var hostingDto = _mapper.Map<HostingDto>(hostingEntity);
@@ -106,6 +148,8 @@ namespace ProyectoViajes.API.Services
                 Data = hostingDto
             };
         }
+
+        // Eliminar hospedaje
         public async Task<ResponseDto<HostingDto>> DeleteAsync(Guid id)
         {
             var hostingEntity = await _context.Hostings.FirstOrDefaultAsync(h => h.Id == id);
@@ -130,6 +174,5 @@ namespace ProyectoViajes.API.Services
                 Message = MessagesConstants.DELETE_SUCCESS
             };
         }
-
     }
 }
