@@ -15,11 +15,6 @@ namespace ProyectoViajes.API.Dtos.Activities
         [StringLength(500, ErrorMessage = "La {0} debe tener menos de {1} caracteres.")]
         public string Description { get; set; }
 
-        // Precio
-        [Display(Name = "precio")]
-        [Required(ErrorMessage = "El {0} es obligatorio")]
-        public decimal Price { get; set; }
-
         // Paquete de viaje
         [Display(Name = "Paquete de Viaje")]
         [Required(ErrorMessage = "El {0} es requerido.")]

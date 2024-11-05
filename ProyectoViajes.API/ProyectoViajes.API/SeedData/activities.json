@@ -3,1575 +3,1350 @@
     "id": "6e0a219b-064f-4aac-9af3-172ce5644423",
     "name": "Visita a Angkor Wat",
     "description": "Explora el famoso templo de Angkor Wat al amanecer y disfruta de su impresionante arquitectura y belleza.",
-    "price": 100,
     "travelPackageId": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8"
   },
   {
     "id": "dd1ab04b-2812-40f5-9fa0-a3a78ef3c9ba",
     "name": "Recorrido en bicicleta por los templos menores",
     "description": "Un tour en bicicleta que te llevará a descubrir templos menos conocidos, rodeados de naturaleza y tranquilidad.",
-    "price": 50,
     "travelPackageId": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8"
   },
   {
     "id": "ecb41792-e54d-4272-bd14-284e27bd441c",
     "name": "Clase de cocina jemer",
     "description": "Aprende a preparar platos tradicionales jemer con un chef local y disfruta de tus creaciones.",
-    "price": 75,
     "travelPackageId": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8"
   },
   {
     "id": "5f5fcd9d-ad9c-4a30-a15f-e7b2d4bffd4f",
     "name": "Paseo en globo aerostático",
     "description": "Disfruta de vistas panorámicas de los templos de Angkor desde un globo aerostático al atardecer.",
-    "price": 120,
     "travelPackageId": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8"
   },
   {
     "id": "6483cf36-7759-4c0b-8df7-509b39f3788c",
     "name": "Tour cultural por el pueblo cercano",
     "description": "Conoce la vida local visitando un pueblo cercano y participa en actividades comunitarias.",
-    "price": 40,
     "travelPackageId": "c1a024b4-3de2-48d5-9d1c-229d2be21bb8"
   },
   {
     "id": "15665214-5494-4204-b290-e4195a19be40",
     "name": "Visita al Mercado Nocturno de Siem Reap",
     "description": "Descubre el vibrante mercado nocturno de Siem Reap, donde podrás comprar artesanías locales y probar la deliciosa comida callejera.",
-    "price": 30,
     "travelPackageId": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77"
   },
   {
     "id": "de0756d8-bcac-4310-956f-213a7760200b",
     "name": "Taller de tejido de seda",
     "description": "Participa en un taller donde aprenderás sobre la producción de seda y crearás tu propio recuerdo.",
-    "price": 80,
     "travelPackageId": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77"
   },
   {
     "id": "6b285ad7-cdea-4aa2-9dd5-6eaa27d7fe8b",
     "name": "Tour cultural por los templos jemer",
     "description": "Visita templos emblemáticos de la cultura jemer y aprende sobre su historia y significado.",
-    "price": 100,
     "travelPackageId": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77"
   },
   {
     "id": "c96f1ecb-39f4-4c5b-ba19-de6b3ea6910e",
     "name": "Clase de cocina jemer",
     "description": "Aprende a preparar platos típicos jemer con un chef local y disfruta de una comida casera.",
-    "price": 70,
     "travelPackageId": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77"
   },
   {
     "id": "c01d7e1e-8e28-47e8-9250-58590a3d9473",
     "name": "Espectáculo de danza Apsara",
     "description": "Disfruta de un espectáculo tradicional de danza Apsara mientras saboreas una cena local.",
-    "price": 90,
     "travelPackageId": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77"
   },
   {
     "id": "0c5748eb-e0d8-45c0-b2f4-4030aa700ba6",
     "name": "Visita privada a Angkor Wat",
     "description": "Disfruta de una visita guiada privada a Angkor Wat, explorando su historia y arquitectura con un experto.",
-    "price": 150,
     "travelPackageId": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2"
   },
   {
     "id": "32441474-378a-45fb-b6c8-e1652cd8bea6",
     "name": "Recorrido por los templos de Bayón y Ta Prohm",
     "description": "Visita los impresionantes templos de Bayón y Ta Prohm, famosos por sus esculturas y la naturaleza que los rodea.",
-    "price": 100,
     "travelPackageId": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2"
   },
   {
     "id": "fd6c1506-2d05-41f5-af89-9073935f53be",
     "name": "Cena tradicional jemer",
     "description": "Disfruta de una cena con platos típicos de la gastronomía jemer en un restaurante local.",
-    "price": 80,
     "travelPackageId": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2"
   },
   {
     "id": "e54cd043-147d-492a-98a8-0684c7f5d3b7",
     "name": "Clase de fotografía en Angkor",
     "description": "Aprende a capturar la belleza de los templos de Angkor con un fotógrafo profesional.",
-    "price": 120,
     "travelPackageId": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2"
   },
   {
     "id": "7cd4b019-6ad9-459d-8c8a-7b0fb582a516",
     "name": "Paseo en tuk-tuk por los templos",
     "description": "Recorre los templos en un tuk-tuk privado, disfrutando de la brisa mientras exploras.",
-    "price": 60,
     "travelPackageId": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2"
   },
   {
     "id": "6662879a-5839-4db8-977e-e23eb9f39b14",
     "name": "Excursión guiada por la jungla",
     "description": "Realiza una emocionante caminata guiada a través de la jungla, descubriendo la flora y fauna local.",
-    "price": 120,
     "travelPackageId": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3"
   },
   {
     "id": "82034e79-d3b5-4a56-98ef-bed94f9a47a2",
     "name": "Ciclismo por senderos de la selva",
     "description": "Explora los senderos menos transitados en bicicleta, disfrutando del paisaje natural y los templos escondidos.",
-    "price": 70,
     "travelPackageId": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3"
   },
   {
     "id": "45c40b48-fcfe-4daf-a779-85291209f8bc",
     "name": "Visita a la aldea de los locales",
     "description": "Conoce la vida de los habitantes de la selva visitando una aldea local y participando en sus actividades diarias.",
-    "price": 50,
     "travelPackageId": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3"
   },
   {
     "id": "c1ac15aa-6188-45ce-a448-a42dcec10f4a",
     "name": "Taller de supervivencia en la jungla",
     "description": "Aprende técnicas de supervivencia en la selva, desde encontrar agua hasta construir refugios.",
-    "price": 90,
     "travelPackageId": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3"
   },
   {
     "id": "d5080281-4b3b-4098-8b8d-4c0b7c953dd9",
     "name": "Avistamiento de aves en la selva",
     "description": "Disfruta de una actividad de avistamiento de aves, observando especies únicas en su hábitat natural.",
-    "price": 40,
     "travelPackageId": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3"
   },
   {
     "id": "906f81c9-0b36-4027-a96a-639c732f1508",
     "name": "Visita a Angkor Wat al amanecer",
     "description": "Experimenta la majestuosidad de Angkor Wat al amanecer con un guía que te compartirá la historia del templo.",
-    "price": 80,
     "travelPackageId": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed"
   },
   {
     "id": "797da879-d881-40fd-8275-97bf53386b71",
     "name": "Desayuno con vista",
     "description": "Disfruta de un delicioso desayuno en un restaurante con vistas panorámicas a los templos mientras el sol se eleva.",
-    "price": 50,
     "travelPackageId": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed"
   },
   {
     "id": "2d24694e-ea1c-4def-8400-fef1c2586fcb",
     "name": "Exploración de los templos de Bayón",
     "description": "Después del desayuno, visita el templo de Bayón, famoso por sus caras esculpidas y su impresionante arquitectura.",
-    "price": 60,
     "travelPackageId": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed"
   },
   {
     "id": "e031fbc1-5d40-43ce-bb9d-aa46b00377e9",
     "name": "Tour fotográfico por los templos",
     "description": "Participa en un tour fotográfico para capturar la belleza de los templos al amanecer con un fotógrafo profesional.",
-    "price": 90,
     "travelPackageId": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed"
   },
   {
     "id": "c11fdc76-4a92-438f-bbac-bd687936150d",
     "name": "Meditación al amanecer",
     "description": "Participa en una sesión de meditación guiada en un entorno tranquilo, rodeado de la belleza de los templos.",
-    "price": 40,
     "travelPackageId": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed"
   },
   {
     "id": "64e38eed-4696-4a45-a5b0-e97e994b130a",
     "name": "Visita guiada a las cataratas",
     "description": "Disfruta de un recorrido guiado por los puntos de vista más impresionantes de las cataratas.",
-    "price": 80,
     "travelPackageId": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74"
   },
   {
     "id": "57d9a71b-3793-4f76-af4f-2abf2d76d66e",
     "name": "Paseo en bote por las cataratas",
     "description": "Embárcate en un emocionante paseo en bote cerca de las cataratas y siente la brisa refrescante.",
-    "price": 50,
     "travelPackageId": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74"
   },
   {
     "id": "90a95840-d85e-4d28-9b8a-42c3d1059a5b",
     "name": "Senderismo en los alrededores",
     "description": "Realiza una caminata por los senderos que rodean las cataratas, disfrutando de la flora y fauna local.",
-    "price": 40,
     "travelPackageId": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74"
   },
   {
     "id": "07bb0d20-e302-4d30-b19d-74db0a5f2604",
     "name": "Picnic junto a las cataratas",
     "description": "Disfruta de un picnic en un área designada con vistas panorámicas a las cataratas.",
-    "price": 30,
     "travelPackageId": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74"
   },
   {
     "id": "b10ca798-007c-41ee-9897-7a290cb7a41d",
     "name": "Fotografía de naturaleza",
     "description": "Participa en un taller de fotografía para capturar la belleza natural de las cataratas y sus alrededores.",
-    "price": 70,
     "travelPackageId": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74"
   },
   {
     "id": "5df9ddee-3434-4863-8d82-f1c6ba9a5ec2",
     "name": "Caminata guiada por la selva",
     "description": "Embárcate en una caminata por la selva con un guía especializado, aprendiendo sobre la flora y fauna local.",
-    "price": 100,
     "travelPackageId": "7b86c8c0-04d5-4a80-a76b-6124180c6b44"
   },
   {
     "id": "84da02f8-b8b0-4590-9f6d-e450b28c0e74",
     "name": "Visita a las Gargantas del Diablo",
     "description": "Admira la impresionante vista de las Gargantas del Diablo, una de las atracciones más emblemáticas del parque.",
-    "price": 90,
     "travelPackageId": "7b86c8c0-04d5-4a80-a76b-6124180c6b44"
   },
   {
     "id": "bcf6caa7-3120-4ff2-a233-fffe66b8f8ba",
     "name": "Paseo en bote por el río Iguazú",
     "description": "Disfruta de un emocionante paseo en bote por el río Iguazú, acercándote a las cataratas.",
-    "price": 70,
     "travelPackageId": "7b86c8c0-04d5-4a80-a76b-6124180c6b44"
   },
   {
     "id": "2df67d89-a059-4fa0-b605-9d08674394d1",
     "name": "Observación de aves en la selva",
     "description": "Participa en una sesión de avistamiento de aves, guiado por un experto en la avifauna de la región.",
-    "price": 50,
     "travelPackageId": "7b86c8c0-04d5-4a80-a76b-6124180c6b44"
   },
   {
     "id": "7d1f10ee-de69-4292-879e-a96416ea88c4",
     "name": "Cena tradicional con vista a las cataratas",
     "description": "Disfruta de una cena típica en un restaurante con vistas espectaculares a las cataratas.",
-    "price": 60,
     "travelPackageId": "7b86c8c0-04d5-4a80-a76b-6124180c6b44"
   },
   {
     "id": "a85536da-af67-4062-9326-282c299e40ff",
     "name": "Rafting en el río Iguazú",
     "description": "Experimenta la adrenalina del rafting en las emocionantes aguas del río Iguazú, con guías expertos.",
-    "price": 150,
     "travelPackageId": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f"
   },
   {
     "id": "33606344-d079-4ee2-86da-8bd731623b3a",
     "name": "Senderismo por los senderos de Iguazú",
     "description": "Realiza una caminata guiada por los senderos del parque nacional, descubriendo la biodiversidad local.",
-    "price": 80,
     "travelPackageId": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f"
   },
   {
     "id": "46c82d3e-c738-4117-97bf-f2267c622d24",
     "name": "Caminata nocturna en la selva",
     "description": "Descubre la vida nocturna de la selva con un tour guiado bajo las estrellas.",
-    "price": 70,
     "travelPackageId": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f"
   },
   {
     "id": "9230a6e7-5508-4244-87f3-ac0626e474ae",
     "name": "Tour de observación de fauna",
     "description": "Participa en un tour de observación de fauna y aprende sobre los animales que habitan en el parque.",
-    "price": 50,
     "travelPackageId": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f"
   },
   {
     "id": "6e9f69a1-e7f4-492f-a21d-6dbafce327a1",
     "name": "Almuerzo junto a las cataratas",
     "description": "Disfruta de un almuerzo con vista a las impresionantes cataratas de Iguazú en un restaurante local.",
-    "price": 60,
     "travelPackageId": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f"
   },
   {
     "id": "30775ccf-13bd-4fa9-a700-e47f3ce19d36",
     "name": "Visita a la comunidad indígena",
     "description": "Conoce la cultura local visitando una comunidad indígena y aprendiendo sobre sus tradiciones y costumbres.",
-    "price": 100,
     "travelPackageId": "8a97f44d-21d3-419e-9174-05f509c80c09"
   },
   {
     "id": "e17ed647-2622-4e54-a769-1d7f294afa0c",
     "name": "Clase de cocina local",
     "description": "Participa en una clase de cocina donde aprenderás a preparar platos típicos de la región.",
-    "price": 80,
     "travelPackageId": "8a97f44d-21d3-419e-9174-05f509c80c09"
   },
   {
     "id": "891d6952-a432-4127-852c-ba7469d02112",
     "name": "Tour cultural por la ciudad",
     "description": "Explora la historia y cultura de la región con un tour guiado por los sitios más emblemáticos.",
-    "price": 70,
     "travelPackageId": "8a97f44d-21d3-419e-9174-05f509c80c09"
   },
   {
     "id": "6bc899ee-c2d7-4a67-8c75-3633e678042e",
     "name": "Taller de artesanía local",
     "description": "Participa en un taller de artesanía donde podrás crear tu propia pieza con técnicas tradicionales.",
-    "price": 50,
     "travelPackageId": "8a97f44d-21d3-419e-9174-05f509c80c09"
   },
   {
     "id": "26f1b31a-2a67-464f-b282-f0bf7f84506d",
     "name": "Caminata cultural por senderos locales",
     "description": "Disfruta de una caminata por senderos que conectan con la cultura local y la naturaleza de la región.",
-    "price": 60,
     "travelPackageId": "8a97f44d-21d3-419e-9174-05f509c80c09"
   },
   {
     "id": "5aa05598-6abe-4820-9958-fb9850590bc5",
     "name": "Masaje relajante con vista",
     "description": "Disfruta de un masaje rejuvenecedor al aire libre con vistas espectaculares a las cataratas.",
-    "price": 150,
     "travelPackageId": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2"
   },
   {
     "id": "2feff416-00d4-4256-bf48-8ac362fa96f5",
     "name": "Baño de vapor en la selva",
     "description": "Relájate en un baño de vapor natural, rodeado de la belleza de la selva tropical.",
-    "price": 70,
     "travelPackageId": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2"
   },
   {
     "id": "13216848-5937-4318-b789-07fc8764967d",
     "name": "Tratamiento de spa con ingredientes locales",
     "description": "Experimenta un tratamiento de spa que utiliza ingredientes naturales de la región para revitalizar tu piel.",
-    "price": 120,
     "travelPackageId": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2"
   },
   {
     "id": "28d8354d-d3b1-4f13-b2be-5b10ce5e9085",
     "name": "Yoga al amanecer con vista a las cataratas",
     "description": "Participa en una sesión de yoga al amanecer en un entorno tranquilo con vistas a las cataratas.",
-    "price": 60,
     "travelPackageId": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2"
   },
   {
     "id": "6942cb9d-0d2e-40c9-a39a-57a44d97ca8e",
     "name": "Almuerzo saludable con vista",
     "description": "Disfruta de un almuerzo saludable en un restaurante con vistas panorámicas a las cataratas.",
-    "price": 50,
     "travelPackageId": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2"
   },
   {
     "id": "19ccde82-d3e3-47bd-8601-1eeb9c93563f",
     "name": "Tour privado del Coliseo",
     "description": "Explora el Coliseo con un guía especializado y aprende sobre su historia y arquitectura.",
-    "price": 100,
     "travelPackageId": "0a374e88-066c-4b25-96f7-89c7c4b5a912"
   },
   {
     "id": "d75683f9-117b-4e46-927b-3caf3f36a9b2",
     "name": "Visita a los Foros Imperiales",
     "description": "Descubre los Foros Imperiales, el corazón de la vida pública en la antigua Roma.",
-    "price": 70,
     "travelPackageId": "0a374e88-066c-4b25-96f7-89c7c4b5a912"
   },
   {
     "id": "15f12ec4-08b5-46ef-8a78-3839da44a802",
     "name": "Recorrido por el Palatino",
     "description": "Visita el monte Palatino, una de las siete colinas de Roma, y aprende sobre su importancia histórica.",
-    "price": 60,
     "travelPackageId": "0a374e88-066c-4b25-96f7-89c7c4b5a912"
   },
   {
     "id": "957c7a6d-fc08-4789-ab27-89b788ec0d86",
     "name": "Entrada a la Galería Borghese",
     "description": "Incluye una visita a la Galería Borghese, hogar de una impresionante colección de arte.",
-    "price": 80,
     "travelPackageId": "0a374e88-066c-4b25-96f7-89c7c4b5a912"
   },
   {
     "id": "8ae88d99-9d37-44c9-acf1-7ee0c1169747",
     "name": "Caminata nocturna por Roma antigua",
     "description": "Disfruta de un recorrido nocturno por los monumentos iluminados de la antigua Roma.",
-    "price": 50,
     "travelPackageId": "0a374e88-066c-4b25-96f7-89c7c4b5a912"
   },
   {
     "id": "b9cd6820-42fc-4a1f-ad79-b43329366778",
     "name": "Tour guiado del Coliseo",
     "description": "Disfruta de un recorrido guiado por el Coliseo, aprendiendo sobre su historia y arquitectura.",
-    "price": 100,
     "travelPackageId": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3"
   },
   {
     "id": "e420ef3e-a43c-45a4-b2b9-9e13ce98dd54",
     "name": "Visita a la Roman Forum",
     "description": "Explora el antiguo Foro Romano y descubre los restos de edificios significativos.",
-    "price": 70,
     "travelPackageId": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3"
   },
   {
     "id": "03d59b00-3dc3-4f84-9ed0-20a22caeedac",
     "name": "Cena en Trattoria típica",
     "description": "Disfruta de una cena en una trattoria local, degustando platos tradicionales romanos.",
-    "price": 120,
     "travelPackageId": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3"
   },
   {
     "id": "12a8ee7c-2b11-48a2-82e0-c9549146035c",
     "name": "Caminata por el barrio Monti",
     "description": "Recorre el encantador barrio Monti después de la cena, con sus boutiques y bares de vinos.",
-    "price": 40,
     "travelPackageId": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3"
   },
   {
     "id": "7794e880-1e96-4a4c-96ed-190cb3560b24",
     "name": "Tarta de la casa en el restaurante",
     "description": "Disfruta de una deliciosa tarta de la casa como postre al final de tu cena.",
-    "price": 30,
     "travelPackageId": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3"
   },
   {
     "id": "f5d02e63-4904-4fe9-8a28-d2c3ef7aadb4",
     "name": "Tour guiado del Coliseo",
     "description": "Visita el Coliseo con un guía especializado que te contará su fascinante historia.",
-    "price": 120,
     "travelPackageId": "e307c2f4-10e5-4cfc-89d0-95f456f5e122"
   },
   {
     "id": "8c55cb2a-1e39-4687-8b6a-f54931f4ad43",
     "name": "Exploración del Foro Romano",
     "description": "Descubre los vestigios del antiguo Foro Romano y aprende sobre su importancia en la historia de Roma.",
-    "price": 80,
     "travelPackageId": "e307c2f4-10e5-4cfc-89d0-95f456f5e122"
   },
   {
     "id": "3553b834-bea2-4a6d-b565-4dc2aa658bc6",
     "name": "Visita al monte Palatino",
     "description": "Explora el monte Palatino y disfruta de vistas panorámicas del Foro y el Coliseo.",
-    "price": 70,
     "travelPackageId": "e307c2f4-10e5-4cfc-89d0-95f456f5e122"
   },
   {
     "id": "7de81dbe-f3c3-4845-9f88-857ca572553d",
     "name": "Acceso prioritario a los monumentos",
     "description": "Disfruta de acceso prioritario a los monumentos sin las largas colas.",
-    "price": 50,
     "travelPackageId": "e307c2f4-10e5-4cfc-89d0-95f456f5e122"
   },
   {
     "id": "8b8347d8-7c50-4b83-ae30-39598b991ad1",
     "name": "Almuerzo típico romano",
     "description": "Disfruta de un almuerzo típico en un restaurante cercano, con platos tradicionales de la cocina romana.",
-    "price": 80,
     "travelPackageId": "e307c2f4-10e5-4cfc-89d0-95f456f5e122"
   },
   {
     "id": "06093876-41f2-4aee-bf28-e463452ea25e",
     "name": "Acceso exclusivo a la arena del Coliseo",
     "description": "Disfruta de acceso exclusivo a la arena del Coliseo y siente la historia bajo tus pies.",
-    "price": 150,
     "travelPackageId": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663"
   },
   {
     "id": "4b09e419-5030-4d97-a57b-c53c4df96cc0",
     "name": "Tour guiado privado",
     "description": "Explora el Coliseo con un guía privado que te proporcionará información exclusiva y detallada.",
-    "price": 100,
     "travelPackageId": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663"
   },
   {
     "id": "d78f5089-91bb-459a-b100-5b9e064131fc",
     "name": "Visita a la Galería de los Emperadores",
     "description": "Accede a la Galería de los Emperadores con un recorrido especial para conocer más sobre la historia romana.",
-    "price": 80,
     "travelPackageId": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663"
   },
   {
     "id": "85905c71-0772-4623-af9e-de21eef4dae0",
     "name": "Fotografía profesional en el Coliseo",
     "description": "Captura el momento con una sesión de fotos profesional en el Coliseo para llevarte un recuerdo inolvidable.",
-    "price": 200,
     "travelPackageId": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663"
   },
   {
     "id": "00a3b560-f522-44e5-8f4a-bbc4d229f735",
     "name": "Acceso a eventos especiales",
     "description": "Asiste a eventos especiales o exposiciones temporales dentro del Coliseo durante tu visita.",
-    "price": 120,
     "travelPackageId": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663"
   },
   {
     "id": "b0ac9527-0426-4027-884a-8700c3e85df7",
     "name": "Recorrido guiado por el Coliseo iluminado",
     "description": "Explora el Coliseo bajo las luces nocturnas con un guía que compartirá historias fascinantes.",
-    "price": 90,
     "travelPackageId": "b8406b18-d270-4b26-bf37-cfb70e5fcb91"
   },
   {
     "id": "b5b01cb3-28f4-451f-bc44-9048c5cce52e",
     "name": "Cena en un restaurante con vista al Coliseo",
     "description": "Disfruta de una cena en un restaurante cercano, saboreando platos típicos mientras admiras el Coliseo iluminado.",
-    "price": 120,
     "travelPackageId": "b8406b18-d270-4b26-bf37-cfb70e5fcb91"
   },
   {
     "id": "98128022-49f5-42a4-9daa-50ff1d12273e",
     "name": "Visita a la Fontana di Trevi",
     "description": "Realiza una parada en la Fontana di Trevi para hacer un deseo y disfrutar de su belleza nocturna.",
-    "price": 50,
     "travelPackageId": "b8406b18-d270-4b26-bf37-cfb70e5fcb91"
   },
   {
     "id": "b74c15e6-6691-4a52-acb2-0721486c50ae",
     "name": "Caminata por el barrio Trastevere",
     "description": "Descubre las encantadoras calles de Trastevere, llenas de vida y luces, al final de tu recorrido.",
-    "price": 40,
     "travelPackageId": "b8406b18-d270-4b26-bf37-cfb70e5fcb91"
   },
   {
     "id": "0b22c485-a586-40a6-a054-5d7e231219ff",
     "name": "Photowalk nocturno",
     "description": "Captura momentos mágicos de Roma de noche con un fotógrafo profesional que te guiará.",
-    "price": 150,
     "travelPackageId": "b8406b18-d270-4b26-bf37-cfb70e5fcb91"
   },
   {
     "id": "b64b4d08-40c7-4fdb-9730-134fdd080956",
     "name": "Senderismo guiado por la Muralla",
     "description": "Disfruta de un recorrido guiado por las secciones más hermosas de la Gran Muralla.",
-    "price": 150,
     "travelPackageId": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e"
   },
   {
     "id": "6c0dc90d-abd0-4719-8ae9-6379fe1779cf",
     "name": "Visita a una aldea local",
     "description": "Conoce la vida en una aldea cercana a la Muralla y disfruta de un almuerzo tradicional.",
-    "price": 80,
     "travelPackageId": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e"
   },
   {
     "id": "621b9b45-cd3d-47bf-a822-6692b056f952",
     "name": "Fotografía en la Muralla",
     "description": "Captura impresionantes vistas de la Gran Muralla con la ayuda de un fotógrafo profesional.",
-    "price": 120,
     "travelPackageId": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e"
   },
   {
     "id": "b7d9b1ab-1ddf-43e4-b8fe-2987bca52122",
     "name": "Trekking nocturno",
     "description": "Vive una experiencia única de senderismo nocturno en la Gran Muralla bajo las estrellas.",
-    "price": 200,
     "travelPackageId": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e"
   },
   {
     "id": "2d0f9b1a-c8e7-4bc8-9012-98d070296d8c",
     "name": "Charla sobre la historia de la Muralla",
     "description": "Asiste a una charla con un historiador local sobre la Gran Muralla y su importancia cultural.",
-    "price": 50,
     "travelPackageId": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e"
   },
   {
     "id": "3a3b8345-ccb9-413b-b7fc-f2641d100b25",
     "name": "Tour fotográfico por la Muralla",
     "description": "Un recorrido guiado con paradas en los mejores miradores para capturar impresionantes fotos.",
-    "price": 150,
     "travelPackageId": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b"
   },
   {
     "id": "dba5134b-97ef-40bf-a73f-c43ec5a69439",
     "name": "Almuerzo tradicional en la Muralla",
     "description": "Disfruta de un almuerzo tradicional chino en un entorno único cerca de la Muralla.",
-    "price": 80,
     "travelPackageId": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b"
   },
   {
     "id": "9e40359e-9f6b-4fd0-84b7-39a2acfea0f4",
     "name": "Experiencia de senderismo personalizado",
     "description": "Elige tu ruta de senderismo preferida en la Muralla con un guía que se adapte a tus necesidades.",
-    "price": 100,
     "travelPackageId": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b"
   },
   {
     "id": "e6b6b52c-44e6-46f3-9e80-0ffb3671325d",
     "name": "Visita a una aldea local",
     "description": "Conoce la cultura local con una visita a una aldea cercana y prueba platos típicos.",
-    "price": 70,
     "travelPackageId": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b"
   },
   {
     "id": "8ec405a6-fbe9-4c78-a478-fa7cc9fbe304",
     "name": "Sesión de meditación en la Muralla",
     "description": "Participa en una sesión de meditación guiada con vistas panorámicas desde la Muralla.",
-    "price": 50,
     "travelPackageId": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b"
   },
   {
     "id": "2f73d89b-f7f5-436a-83a6-ffd7166282ca",
     "name": "Visita guiada a una aldea local",
     "description": "Explora una aldea cercana a la Muralla y aprende sobre su historia y tradiciones.",
-    "price": 100,
     "travelPackageId": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89"
   },
   {
     "id": "14ea1481-d2f7-426c-af46-6b76ed887ea1",
     "name": "Clase de cocina tradicional",
     "description": "Participa en una clase de cocina donde aprenderás a preparar platos locales con ingredientes frescos.",
-    "price": 120,
     "travelPackageId": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89"
   },
   {
     "id": "ac9a7403-b431-4b6b-afef-34e353666d30",
     "name": "Taller de artesanía local",
     "description": "Crea tu propia artesanía bajo la guía de artesanos locales y llévate un recuerdo único.",
-    "price": 80,
     "travelPackageId": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89"
   },
   {
     "id": "a05de6a8-6e05-4f12-b7a3-60dadf959bb7",
     "name": "Recorrido cultural por la Gran Muralla",
     "description": "Un recorrido guiado que combina la historia de la Muralla con las tradiciones culturales de la región.",
-    "price": 150,
     "travelPackageId": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89"
   },
   {
     "id": "a325771e-6bb6-4253-a7a7-03dad3539c7a",
     "name": "Caminata de fin de semana con los aldeanos",
     "description": "Únete a los habitantes locales en una caminata por los alrededores de la aldea y aprende sobre su estilo de vida.",
-    "price": 60,
     "travelPackageId": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89"
   },
   {
     "id": "92e56033-2691-4332-b280-88d4baf5960c",
     "name": "Exploración guiada por secciones ocultas",
     "description": "Un recorrido guiado que te llevará a las partes menos visitadas de la Gran Muralla, lejos de las multitudes.",
-    "price": 150,
     "travelPackageId": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3"
   },
   {
     "id": "d812862e-0d8e-4623-87e9-be4ba4428d61",
     "name": "Taller de fotografía de paisajes",
     "description": "Aprende técnicas de fotografía mientras capturas la belleza natural de la Muralla y sus alrededores.",
-    "price": 100,
     "travelPackageId": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3"
   },
   {
     "id": "7e77c0a9-3ced-4a42-aa96-5abfcac8b376",
     "name": "Caminata al amanecer",
     "description": "Disfruta de un recorrido al amanecer en las secciones menos conocidas de la Muralla, con vistas espectaculares.",
-    "price": 80,
     "travelPackageId": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3"
   },
   {
     "id": "0ef007ef-d821-4ceb-9e02-2d71b01356cb",
     "name": "Charla sobre la historia de la Muralla",
     "description": "Asiste a una charla sobre la historia y el significado cultural de las secciones menos conocidas de la Muralla.",
-    "price": 50,
     "travelPackageId": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3"
   },
   {
     "id": "e50e3dfc-f8f2-4280-aeff-953877be6e92",
     "name": "Picnic en la Muralla",
     "description": "Disfruta de un picnic preparado con productos locales en un lugar tranquilo a lo largo de la Muralla.",
-    "price": 70,
     "travelPackageId": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3"
   },
   {
     "id": "1f0b8dbe-f61b-4c0e-8c7b-0491667fd8f7",
     "name": "Senderismo a Huayna Picchu",
     "description": "Aventúrate a escalar Huayna Picchu y disfruta de vistas espectaculares de Machu Picchu.",
-    "price": 150,
     "travelPackageId": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7"
   },
   {
     "id": "3ca3c249-6907-4d2c-8733-5077713ad46c",
     "name": "Visita al Templo del Sol",
     "description": "Explora el Templo del Sol y aprende sobre su importancia cultural y espiritual.",
-    "price": 80,
     "travelPackageId": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7"
   },
   {
     "id": "ac7e03e8-112b-4cc6-bb3e-9eda8b146cd0",
     "name": "Clase de historia inca",
     "description": "Asiste a una clase interactiva sobre la historia y cultura de los Incas en un entorno único.",
-    "price": 60,
     "travelPackageId": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7"
   },
   {
     "id": "ee6b683a-c098-4c1d-a243-62e54f77130d",
     "name": "Paseo por el Jardín Inca",
     "description": "Disfruta de un recorrido por los jardines de Machu Picchu y descubre su biodiversidad.",
-    "price": 50,
     "travelPackageId": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7"
   },
   {
     "id": "d53882fc-2227-4645-bcba-393cb6193221",
     "name": "Taller de artesanía andina",
     "description": "Participa en un taller de artesanía donde podrás crear tu propia pieza de arte andino.",
-    "price": 90,
     "travelPackageId": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7"
   },
   {
     "id": "7d1b98b6-c4bf-4b72-9525-f6826d18589b",
     "name": "Trekking guiado por la ruta inca",
     "description": "Disfruta de una caminata guiada a través de paisajes impresionantes y sitios arqueológicos.",
-    "price": 250,
     "travelPackageId": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182"
   },
   {
     "id": "8950f34c-dc4d-4ad4-a0bd-ca9ad9e2e420",
     "name": "Noche en camping",
     "description": "Experimenta una noche bajo las estrellas en un campamento en la ruta hacia Machu Picchu.",
-    "price": 100,
     "travelPackageId": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182"
   },
   {
     "id": "8f2b4ca9-16c4-40cf-b631-62f459906da5",
     "name": "Taller de fotografía de naturaleza",
     "description": "Captura la belleza del paisaje inca mientras aprendes técnicas de fotografía.",
-    "price": 80,
     "travelPackageId": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182"
   },
   {
     "id": "88784263-2c30-49f6-b43a-73c38b210ca0",
     "name": "Charla sobre la cultura Inca",
     "description": "Participa en una charla sobre la historia y cultura inca durante la caminata.",
-    "price": 50,
     "travelPackageId": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182"
   },
   {
     "id": "8497e214-d156-4ac5-9d18-a949dd99cb1b",
     "name": "Visita a sitios arqueológicos",
     "description": "Explora sitios arqueológicos en el camino hacia Machu Picchu, guiado por un experto.",
-    "price": 120,
     "travelPackageId": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182"
   },
   {
     "id": "9205fa5e-66a0-43d7-93ed-d2c8fa391ea8",
     "name": "Visita a Pisac",
     "description": "Explora el mercado de Pisac y las ruinas arqueológicas con un guía local.",
-    "price": 100,
     "travelPackageId": "7506c7ff-517e-44a1-b98c-1da0f1be042e"
   },
   {
     "id": "2757b2ce-43c0-43e3-8830-96451f996b59",
     "name": "Tour de cultura viva",
     "description": "Conoce a los productores locales y aprende sobre sus tradiciones en el Valle Sagrado.",
-    "price": 120,
     "travelPackageId": "7506c7ff-517e-44a1-b98c-1da0f1be042e"
   },
   {
     "id": "ba9e1637-1f6d-4346-85d4-a43fc44e5aac",
     "name": "Caminata por el río Urubamba",
     "description": "Disfruta de un recorrido a pie a lo largo del hermoso río Urubamba, con vistas panorámicas.",
-    "price": 80,
     "travelPackageId": "7506c7ff-517e-44a1-b98c-1da0f1be042e"
   },
   {
     "id": "bd600a0f-413e-4e2e-bb29-c04ee0d12177",
     "name": "Clase de cocina andina",
     "description": "Participa en una clase de cocina y aprende a preparar platos tradicionales del Perú.",
-    "price": 90,
     "travelPackageId": "7506c7ff-517e-44a1-b98c-1da0f1be042e"
   },
   {
     "id": "80e6fb9c-19cc-4950-bbcc-04cbdc18f725",
     "name": "Visita a Chinchero",
     "description": "Descubre las impresionantes terrazas agrícolas y la iglesia colonial en Chinchero.",
-    "price": 70,
     "travelPackageId": "7506c7ff-517e-44a1-b98c-1da0f1be042e"
   },
   {
     "id": "53f895a7-cc0c-453b-8a0f-b1e8691110ba",
     "name": "Guía personal para la caminata",
     "description": "Acompañamiento de un guía especializado durante toda la ascensión a Huayna Picchu.",
-    "price": 120,
     "travelPackageId": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2"
   },
   {
     "id": "b0340095-507d-47c4-a194-0a89d5f60dc4",
     "name": "Desayuno con vistas",
     "description": "Disfruta de un desayuno energizante antes de comenzar la caminata, con vistas a la montaña.",
-    "price": 40,
     "travelPackageId": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2"
   },
   {
     "id": "27736499-46e2-4f4c-a9d7-d518e54d1113",
     "name": "Fotografía en la cima",
     "description": "Sesión de fotos profesional en la cima de Huayna Picchu para capturar el momento.",
-    "price": 70,
     "travelPackageId": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2"
   },
   {
     "id": "6c69046d-0071-41e6-a650-b6b7a353ae68",
     "name": "Visita al Templo de la Luna",
     "description": "Explora el Templo de la Luna en el camino hacia Huayna Picchu con un guía local.",
-    "price": 60,
     "travelPackageId": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2"
   },
   {
     "id": "18b6a514-274e-475b-aec2-312d7db4a609",
     "name": "Snack energético",
     "description": "Incluye un snack saludable y agua para reabastecerte durante la caminata.",
-    "price": 20,
     "travelPackageId": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2"
   },
   {
     "id": "04d7c952-4d10-4715-b8b3-46ab1e27f7a7",
     "name": "Guía privado para el amanecer",
     "description": "Acompañamiento de un guía experto para disfrutar del amanecer en Machu Picchu.",
-    "price": 150,
     "travelPackageId": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff"
   },
   {
     "id": "e97ba267-3c2a-4032-b9c1-cc64d387efd8",
     "name": "Desayuno gourmet con vista",
     "description": "Un desayuno gourmet servido con vistas panorámicas de Machu Picchu.",
-    "price": 60,
     "travelPackageId": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff"
   },
   {
     "id": "5cb653fc-d6f7-4229-83ae-9c047af6e6aa",
     "name": "Recorrido por los templos principales",
     "description": "Visita guiada a los templos principales de Machu Picchu durante el amanecer.",
-    "price": 100,
     "travelPackageId": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff"
   },
   {
     "id": "22756717-922c-485b-b9e9-0a3dcaa29338",
     "name": "Fotografía al amanecer",
     "description": "Captura el mágico momento del amanecer en Machu Picchu con un fotógrafo profesional.",
-    "price": 80,
     "travelPackageId": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff"
   },
   {
     "id": "475b7f54-a03e-44c6-8472-163497dfae78",
     "name": "Caminata a Inti Punku",
     "description": "Una caminata opcional a Inti Punku, la puerta del sol, para vistas impresionantes.",
-    "price": 70,
     "travelPackageId": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff"
   },
   {
     "id": "f5dfe55b-8190-42b8-bb83-6c2b56f2fa2b",
     "name": "Caminata por los senderos de Fuji",
     "description": "Explora los senderos cercanos al Monte Fuji con un guía experto.",
-    "price": 80,
     "travelPackageId": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99"
   },
   {
     "id": "aa5b07b0-000f-4e0f-aa2d-b57a35f2a8a4",
     "name": "Visita al Lago Kawaguchi",
     "description": "Disfruta de un paseo en bote por el Lago Kawaguchi con vistas espectaculares.",
-    "price": 60,
     "travelPackageId": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99"
   },
   {
     "id": "cd2770d9-4474-4f11-bdf0-0a3735ddcc15",
     "name": "Tour cultural en una aldea local",
     "description": "Visita a una aldea cercana para conocer la cultura local y probar la gastronomía.",
-    "price": 100,
     "travelPackageId": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99"
   },
   {
     "id": "91b36444-a2fc-4a53-9c45-d062a638a4e2",
     "name": "Fotografía en el Monte Fuji",
     "description": "Sesión de fotos con un fotógrafo profesional para capturar los mejores momentos.",
-    "price": 70,
     "travelPackageId": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99"
   },
   {
     "id": "54b23f43-a3bd-4a05-9463-4ac37cd870de",
     "name": "Trekking hasta la 5ª estación",
     "description": "Caminata hasta la 5ª estación del Monte Fuji para vistas impresionantes.",
-    "price": 90,
     "travelPackageId": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99"
   },
   {
     "id": "3322efbd-f0ed-47a1-abbb-524b8d17c15a",
     "name": "Guía experto de senderismo",
     "description": "Acompañamiento de un guía especializado para una experiencia segura y enriquecedora.",
-    "price": 150,
     "travelPackageId": "b1574f05-3708-4d51-a64b-7eec2be2a6a4"
   },
   {
     "id": "0a2792c4-983b-472a-9c6a-df4f8bdf2688",
     "name": "Almuerzo en la cima",
     "description": "Disfruta de un delicioso almuerzo en la cima del Monte Fuji con vistas panorámicas.",
-    "price": 50,
     "travelPackageId": "b1574f05-3708-4d51-a64b-7eec2be2a6a4"
   },
   {
     "id": "4febc608-023c-496c-a92b-ec7c536db23a",
     "name": "Fotografía durante la caminata",
     "description": "Captura momentos inolvidables con un fotógrafo profesional durante el senderismo.",
-    "price": 80,
     "travelPackageId": "b1574f05-3708-4d51-a64b-7eec2be2a6a4"
   },
   {
     "id": "9f39aada-f0e8-4ed7-9aaf-dbb8ef18737e",
     "name": "Visita al Santuario de Fuji",
     "description": "Explora el Santuario de Fuji antes de comenzar la caminata, sumergiéndote en la cultura local.",
-    "price": 40,
     "travelPackageId": "b1574f05-3708-4d51-a64b-7eec2be2a6a4"
   },
   {
     "id": "59ebec3d-ad86-41fb-8700-647995225579",
     "name": "Transporte incluido",
     "description": "Transporte de ida y vuelta desde el hotel hasta el punto de inicio de la caminata.",
-    "price": 30,
     "travelPackageId": "b1574f05-3708-4d51-a64b-7eec2be2a6a4"
   },
   {
     "id": "42c1f8b1-9f94-4f0a-a0ad-a73e43d61f03",
     "name": "Visita a Templos Históricos",
     "description": "Explora templos históricos cercanos al Monte Fuji con un guía experto.",
-    "price": 100,
     "travelPackageId": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637"
   },
   {
     "id": "d55caa14-54d5-44ad-b3c7-0faa566c7901",
     "name": "Taller de Artesanía Local",
     "description": "Participa en un taller de artesanía local para aprender sobre las tradiciones culturales.",
-    "price": 80,
     "travelPackageId": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637"
   },
   {
     "id": "09df4006-82cd-42ef-8b50-d0cc06b3a01f",
     "name": "Degustación de Comida Local",
     "description": "Prueba platillos típicos de la región en una experiencia culinaria única.",
-    "price": 60,
     "travelPackageId": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637"
   },
   {
     "id": "874c0410-dcf1-4f44-a2b2-412cc91f586c",
     "name": "Paseo por la Naturaleza",
     "description": "Disfruta de un paseo guiado por la naturaleza que rodea el Monte Fuji.",
-    "price": 50,
     "travelPackageId": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637"
   },
   {
     "id": "e548e79b-4b0a-4405-9441-2ca8579bf0cc",
     "name": "Charla sobre la Cultura Local",
     "description": "Asiste a una charla sobre la historia y la cultura de la región de Fuji.",
-    "price": 40,
     "travelPackageId": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637"
   },
   {
     "id": "a59ebbba-7717-4a00-b957-a33cd3a1bd9c",
     "name": "Acceso al Onsen",
     "description": "Disfruta de un día completo en un onsen tradicional con vistas al Monte Fuji.",
-    "price": 150,
     "travelPackageId": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87"
   },
   {
     "id": "e28d552f-10d7-4d97-9bad-1a9790682455",
     "name": "Almuerzo en el Onsen",
     "description": "Degusta un delicioso almuerzo japonés en el onsen mientras te relajas.",
-    "price": 60,
     "travelPackageId": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87"
   },
   {
     "id": "9393d529-be1f-4602-bc9b-da0b7dae0d00",
     "name": "Tour guiado por el Monte Fuji",
     "description": "Explora las áreas alrededor del Monte Fuji con un guía experto.",
-    "price": 120,
     "travelPackageId": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87"
   },
   {
     "id": "5c53d333-d514-4bcb-a1f1-bccb6285d6b8",
     "name": "Masaje relajante",
     "description": "Disfruta de un masaje relajante en el onsen después de tu día de exploración.",
-    "price": 80,
     "travelPackageId": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87"
   },
   {
     "id": "4cfdb494-8834-465d-a16a-dbdc72d2b233",
     "name": "Sesión de meditación",
     "description": "Participa en una sesión de meditación al aire libre con vistas al Monte Fuji.",
-    "price": 40,
     "travelPackageId": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87"
   },
   {
     "id": "f6f2ce44-b51e-4ceb-9ce4-4e0cd51b7603",
     "name": "Exploración del Tesoro",
     "description": "Visita guiada al famoso Tesoro de Petra con historias y datos históricos.",
-    "price": 100,
     "travelPackageId": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66"
   },
   {
     "id": "3c0915db-de16-4191-8ad3-427eb4e40b05",
     "name": "Senderismo en el Siq",
     "description": "Caminata por el Siq, el estrecho desfiladero que lleva a Petra.",
-    "price": 80,
     "travelPackageId": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66"
   },
   {
     "id": "9467ee9b-aacd-48df-b085-069d492f7fd8",
     "name": "Visita al Monasterio",
     "description": "Excursión al Monasterio de Petra, uno de los lugares más impresionantes de la antigua ciudad.",
-    "price": 120,
     "travelPackageId": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66"
   },
   {
     "id": "1e870507-8111-4b7e-801b-221a4565be84",
     "name": "Taller de Cultura Nabatea",
     "description": "Participa en un taller sobre la cultura y la historia de los nabateos.",
-    "price": 50,
     "travelPackageId": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66"
   },
   {
     "id": "57efaa29-75b2-41ec-9694-bb7d6c18898b",
     "name": "Paseo en Camello",
     "description": "Disfruta de un paseo en camello por el desierto de Petra.",
-    "price": 70,
     "travelPackageId": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66"
   },
   {
     "id": "6c12ab08-3a92-444f-a617-a25ed2e182ab",
     "name": "Visita a la Comunidad Beduina",
     "description": "Conoce a las comunidades beduinas y aprende sobre su estilo de vida.",
-    "price": 120,
     "travelPackageId": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189"
   },
   {
     "id": "d0790279-8342-463a-b37c-eeaf2ea43d64",
     "name": "Taller de Artesanía Beduina",
     "description": "Participa en un taller para aprender técnicas de artesanía tradicional beduina.",
-    "price": 80,
     "travelPackageId": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189"
   },
   {
     "id": "11da3077-ba1e-4eae-a29d-7737c45804f4",
     "name": "Caminata por el Desierto",
     "description": "Explora el desierto circundante con un guía local y disfruta de la naturaleza.",
-    "price": 100,
     "travelPackageId": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189"
   },
   {
     "id": "7d5960f6-c56c-4d69-8131-34a44bb59b1d",
     "name": "Cena Tradicional Beduina",
     "description": "Disfruta de una cena típica beduina bajo las estrellas.",
-    "price": 60,
     "travelPackageId": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189"
   },
   {
     "id": "e6fb88bc-deb7-4c47-9606-28f03daf7ef1",
     "name": "Cuentacuentos Beduino",
     "description": "Escucha historias y leyendas de la cultura beduina alrededor de la fogata.",
-    "price": 40,
     "travelPackageId": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189"
   },
   {
     "id": "4dfb7d6c-1afb-4771-8fac-66645622ff98",
     "name": "Amanecer en el Siq",
     "description": "Disfruta de un recorrido por el Siq al amanecer, una experiencia mágica.",
-    "price": 80,
     "travelPackageId": "caa75089-8be6-4b8f-bf0e-b0c0469ef745"
   },
   {
     "id": "0c8e40cc-2cdd-4ba8-bea7-0ba7fe5d32c4",
     "name": "Desayuno con Vista",
     "description": "Desayuna en un mirador exclusivo con vistas panorámicas de Petra.",
-    "price": 50,
     "travelPackageId": "caa75089-8be6-4b8f-bf0e-b0c0469ef745"
   },
   {
     "id": "c2781f96-eb73-4846-aa63-857529b039eb",
     "name": "Visita al Tesoro",
     "description": "Acceso temprano al Tesoro de Petra antes de la llegada de otros visitantes.",
-    "price": 100,
     "travelPackageId": "caa75089-8be6-4b8f-bf0e-b0c0469ef745"
   },
   {
     "id": "30a89683-b3f4-4b68-9dfc-a406b5a2389c",
     "name": "Fotografía al Amanecer",
     "description": "Sesión fotográfica guiada en los mejores puntos de vista de Petra al amanecer.",
-    "price": 90,
     "travelPackageId": "caa75089-8be6-4b8f-bf0e-b0c0469ef745"
   },
   {
     "id": "e2cfd23c-54a6-4407-ba94-2bd7e1ec2712",
     "name": "Trekking Matutino",
     "description": "Caminata por senderos menos conocidos con un guía local al amanecer.",
-    "price": 120,
     "travelPackageId": "caa75089-8be6-4b8f-bf0e-b0c0469ef745"
   },
   {
     "id": "a3829f61-08e6-444d-b6f3-1a6644556f2d",
     "name": "Spa y Bienestar",
     "description": "Disfruta de un tratamiento de spa relajante en el hotel.",
-    "price": 150,
     "travelPackageId": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0"
   },
   {
     "id": "f125b50e-25b7-4dfb-9f32-ff7ffd65451b",
     "name": "Yoga al Amanecer",
     "description": "Participa en una sesión de yoga al aire libre con vista a Petra.",
-    "price": 80,
     "travelPackageId": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0"
   },
   {
     "id": "dada36c2-ce78-47a2-9030-5d4c537e53ac",
     "name": "Cata de Té Beduino",
     "description": "Relájate con una experiencia de cata de té beduino en el hotel.",
-    "price": 40,
     "travelPackageId": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0"
   },
   {
     "id": "aca95d42-4951-4a04-9b4d-6cf79737e662",
     "name": "Caminata por el Jardín del Hotel",
     "description": "Explora los jardines del hotel en un paseo relajante.",
-    "price": 20,
     "travelPackageId": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0"
   },
   {
     "id": "ec5795e6-4ec1-486f-9393-056dd140e97b",
     "name": "Cena Gourmet",
     "description": "Disfruta de una cena gourmet en el restaurante del hotel.",
-    "price": 100,
     "travelPackageId": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0"
   },
   {
     "id": "9244a63d-c017-40d6-933c-ddec33041604",
     "name": "Tour en Barco por la Caldera",
     "description": "Descubre la caldera de Santorini en un tour en barco con paradas para nadar.",
-    "price": 150,
     "travelPackageId": "56a77546-4971-4296-9cf2-f77a06d5e8da"
   },
   {
     "id": "4ba68338-c889-46af-8b05-37a6642c79e6",
     "name": "Degustación de Vinos",
     "description": "Visita a una bodega local y cata de vinos de Santorini.",
-    "price": 70,
     "travelPackageId": "56a77546-4971-4296-9cf2-f77a06d5e8da"
   },
   {
     "id": "bd76bad8-80e4-415b-9325-cd2b64718ca0",
     "name": "Clase de Cocina Griega",
     "description": "Aprende a preparar platos típicos griegos en una clase de cocina local.",
-    "price": 90,
     "travelPackageId": "56a77546-4971-4296-9cf2-f77a06d5e8da"
   },
   {
     "id": "bdd97ee0-d42c-434d-b62f-99904cba3ac3",
     "name": "Día de Spa en la Playa",
     "description": "Disfruta de un día de spa con masajes y tratamientos en la playa.",
-    "price": 200,
     "travelPackageId": "56a77546-4971-4296-9cf2-f77a06d5e8da"
   },
   {
     "id": "8ac3661b-2289-4a87-bdec-dd92ba785dc8",
     "name": "Paseo por Oia",
     "description": "Recorre el encantador pueblo de Oia y disfruta de sus vistas panorámicas.",
-    "price": 40,
     "travelPackageId": "56a77546-4971-4296-9cf2-f77a06d5e8da"
   },
   {
     "id": "e9bfad8e-4dde-4326-9da6-22d25d2e1fbf",
     "name": "Senderismo de Fira a Oia",
     "description": "Disfruta de un recorrido panorámico a pie entre las dos ciudades más icónicas de Santorini.",
-    "price": 50,
     "travelPackageId": "92ef71f3-8a9f-4c62-a453-d571b8bb447b"
   },
   {
     "id": "e533a851-c19b-47e4-bb67-ce10f8a0b99f",
     "name": "Visita a las Playas de Santorini",
     "description": "Explora las playas de arena negra y roja de la isla en un tour guiado.",
-    "price": 80,
     "travelPackageId": "92ef71f3-8a9f-4c62-a453-d571b8bb447b"
   },
   {
     "id": "94ce7142-eb6e-4964-b2e0-a86b0e01651c",
     "name": "Exploración de Ruinas Antiguas",
     "description": "Visita el yacimiento arqueológico de Akrotiri y aprende sobre la historia de la isla.",
-    "price": 100,
     "travelPackageId": "92ef71f3-8a9f-4c62-a453-d571b8bb447b"
   },
   {
     "id": "846fb357-891f-4eb7-af1a-c3e073c2049e",
     "name": "Tour de Vino",
     "description": "Descubre las bodegas locales y degusta los famosos vinos de Santorini.",
-    "price": 70,
     "travelPackageId": "92ef71f3-8a9f-4c62-a453-d571b8bb447b"
   },
   {
     "id": "046ff2cf-3e11-41ca-a932-87c9d85083c5",
     "name": "Clase de Cerámica",
     "description": "Participa en una clase de cerámica y crea tu propia obra de arte inspirada en Santorini.",
-    "price": 90,
     "travelPackageId": "92ef71f3-8a9f-4c62-a453-d571b8bb447b"
   },
   {
     "id": "a7015631-30eb-4c86-9140-1e7da4467e91",
     "name": "Tour por la Isla en Catamarán",
     "description": "Navega por la costa de Santorini y disfruta de paradas en playas ocultas.",
-    "price": 300,
     "travelPackageId": "d10dc012-12ed-4894-9e04-b3c465b0e77e"
   },
   {
     "id": "1912e96c-821a-4d56-9b72-f2bf7eb42db2",
     "name": "Cata de Vinos al Atardecer",
     "description": "Degusta los mejores vinos de Santorini mientras disfrutas de las vistas.",
-    "price": 150,
     "travelPackageId": "d10dc012-12ed-4894-9e04-b3c465b0e77e"
   },
   {
     "id": "93ec10da-18e8-43a0-aff1-af2fcedbf95c",
     "name": "Clase de Cocina Griega",
     "description": "Aprende a preparar platos tradicionales griegos y disfruta de tu creación al atardecer.",
-    "price": 200,
     "travelPackageId": "d10dc012-12ed-4894-9e04-b3c465b0e77e"
   },
   {
     "id": "d7ab46ae-06b8-452f-878c-d80f2e28796e",
     "name": "Paseo por las Calles de Oia",
     "description": "Explora las encantadoras calles de Oia y sus famosas tiendas y galerías.",
-    "price": 50,
     "travelPackageId": "d10dc012-12ed-4894-9e04-b3c465b0e77e"
   },
   {
     "id": "3b5e6761-398c-4d88-843e-27ab508f99ab",
     "name": "Sesión de Fotos al Atardecer",
     "description": "Captura momentos especiales con un fotógrafo profesional en los mejores puntos de Oia.",
-    "price": 100,
     "travelPackageId": "d10dc012-12ed-4894-9e04-b3c465b0e77e"
   },
   {
     "id": "bdb10967-578c-451a-85ad-9f1f7b43f3b6",
     "name": "Tour por las Bodegas",
     "description": "Recorrido por las bodegas de Santorini con degustación de vinos y aperitivos.",
-    "price": 200,
     "travelPackageId": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48"
   },
   {
     "id": "d47a26b5-f0ec-4942-8e4c-ad3037797f77",
     "name": "Clase de Cocina Griega",
     "description": "Aprende a cocinar platos tradicionales griegos con un chef local.",
-    "price": 250,
     "travelPackageId": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48"
   },
   {
     "id": "a87a348a-128d-4947-bf49-e2b77d229dc7",
     "name": "Visita a Sitios Arqueológicos",
     "description": "Explora las ruinas de Akrotiri, una antigua ciudad minoica, con guía experto.",
-    "price": 300,
     "travelPackageId": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48"
   },
   {
     "id": "049512db-7519-492c-a324-02c3fc09bf85",
     "name": "Taller de Cerámica",
     "description": "Participa en un taller donde aprenderás a hacer cerámica local.",
-    "price": 150,
     "travelPackageId": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48"
   },
   {
     "id": "c76224c1-bf99-441d-a5fb-7b1e101f52d5",
     "name": "Paseo Cultural por Fira",
     "description": "Descubre la cultura local en un recorrido por la capital de Santorini, Fira.",
-    "price": 100,
     "travelPackageId": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48"
   },
   {
     "id": "1a96ae8f-ec76-44d4-9b7c-a5f19fdb52ee",
     "name": "Paseo en Rickshaw",
     "description": "Disfruta de un paseo en rickshaw por Agra antes de visitar el Taj Mahal.",
-    "price": 50,
     "travelPackageId": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76"
   },
   {
     "id": "d55557bf-996e-474a-aa44-cb68203b3c96",
     "name": "Desayuno en el Jardín",
     "description": "Desayuno típico indio en los jardines del Taj Mahal después de la visita.",
-    "price": 75,
     "travelPackageId": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76"
   },
   {
     "id": "801fad09-8ef2-41c8-8cdb-8768ef634bcf",
     "name": "Visita al Fuerte de Agra",
     "description": "Explora el Fuerte de Agra, un sitio de Patrimonio Mundial de la UNESCO, con un guía.",
-    "price": 120,
     "travelPackageId": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76"
   },
   {
     "id": "7f0d4221-f6b1-413a-be87-214b8ea21d6d",
     "name": "Taller de Arte Local",
     "description": "Participa en un taller de arte local para aprender sobre la artesanía india.",
-    "price": 80,
     "travelPackageId": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76"
   },
   {
     "id": "7295295a-6c2f-4743-a985-55bfa3453fe9",
     "name": "Recorrido Fotográfico",
     "description": "Únete a un recorrido fotográfico para capturar los mejores momentos en el Taj Mahal.",
-    "price": 100,
     "travelPackageId": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76"
   },
   {
     "id": "6555a2fa-122c-4cbe-88d0-d111299cee60",
     "name": "Visita Guiada al Taj Mahal",
     "description": "Recorrido guiado por el Taj Mahal con historias sobre su historia y arquitectura.",
-    "price": 150,
     "travelPackageId": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e"
   },
   {
     "id": "06a76ee8-0d0a-4204-8758-2d07e6193d41",
     "name": "Exploración del Fuerte de Agra",
     "description": "Visita al Fuerte de Agra con un guía que te contará su historia fascinante.",
-    "price": 120,
     "travelPackageId": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e"
   },
   {
     "id": "c19baea7-3e80-4ac2-a13b-5acbb4180755",
     "name": "Paseo en Elefante",
     "description": "Disfruta de un paseo en elefante en los alrededores de Agra.",
-    "price": 200,
     "travelPackageId": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e"
   },
   {
     "id": "bf8435d7-573c-4491-9d4a-bcdfeabee97c",
     "name": "Degustación de Comida Local",
     "description": "Prueba platos típicos de Agra en un restaurante local.",
-    "price": 80,
     "travelPackageId": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e"
   },
   {
     "id": "fc618d11-eb9c-41f8-853f-1093a0d2d613",
     "name": "Recorrido Fotográfico",
     "description": "Únete a un recorrido fotográfico para capturar los mejores momentos en Agra.",
-    "price": 100,
     "travelPackageId": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e"
   },
   {
     "id": "d9ab8cd5-128b-4f9a-b770-a9106e3b884b",
     "name": "Visita a la Comunidad Local",
     "description": "Interactúa con los residentes y aprende sobre su estilo de vida.",
-    "price": 150,
     "travelPackageId": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7"
   },
   {
     "id": "4910819c-a259-4038-8bec-9fe9eb9d3be4",
     "name": "Clase de Cocina India",
     "description": "Participa en una clase de cocina y aprende a preparar platos tradicionales.",
-    "price": 120,
     "travelPackageId": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7"
   },
   {
     "id": "db89e7b6-e309-4a7d-b857-4c9040a5e244",
     "name": "Tour Cultural por Agra",
     "description": "Explora los aspectos culturales de Agra a través de sus mercados y artesanías.",
-    "price": 180,
     "travelPackageId": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7"
   },
   {
     "id": "26aa36e7-0e00-4490-8c9a-7cd0cb174d7b",
     "name": "Almuerzo Tradicional",
     "description": "Disfruta de un almuerzo típico en la casa de una familia local.",
-    "price": 80,
     "travelPackageId": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7"
   },
   {
     "id": "99cbb3d2-bf8b-430a-84fe-923f7ae84b76",
     "name": "Espectáculo de Danza Folclórica",
     "description": "Asiste a un espectáculo de danza tradicional para conocer más sobre la cultura local.",
-    "price": 100,
     "travelPackageId": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7"
   },
   {
     "id": "8bca1be3-77b2-4bce-9baf-8b08b45c205f",
     "name": "Sesión Fotográfica Profesional",
     "description": "Captura momentos especiales con un fotógrafo en los mejores rincones del Taj Mahal.",
-    "price": 200,
     "travelPackageId": "ba672a48-7e35-43c8-b048-e362f4c8a5e5"
   },
   {
     "id": "2d850ded-55f8-4d61-ada3-ad59597bad61",
     "name": "Tour por el Fuerte de Agra",
     "description": "Explora el impresionante Fuerte de Agra y aprende sobre su historia.",
-    "price": 150,
     "travelPackageId": "ba672a48-7e35-43c8-b048-e362f4c8a5e5"
   },
   {
     "id": "c62e8e66-9e54-4361-b927-30b00d609d9c",
     "name": "Recorrido por el Jardín de Mehtab Bagh",
     "description": "Disfruta de una vista panorámica del Taj Mahal desde este hermoso jardín.",
-    "price": 100,
     "travelPackageId": "ba672a48-7e35-43c8-b048-e362f4c8a5e5"
   },
   {
     "id": "3c754756-3444-405a-9ecd-426443c3a517",
     "name": "Almuerzo en Restaurante Local",
     "description": "Disfruta de un almuerzo en un restaurante típico con cocina local.",
-    "price": 80,
     "travelPackageId": "ba672a48-7e35-43c8-b048-e362f4c8a5e5"
   },
   {
     "id": "d140994e-15ca-41ab-a3be-0a01f5f5d847",
     "name": "Visita a una Comunidad Local",
     "description": "Interactúa con los residentes y conoce su estilo de vida y tradiciones.",
-    "price": 120,
     "travelPackageId": "ba672a48-7e35-43c8-b048-e362f4c8a5e5"
   },
   {
     "id": "173953da-f78b-4d35-8a31-b1e2b3fc92d6",
     "name": "Cruce por el Sena",
     "description": "Disfruta de un paseo en barco por el río Sena con vistas a la Torre Eiffel.",
-    "price": 150,
     "travelPackageId": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29"
   },
   {
     "id": "223e48ef-bb20-4c09-bab8-fc2d318e05a4",
     "name": "Tour Guiado por la Torre Eiffel",
     "description": "Acceso prioritario y visita guiada a los niveles de la Torre Eiffel.",
-    "price": 200,
     "travelPackageId": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29"
   },
   {
     "id": "72b56d59-dc3b-4501-9f14-5000180052ee",
     "name": "Degustación de Vinos Franceses",
     "description": "Disfruta de una cata de vinos mientras contemplas la Torre Eiffel.",
-    "price": 100,
     "travelPackageId": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29"
   },
   {
     "id": "467a0804-038e-45ce-948d-e33b626c2300",
     "name": "Visita a los Jardines del Trocadéro",
     "description": "Paseo por los jardines con vistas espectaculares de la Torre Eiffel.",
-    "price": 50,
     "travelPackageId": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29"
   },
   {
     "id": "0537a266-50e8-42f9-954a-00ec86dd7097",
     "name": "Cena en Restaurante con Vista",
     "description": "Cena en un restaurante con vista directa a la Torre Eiffel al atardecer.",
-    "price": 250,
     "travelPackageId": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29"
   },
   {
     "id": "7eddafdd-6741-4216-a6bc-73d2cedffc5a",
     "name": "Paseo por los Jardines de Champ de Mars",
     "description": "Disfruta de un paseo relajante por los jardines con vistas a la Torre Eiffel.",
-    "price": 70,
     "travelPackageId": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c"
   },
   {
     "id": "def9a82e-fe85-4136-b30c-63f9cee4e467",
     "name": "Crucero por el Sena",
     "description": "Navega por el río Sena y disfruta de vistas icónicas de París.",
-    "price": 150,
     "travelPackageId": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c"
   },
   {
     "id": "e1dd976d-7aea-4e0f-8b23-8ebe9a34db08",
     "name": "Visita al Museo del Quai Branly",
     "description": "Explora el museo de arte indígena cercano a la Torre Eiffel.",
-    "price": 120,
     "travelPackageId": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c"
   },
   {
     "id": "139faf2c-082d-4c6c-a262-a7de52d7c098",
     "name": "Degustación de Pasteles Franceses",
     "description": "Disfruta de una cata de deliciosos pasteles en una pastelería cercana.",
-    "price": 50,
     "travelPackageId": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c"
   },
   {
     "id": "84ba3cb4-11b3-49bc-b5b8-ab96a19741cc",
     "name": "Cena en Restaurante con Vista a la Torre",
     "description": "Cena gourmet en un restaurante con vista directa a la Torre Eiffel.",
-    "price": 250,
     "travelPackageId": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c"
   },
   {
     "id": "ea3abb31-4b26-43d7-9f91-fa6a31fe0ec7",
     "name": "Visita Guiada a la Torre Eiffel",
     "description": "Acceso prioritario y visita guiada a la Torre Eiffel.",
-    "price": 300,
     "travelPackageId": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b"
   },
   {
     "id": "192a4cfa-150f-4b79-af08-f4ab28a7aef1",
     "name": "Crucero Nocturno por el Sena",
     "description": "Disfruta de un crucero por el río Sena para ver la ciudad iluminada.",
-    "price": 150,
     "travelPackageId": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b"
   },
   {
     "id": "20b9bc57-4bd5-4414-b15b-d9039237628c",
     "name": "Degustación de Quesos Franceses",
     "description": "Disfruta de una cata de quesos en una de las mejores queserías de París.",
-    "price": 80,
     "travelPackageId": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b"
   },
   {
     "id": "71c1af64-59de-4907-b1fa-1884956a1207",
     "name": "Tour de Arte Callejero",
     "description": "Explora el arte urbano en el barrio de Belleville con un guía local.",
-    "price": 100,
     "travelPackageId": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b"
   },
   {
     "id": "05a9494b-9f8f-4464-9834-814c136a92ef",
     "name": "Experiencia de Fotografía en París",
     "description": "Sesión de fotografía profesional en los puntos más emblemáticos de la ciudad.",
-    "price": 200,
     "travelPackageId": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b"
   },
   {
     "id": "66eb2ec7-16a0-4127-a3b4-e5fc55ccd54c",
     "name": "Visita Guiada a la Torre Eiffel",
     "description": "Acceso prioritario y visita guiada a la Torre Eiffel.",
-    "price": 300,
     "travelPackageId": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c"
   },
   {
     "id": "542b4ffd-6cdb-4796-8cde-058a6115182e",
     "name": "Crucero al Atardecer por el Sena",
     "description": "Disfruta de un crucero al atardecer con aperitivos incluidos.",
-    "price": 200,
     "travelPackageId": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c"
   },
   {
     "id": "963844a8-7614-4d8e-a64c-cf1ce31bbc51",
     "name": "Cena en un Bistro Francés",
     "description": "Cena en un encantador bistro francés cerca de la Torre Eiffel.",
-    "price": 150,
     "travelPackageId": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c"
   },
   {
     "id": "f0a725a2-9aa8-4d77-8523-988a2a43d200",
     "name": "Degustación de Macarons",
     "description": "Cata de deliciosos macarons en una famosa pastelería parisina.",
-    "price": 80,
     "travelPackageId": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c"
   },
   {
     "id": "299b8590-0a5c-44b6-b6e5-418745b43809",
     "name": "Tour de Arte en París",
     "description": "Descubre las obras de arte más impresionantes en las calles de París.",
-    "price": 100,
     "travelPackageId": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c"
   },
   {
     "id": "4ad7845a-4484-4d88-b970-f495726de066",
     "name": "Visita a la Torre Eiffel",
     "description": "Acceso prioritario y recorrido guiado por la Torre Eiffel.",
-    "price": 300,
     "travelPackageId": "2e788f77-04c6-47cc-a79e-bd5280e2027a"
   },
   {
     "id": "209ebdad-3368-4059-9c8e-0d8d83561575",
     "name": "Recorrido por el Louvre",
     "description": "Visita guiada al Museo del Louvre y sus obras maestras.",
-    "price": 350,
     "travelPackageId": "2e788f77-04c6-47cc-a79e-bd5280e2027a"
   },
   {
     "id": "24293147-5d61-46ac-985f-ab1b0c0511f2",
     "name": "Crucero por el Sena",
     "description": "Disfruta de un crucero por el río Sena con vistas a los monumentos.",
-    "price": 150,
     "travelPackageId": "2e788f77-04c6-47cc-a79e-bd5280e2027a"
   },
   {
     "id": "36ac6f96-28e3-4967-adcf-4b4063f6477f",
     "name": "Café y Pastelería",
     "description": "Degustación de café y pasteles en una tradicional pastelería parisina.",
-    "price": 50,
     "travelPackageId": "2e788f77-04c6-47cc-a79e-bd5280e2027a"
   },
   {
     "id": "23cfec84-2a79-4164-8afc-5ff20941d68e",
     "name": "Tour de Arte Callejero",
     "description": "Explora el arte urbano en los barrios más icónicos de París.",
-    "price": 100,
     "travelPackageId": "2e788f77-04c6-47cc-a79e-bd5280e2027a"
   }
 ]

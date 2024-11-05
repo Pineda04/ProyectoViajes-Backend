@@ -17,11 +17,6 @@ namespace ProyectoViajes.API.Database.Entities
         [Column("description")]
         public string Description { get; set; }
 
-        // Precio
-        [Required]
-        [Column("price")]
-        public decimal Price { get; set; }
-
         // Para la relación con Paquete de viaje
         [Required]
         [Column("travel_package_id")]

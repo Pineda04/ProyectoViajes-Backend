@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoViajes.API.Database;
 
@@ -11,9 +12,11 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    partial class ProyectoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20241104224443_FixTableTypesFlights")]
+    partial class FixTableTypesFlights
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,6 +51,10 @@ namespace ProyectoViajes.API.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("name");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("price");
 
                     b.Property<Guid>("TravelPackageId")
                         .HasColumnType("uniqueidentifier")
@@ -405,6 +412,11 @@ namespace ProyectoViajes.API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("created_date");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("description");
 
                     b.Property<string>("Name")
                         .IsRequired()

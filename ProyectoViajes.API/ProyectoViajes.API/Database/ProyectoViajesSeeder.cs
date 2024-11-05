@@ -14,6 +14,10 @@ namespace ProyectoViajes.API.Database
                 await LoadPointsInterestAsync(context, loggerFactory);
                 await LoadTravelPackagesAsync(context, loggerFactory);
                 await LoadActivitiesAsync(context, loggerFactory);
+                await LoadTypesFlightsAsync(context, loggerFactory);
+                await LoadTypesHostingsAsync(context, loggerFactory);
+                await LoadFlightsAsync(context, loggerFactory);
+                await LoadHostingsAsync(context, loggerFactory);
             }
             catch (Exception ex)
             {
@@ -127,6 +131,118 @@ namespace ProyectoViajes.API.Database
             catch(Exception ex){
                 var logger = loggerFactory.CreateLogger<ProyectoViajesSeeder>();
                 logger.LogError(ex, "Error al ejecutar el seed de actividades");
+            }
+        }
+
+        private static async Task LoadTypesFlightsAsync(ProyectoViajesContext context, ILoggerFactory loggerFactory)
+        {
+            try
+            {
+                var jsonFilePatch = "SeedData/types_flights.json";
+                var jsonContent = await File.ReadAllTextAsync(jsonFilePatch);
+                var types_flights = JsonConvert.DeserializeObject<List<TypeFlightEntity>>(jsonContent);
+
+                if(!await context.TypesFlight.AnyAsync())
+                {
+                    for(int i=0; i < types_flights.Count; i++)
+                    {
+                        types_flights[i].CreatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        types_flights[i].CreatedDate = DateTime.Now;
+                        types_flights[i].UpdatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        types_flights[i].UpdatedDate = DateTime.Now;
+                    }
+                    context.AddRange(types_flights);
+                    await context.SaveChangesAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<ProyectoViajesSeeder>();
+                logger.LogError(ex, "Error al ejecutar el seed de tipos de vuelo");
+            }
+        }
+
+        private static async Task LoadTypesHostingsAsync(ProyectoViajesContext context, ILoggerFactory loggerFactory)
+        {
+            try
+            {
+                var jsonFilePatch = "SeedData/types_hostings.json";
+                var jsonContent = await File.ReadAllTextAsync(jsonFilePatch);
+                var types_hostings = JsonConvert.DeserializeObject<List<TypeHostingEntity>>(jsonContent);
+
+                if(!await context.TypesHosting.AnyAsync())
+                {
+                    for(int i=0; i < types_hostings.Count; i++)
+                    {
+                        types_hostings[i].CreatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        types_hostings[i].CreatedDate = DateTime.Now;
+                        types_hostings[i].UpdatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        types_hostings[i].UpdatedDate = DateTime.Now;
+                    }
+                    context.AddRange(types_hostings);
+                    await context.SaveChangesAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<ProyectoViajesSeeder>();
+                logger.LogError(ex, "Error al ejecutar el seed de tipos de alojamientos");
+            }
+        }
+
+        private static async Task LoadFlightsAsync(ProyectoViajesContext context, ILoggerFactory loggerFactory)
+        {
+            try
+            {
+                var jsonFilePatch = "SeedData/flights.json";
+                var jsonContent = await File.ReadAllTextAsync(jsonFilePatch);
+                var flights = JsonConvert.DeserializeObject<List<FlightEntity>>(jsonContent);
+
+                if(!await context.Flights.AnyAsync())
+                {
+                    for(int i=0; i < flights.Count; i++)
+                    {
+                        flights[i].CreatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        flights[i].CreatedDate = DateTime.Now;
+                        flights[i].UpdatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        flights[i].UpdatedDate = DateTime.Now;
+                    }
+                    context.AddRange(flights);
+                    await context.SaveChangesAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<ProyectoViajesSeeder>();
+                logger.LogError(ex, "Error al ejecutar el seed de vuelos");
+            }
+        }
+
+        private static async Task LoadHostingsAsync(ProyectoViajesContext context, ILoggerFactory loggerFactory)
+        {
+            try
+            {
+                var jsonFilePatch = "SeedData/hostings.json";
+                var jsonContent = await File.ReadAllTextAsync(jsonFilePatch);
+                var hostings = JsonConvert.DeserializeObject<List<HostingEntity>>(jsonContent);
+
+                if(!await context.Hostings.AnyAsync())
+                {
+                    for(int i=0; i < hostings.Count; i++)
+                    {
+                        hostings[i].CreatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        hostings[i].CreatedDate = DateTime.Now;
+                        hostings[i].UpdatedBy = "2a373bd7-1829-4bb4-abb7-19da4257891d";
+                        hostings[i].UpdatedDate = DateTime.Now;
+                    }
+                    context.AddRange(hostings);
+                    await context.SaveChangesAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<ProyectoViajesSeeder>();
+                logger.LogError(ex, "Error al ejecutar el seed de alojamientos");
             }
         }
     }

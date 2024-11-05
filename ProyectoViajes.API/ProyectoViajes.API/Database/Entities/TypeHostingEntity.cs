@@ -10,9 +10,5 @@ namespace ProyectoViajes.API.Database.Entities
         [Required]
         [StringLength(75)]
         public string Name { get; set; }
-
-        [Column("description")]
-        [StringLength(500)]
-        public string Description { get; set; }
     }
 }

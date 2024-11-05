@@ -1,0 +1,403 @@
+[
+    {
+      "id": "c3f8b7e9-0b6a-4524-a72f-7d6b904d881a",
+      "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+      "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+      "name": "Angkor Wat Resort & Spa",
+      "description": "Un lujoso resort cercano a Angkor Wat, con vistas al templo y servicios exclusivos.",
+      "pricePerNight": 150
+    },
+    {
+      "id": "df1f6f85-7bfe-4d8f-9cfc-8f35a888b10f",
+      "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+      "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+      "name": "Temple View Guesthouse",
+      "description": "Una acogedora casa de huéspedes con vistas panorámicas a los templos de Angkor.",
+      "pricePerNight": 45
+    },
+    {
+      "id": "ef66b8a3-b55a-42ad-b53e-4120e1c21e24",
+      "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+      "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+      "name": "Angkor Heritage Hotel",
+      "description": "Un hotel con arquitectura tradicional jemer y servicios de lujo a pocos minutos del complejo.",
+      "pricePerNight": 80
+    },
+    {
+      "id": "35b6e9b8-937d-4f6e-95f3-d91a3abf1d47",
+      "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+      "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+      "name": "Angkor Comfort Inn",
+      "description": "Un pequeño y cómodo alojamiento para viajeros que buscan conveniencia y buen precio.",
+      "pricePerNight": 30
+    },
+    {
+      "id": "734bb5a6-5783-4f60-bf29-6c0ad8bfe595",
+      "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+      "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+      "name": "Angkor Eco Lodge",
+      "description": "Un alojamiento ecológico que se enfoca en la sostenibilidad, rodeado de naturaleza.",
+      "pricePerNight": 50
+    },
+    {
+        "id": "8c9b9d9c-9b1b-4e1e-9b75-e8f2a79d9d74",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+        "name": "Iguazú Jungle Lodge",
+        "description": "Un refugio en la selva cerca de las cascadas, con una vista espectacular de la naturaleza.",
+        "pricePerNight": 120
+      },
+      {
+        "id": "c9e0d9ac-290d-4b65-b9f1-c2a1d1ed6a26",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+        "name": "Falls View Hotel",
+        "description": "Hotel moderno con vistas directas a las Cataratas del Iguazú, con acceso rápido a los parques.",
+        "pricePerNight": 180
+      },
+      {
+        "id": "7ac3cbd4-bfd2-47ac-a3de-8749a1f824be",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+        "name": "Iguazú River Bungalows",
+        "description": "Acogedores bungalows junto al río Iguazú, ideales para una escapada tranquila.",
+        "pricePerNight": 75
+      },
+      {
+        "id": "17d1f2db-0e2e-48f2-9c5b-25902a72d04a",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+        "name": "Selva Iguazú Hostel",
+        "description": "Hostel con un ambiente relajado y amigable, ideal para mochileros que exploran las cataratas.",
+        "pricePerNight": 30
+      },
+      {
+        "id": "0d59a7c3-967e-4a37-bd5f-60d745f55b6c",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+        "name": "Iguazú Eco Resort",
+        "description": "Resort ecológico que combina lujo y naturaleza con actividades para disfrutar del entorno natural.",
+        "pricePerNight": 150
+      },
+      {
+        "id": "c3be9459-cb2e-4634-a939-9bcd45ac87f2",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+        "name": "Colosseo View Hotel",
+        "description": "Hotel con vistas impresionantes al Coliseo, ubicado en el corazón de Roma.",
+        "pricePerNight": 200
+      },
+      {
+        "id": "c5f4c2e4-5f0b-46f5-94ba-71f12d81035d",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+        "name": "Roman Palace Hostel",
+        "description": "Hostel histórico cerca del Coliseo, perfecto para los viajeros que buscan una experiencia económica.",
+        "pricePerNight": 40
+      },
+      {
+        "id": "9827c1db-9a7f-4777-a5be-098d8c4eec26",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+        "name": "Rome Suites",
+        "description": "Suites lujosas con una ubicación privilegiada cerca del Coliseo y otros monumentos romanos.",
+        "pricePerNight": 250
+      },
+      {
+        "id": "957d84a1-df3f-4b91-bfbb-0c4370a1fd5b",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+        "name": "Roman Holiday Inn",
+        "description": "Un cómodo hotel de tres estrellas en una ubicación perfecta para explorar la ciudad antigua.",
+        "pricePerNight": 100
+      },
+      {
+        "id": "8b5b8db1-3f9b-47e7-b6b5-7f3a144f1b43",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+        "name": "La Dolce Vita Boutique Hotel",
+        "description": "Hotel boutique con una experiencia única romana, servicio de alta calidad y un ambiente relajado.",
+        "pricePerNight": 180
+      },
+      {
+        "id": "7d9fcb4e-145e-4e85-87f5-dc5e24997eaf",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+        "name": "Great Wall Resort",
+        "description": "Un resort de lujo con vistas espectaculares a la Gran Muralla, ideal para una estancia exclusiva.",
+        "pricePerNight": 300
+      },
+      {
+        "id": "6f842fe5-d25d-40ba-8f85-63e9b6bdbb98",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+        "name": "Wall View Hostel",
+        "description": "Hostel con acceso fácil a la Gran Muralla, con un ambiente joven y relajado.",
+        "pricePerNight": 40
+      },
+      {
+        "id": "b4a8b8d0-670b-4314-8e25-64cd9893e9f1",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+        "name": "Beijing Great Wall Hotel",
+        "description": "Hotel de cuatro estrellas con modernas instalaciones y una vista inmejorable de la Muralla.",
+        "pricePerNight": 150
+      },
+      {
+        "id": "1a37b8f5-1f6d-4d6d-9738-0f8d44c47dfd",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+        "name": "Great Wall Lodge",
+        "description": "Alojamiento económico con un servicio amable y acceso fácil a la Muralla.",
+        "pricePerNight": 60
+      },
+      {
+        "id": "798a5d9c-4742-488e-b7c7-ccd9243c88f2",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+        "name": "The Wall Boutique Hotel",
+        "description": "Un boutique hotel cerca de la Gran Muralla con una experiencia única de lujo y confort.",
+        "pricePerNight": 200
+      },
+      {
+        "id": "b8c9be7c-df76-4e50-bf6e-79cd8b8b5690",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+        "name": "Machu Picchu Sanctuary Lodge",
+        "description": "Lodge de lujo al lado de Machu Picchu, ideal para explorar las maravillas de la antigua ciudad inca.",
+        "pricePerNight": 350
+      },
+      {
+        "id": "e83ad33c-4123-44a4-b9e5-429c2b29e595",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+        "name": "Inca View Hotel",
+        "description": "Un hotel con vistas panorámicas de Machu Picchu, ideal para los viajeros que buscan comodidad y cercanía.",
+        "pricePerNight": 150
+      },
+      {
+        "id": "d2f7cc16-24e9-44a5-aaf5-fb201de6b5d9",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+        "name": "Machu Picchu Guesthouse",
+        "description": "Alojamiento de bajo costo con acceso fácil al sitio arqueológico y un ambiente cálido.",
+        "pricePerNight": 60
+      },
+      {
+        "id": "e4a93db2-24a7-4c6b-b9fe-90aefb1d121a",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+        "name": "Andean Hostel",
+        "description": "Hostel ideal para mochileros y aventureros, con una atmósfera amigable y precios accesibles.",
+        "pricePerNight": 25
+      },
+      {
+        "id": "32c8db8a-4eab-42b2-8b61-6ca3876e9a48",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+        "name": "The Inca Trails Hotel",
+        "description": "Hotel cómodo y cercano a las rutas de trekking hacia Machu Picchu, ideal para explorar la región.",
+        "pricePerNight": 90
+      },
+      {
+        "id": "fb0c8c42-e604-4cbe-89b8-99bb1f1d57a3",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+        "name": "Fuji View Resort",
+        "description": "Resort de lujo con vistas panorámicas del Monte Fuji, ideal para una estancia tranquila y exclusiva.",
+        "pricePerNight": 250
+      },
+      {
+        "id": "3d2f23ac-b649-4b3d-9f7d-df9147f18ae0",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+        "name": "Fuji Peak Inn",
+        "description": "Acogedor hotel en las faldas del Monte Fuji, ideal para disfrutar de la naturaleza y las vistas.",
+        "pricePerNight": 130
+      },
+      {
+        "id": "fae87d09-71c6-46ae-9cf0-cf7483d239d7",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+        "name": "Mount Fuji Hostel",
+        "description": "Hostel sencillo pero acogedor, perfecto para viajeros que buscan una opción económica cerca del monte.",
+        "pricePerNight": 40
+      },
+      {
+        "id": "ad58d9f1-52b1-49b7-8bcf-e9b6f7888456",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+        "name": "Fujiyama Lodge",
+        "description": "Un lodge con una vista impresionante del Monte Fuji, ideal para quienes buscan una experiencia más rústica.",
+        "pricePerNight": 80
+      },
+      {
+        "id": "20efb3ff-b9d1-43ba-8cf9-4ec98d86cf96",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+        "name": "Fuji Vista Hotel",
+        "description": "Hotel de tres estrellas con vistas únicas del Monte Fuji, una excelente opción para los amantes de la naturaleza.",
+        "pricePerNight": 120
+      },
+      {
+        "id": "ddf00d7b-d9f2-43b2-aee6-bd118236350a",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+        "name": "Petra Palace Hotel",
+        "description": "Un hotel de lujo con vistas al desfiladero de Siq y la antigua ciudad de Petra, ideal para una estancia cómoda y cercana a los monumentos.",
+        "pricePerNight": 220
+      },
+      {
+        "id": "e5ed2be3-0982-4553-b2be-56cce6c2e1b0",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+        "name": "Petra Boutique Inn",
+        "description": "Inn boutique en el corazón de Petra, con habitaciones encantadoras y un ambiente acogedor.",
+        "pricePerNight": 110
+      },
+      {
+        "id": "a6d0a925-8e70-450d-b5a2-1189d6d18c38",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+        "name": "Wadi Musa Guesthouse",
+        "description": "Alojamiento sencillo en Wadi Musa, ideal para explorar Petra a un precio accesible.",
+        "pricePerNight": 50
+      },
+      {
+        "id": "1a47968a-b098-4d6c-a41d-b380b33f06a5",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+        "name": "Petra Desert Lodge",
+        "description": "Lodge en el desierto cerca de Petra, ideal para disfrutar de la tranquilidad y el ambiente árabe.",
+        "pricePerNight": 90
+      },
+      {
+        "id": "3eae5ab0-06ca-4d38-8d36-6795a91361c5",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+        "name": "Al Anbat Hotel",
+        "description": "Hotel económico con habitaciones cómodas y un fácil acceso a Petra, perfecto para los viajeros que buscan una opción asequible.",
+        "pricePerNight": 70
+      },
+      {
+        "id": "fbb49567-36e4-437b-b50c-963e36a8a9a1",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+        "name": "Santorini Luxury Suites",
+        "description": "Suites de lujo en la costa de Santorini, con vistas al mar Egeo y una experiencia de confort único.",
+        "pricePerNight": 350
+      },
+      {
+        "id": "ef827fcd-9535-423b-a1f4-7e340f7303da",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+        "name": "Santorini Breeze Hotel",
+        "description": "Hotel con vistas panorámicas al mar, ideal para una escapada relajante en la isla.",
+        "pricePerNight": 200
+      },
+      {
+        "id": "eb872ab7-bbc6-41b1-b95e-3e2ad6a2b789",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+        "name": "Fira Hostel",
+        "description": "Hostel económico en el centro de Fira, perfecto para explorar la isla sin romper el presupuesto.",
+        "pricePerNight": 60
+      },
+      {
+        "id": "f99f8b06-8b1d-4ad4-8a91-b3d8f8f9e8c4",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+        "name": "Santorini Cliff Resort",
+        "description": "Resort de lujo situado en un acantilado, con vistas impresionantes y un ambiente relajante.",
+        "pricePerNight": 350
+      },
+      {
+        "id": "76cb64ff-6e66-4b1e-b650-0adfdc3d1d84",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+        "name": "Oia Village Villas",
+        "description": "Villas privadas en Oia, Santorini, con vistas exclusivas al atardecer y lujo moderno.",
+        "pricePerNight": 500
+      },
+      {
+        "id": "5df5ed13-0159-4e72-b3bb-98e498a6c0ca",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+        "name": "Taj View Hotel",
+        "description": "Hotel de lujo con vistas al Taj Mahal, para una experiencia única cerca de este icónico monumento.",
+        "pricePerNight": 250
+      },
+      {
+        "id": "26a3b59b-8a35-4d28-8a95-1a5b5b257e0f",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+        "name": "Agra Heritage Inn",
+        "description": "Hotel cercano al Taj Mahal con un ambiente tradicional y todas las comodidades modernas.",
+        "pricePerNight": 120
+      },
+      {
+        "id": "d8e4826b-b6f0-4be0-b9e4-d86b7999c312",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+        "name": "Taj Mahal Guesthouse",
+        "description": "Guesthouse económica a solo unos minutos del Taj Mahal, ideal para viajeros con presupuesto limitado.",
+        "pricePerNight": 50
+      },
+      {
+        "id": "2d01d264-995e-423d-8b6b-1e3c4400ad1b",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+        "name": "Mughal Luxury Resort",
+        "description": "Resort de lujo con una piscina exterior, spa y vistas impresionantes del Taj Mahal.",
+        "pricePerNight": 300
+      },
+      {
+        "id": "fbd7426b-399f-43a7-8d7e-984d975be5db",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+        "name": "Agra Palace Hotel",
+        "description": "Un elegante hotel con excelentes vistas al Taj Mahal, perfecto para una estancia cómoda y lujosa.",
+        "pricePerNight": 180
+      },
+      {
+        "id": "74d3db85-7b83-4f27-ae33-8a57c7fc9877",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+        "name": "Eiffel Tower Luxury Suites",
+        "description": "Suites de lujo con vistas panorámicas a la Torre Eiffel, el lugar perfecto para una estancia romántica.",
+        "pricePerNight": 500
+      },
+      {
+        "id": "6f5423fc-e719-4426-b779-9a3d9d3c3eb6",
+        "typeHostingId": "a5f8f3b7-4b1d-4b58-8e99-5465f35e0f84",
+        "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+        "name": "Hotel Paris View",
+        "description": "Hotel con vistas a la Torre Eiffel, con servicios de alta calidad y a solo unos pasos del centro de París.",
+        "pricePerNight": 350
+      },
+      {
+        "id": "e315216d-178e-4cf1-85d5-9b88d80c4fd7",
+        "typeHostingId": "f3a2c2d8-7c45-4b6b-a8d3-4c59cabc7c3d",
+        "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+        "name": "Eiffel Hostel",
+        "description": "Hostel cercano a la Torre Eiffel, ideal para aquellos que buscan una opción económica y accesible.",
+        "pricePerNight": 60
+      },
+      {
+        "id": "ff07f3d1-1f5f-4428-a0cc-cfc0f7991c85",
+        "typeHostingId": "e5f8f3b7-4b1d-4b58-8e99-5465f35e0f85",
+        "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+        "name": "Parisian Elegance Hotel",
+        "description": "Hotel elegante en el centro de París con acceso rápido a la Torre Eiffel y otras atracciones.",
+        "pricePerNight": 250
+      },
+      {
+        "id": "6c4a63fe-f2d4-4018-855e-4f04033eae99",
+        "typeHostingId": "d9c1b3e7-2c1a-4c8e-9f7e-1e5e2e978b6e",
+        "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+        "name": "Le Petit Paris",
+        "description": "Un acogedor hotel boutique con un estilo parisino auténtico, ideal para una estancia corta en la ciudad.",
+        "pricePerNight": 100
+      }
+  ]
+  
