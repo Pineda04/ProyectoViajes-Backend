@@ -25,7 +25,7 @@ namespace ProyectoViajes.API.Services
         {
             var flightEntities = await _context.Flights
                 .Include(h => h.Destination)         
-                .Include(h => h.TypeFlight)        
+                .Include(h => h.TypeFlight)
                 .ToListAsync();
 
             var flightDtos = _mapper.Map<List<FlightDto>>(flightEntities);

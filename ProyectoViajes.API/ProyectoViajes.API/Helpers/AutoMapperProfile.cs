@@ -8,6 +8,7 @@ using ProyectoViajes.API.Dtos.Flights;
 using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Dtos.TypeHostings;
 using ProyectoViajes.API.Dtos.TypesFlight;
+using ProyectoViajes.API.Dtos.Assessments;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -23,12 +24,21 @@ namespace ProyectoViajes.API.Helpers
             MapsForTypesHosting();
             MapsForTypesFlight();
             MapsForFlights();
+            MapsForAssessments();
+        }
+
+        private void MapsForAssessments()
+        {
+            CreateMap<AssessmentEntity, AssessmentDto>();
+            CreateMap<AssessmentCreateDto, AssessmentEntity>();
+            CreateMap<AssessmentEditDto, AssessmentEntity>();
         }
 
         private void MapsForTravelPackages()
         {
             CreateMap<TravelPackageEntity, TravelPackageDto>()
-                .ForMember(tp => tp.Activities, opt => opt.MapFrom(src => src.Activities));
+                .ForMember(tp => tp.Activities, opt => opt.MapFrom(src => src.Activities))
+                .ForMember(tp => tp.Assessments, opt => opt.MapFrom(src => src.Assessments));
             CreateMap<TravelPackageCreateDto, TravelPackageEntity>();
             CreateMap<TravelPackageEditDto, TravelPackageEntity>();
         }

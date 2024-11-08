@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoViajes.API.Database;
 
@@ -11,9 +12,11 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    partial class ProyectoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20241106193229_AddAssessments")]
+    partial class AddAssessments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -489,7 +492,7 @@ namespace ProyectoViajes.API.Migrations
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.AssessmentEntity", b =>
                 {
                     b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
-                        .WithMany("Assessments")
+                        .WithMany()
                         .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -565,8 +568,6 @@ namespace ProyectoViajes.API.Migrations
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TravelPackageEntity", b =>
                 {
                     b.Navigation("Activities");
-
-                    b.Navigation("Assessments");
                 });
 #pragma warning restore 612, 618
         }

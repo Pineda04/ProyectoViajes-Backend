@@ -42,5 +42,7 @@ namespace ProyectoViajes.API.Database.Entities
         public Guid DestinationId { get; set; }
         [ForeignKey(nameof(DestinationId))]
         public virtual DestinationEntity Destination { get; set; }
+
+        public virtual IEnumerable<AssessmentEntity> Assessments { get; set; }
     }
 }

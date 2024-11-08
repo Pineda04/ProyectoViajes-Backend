@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoViajes.API.Database;
 
@@ -11,9 +12,11 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    partial class ProyectoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20241107212411_AddTables")]
+    partial class AddTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -344,6 +347,72 @@ namespace ProyectoViajes.API.Migrations
                     b.ToTable("points_interest", "dbo");
                 });
 
+            modelBuilder.Entity("ProyectoViajes.API.Database.Entities.ReservationEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("created_by");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_date");
+
+                    b.Property<Guid>("DestinationId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("destination_id");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("end_date");
+
+                    b.Property<Guid>("FlightId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("flight_id");
+
+                    b.Property<Guid>("HostingId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("hosting_id");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("start_date");
+
+                    b.Property<Guid>("TravelPackageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("travel_package_id");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("updated_by");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_date");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DestinationId");
+
+                    b.HasIndex("FlightId");
+
+                    b.HasIndex("HostingId");
+
+                    b.HasIndex("TravelPackageId");
+
+                    b.ToTable("reservations", "dbo");
+                });
+
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TravelPackageEntity", b =>
                 {
                     b.Property<Guid>("Id")
@@ -544,6 +613,41 @@ namespace ProyectoViajes.API.Migrations
                         .IsRequired();
 
                     b.Navigation("Destination");
+                });
+
+            modelBuilder.Entity("ProyectoViajes.API.Database.Entities.ReservationEntity", b =>
+                {
+                    b.HasOne("ProyectoViajes.API.Database.Entities.DestinationEntity", "Destination")
+                        .WithMany()
+                        .HasForeignKey("DestinationId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoViajes.API.Database.Entities.FlightEntity", "Flight")
+                        .WithMany()
+                        .HasForeignKey("FlightId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoViajes.API.Database.Entities.HostingEntity", "Hosting")
+                        .WithMany()
+                        .HasForeignKey("HostingId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
+                        .WithMany()
+                        .HasForeignKey("TravelPackageId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Destination");
+
+                    b.Navigation("Flight");
+
+                    b.Navigation("Hosting");
+
+                    b.Navigation("TravelPackage");
                 });
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TravelPackageEntity", b =>

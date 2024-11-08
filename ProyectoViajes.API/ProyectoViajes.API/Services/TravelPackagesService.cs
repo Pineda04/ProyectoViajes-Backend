@@ -21,7 +21,7 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<List<TravelPackageDto>>> GetTravelPackagesListAsync()
         {
             var travelPackagesEntity = await _context.Travels
-                .Include(tp => tp.Activities).ToListAsync();
+                .Include(tp => tp.Activities).Include(tp => tp.Assessments).ToListAsync();
             var travelPackagesDtos = _mapper.Map<List<TravelPackageDto>>(travelPackagesEntity);
             return new ResponseDto<List<TravelPackageDto>>
             {
@@ -34,7 +34,7 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<TravelPackageDto>> GetTravelPackageByIdAsync(Guid id)
         {
             var travelPackageEntity = await _context.Travels
-                .Include(tp => tp.Activities).FirstOrDefaultAsync(tp => tp.Id == id);
+                .Include(tp => tp.Activities).Include(tp => tp.Assessments).FirstOrDefaultAsync(tp => tp.Id == id);
             if (travelPackageEntity == null)
             {
                 return new ResponseDto<TravelPackageDto>

@@ -19,35 +19,35 @@ namespace ProyectoViajes.API.Controllers
         // Traer todos
         [HttpGet]
         public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> GetAll(){
-            var response = await _pointsInterestService.GetPuntosDeInteresListAsync();
+            var response = await _pointsInterestService.GetPointsInterestListAsync();
             return StatusCode(response.StatusCode, response);
         }
 
         // Traer por id
         [HttpGet("{id}")]
         public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> Get(Guid id){
-            var response = await _pointsInterestService.GetPuntoDeInteresByIdAsync(id);
+            var response = await _pointsInterestService.GetPointInterestByIdAsync(id);
             return StatusCode(response.StatusCode, response);
         }
 
         // Crear un punto de interes
         [HttpPost]
         public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> Create(PointInterestCreateDto dto){
-            var response = await _pointsInterestService.CreatePuntoDeInteresAsync(dto);
+            var response = await _pointsInterestService.CreateAsync(dto);
             return StatusCode(response.StatusCode, response);
         }
 
         // Editar un punto de interes
         [HttpPut("{id}")]
         public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> Edit(PointInterestEditDto dto ,Guid id){
-            var response = await _pointsInterestService.EditPuntoDeInteresAsync(dto, id);
+            var response = await _pointsInterestService.EditAsync(dto, id);
             return StatusCode(response.StatusCode, response);
         }
 
         // Eliminar un punto de interes
         [HttpDelete("{id}")]
         public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> Delete(Guid id){
-            var response = await _pointsInterestService.DeletePuntoDeInteresAsync(id);
+            var response = await _pointsInterestService.DeleteAsync(id);
             return StatusCode(response.StatusCode, response);
         }
     }

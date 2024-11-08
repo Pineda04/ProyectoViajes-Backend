@@ -1,4 +1,5 @@
 ﻿using ProyectoViajes.API.Database.Entities;
+using ProyectoViajes.API.Dtos.Destinations;
 
 namespace ProyectoViajes.API.Dtos.Flights
 {
@@ -6,7 +7,7 @@ namespace ProyectoViajes.API.Dtos.Flights
     {
         public Guid Id { get; set; }
         public Guid TypeFlightId { get; set; }
-        public Guid DestinationId { get; set; }
+        public DestinationDto Destination { get; set; }
         public string Airline { get; set; }
         public string Origin { get; set; }
         public DateTime DepartureDate { get; set; }

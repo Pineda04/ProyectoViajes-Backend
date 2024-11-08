@@ -1,4 +1,5 @@
 using ProyectoViajes.API.Dtos.Activities;
+using ProyectoViajes.API.Dtos.Assessments;
 using ProyectoViajes.API.Dtos.Destinations;
 
 namespace ProyectoViajes.API.Dtos.TravelPackages
@@ -12,5 +13,6 @@ namespace ProyectoViajes.API.Dtos.TravelPackages
         public int Duration { get; set; }
         public int NumberPerson { get; set; }
         public List<ActivityDto> Activities { get; set; }
+        public List<AssessmentDto> Assessments { get; set; }
     }
 }
