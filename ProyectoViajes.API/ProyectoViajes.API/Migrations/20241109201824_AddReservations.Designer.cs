@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoViajes.API.Database;
 
@@ -11,9 +12,11 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    partial class ProyectoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20241109201824_AddReservations")]
+    partial class AddReservations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

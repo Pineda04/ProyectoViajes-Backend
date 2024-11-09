@@ -9,6 +9,7 @@ using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Dtos.TypeHostings;
 using ProyectoViajes.API.Dtos.TypesFlight;
 using ProyectoViajes.API.Dtos.Assessments;
+using ProyectoViajes.API.Dtos.Reservations;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -25,6 +26,18 @@ namespace ProyectoViajes.API.Helpers
             MapsForTypesFlight();
             MapsForFlights();
             MapsForAssessments();
+            MapsForReservations();
+        }
+
+        private void MapsForReservations()
+        {
+            CreateMap<ReservationEntity, ReservationDto>()
+            .ForMember(dest => dest.TravelPackageName, opt => opt.MapFrom(src => src.TravelPackage.Name))
+            .ForMember(dest => dest.FlightAirline, opt => opt.MapFrom(src => src.Flight.Airline))
+            .ForMember(dest => dest.HostingName, opt => opt.MapFrom(src => src.Hosting.Name));
+
+            CreateMap<ReservationCreateDto, ReservationEntity>();
+            CreateMap<ReservationEditDto, ReservationEntity>();
         }
 
         private void MapsForAssessments()

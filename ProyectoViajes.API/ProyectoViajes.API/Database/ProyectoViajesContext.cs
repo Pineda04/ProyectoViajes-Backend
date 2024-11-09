@@ -41,6 +41,77 @@ namespace ProyectoViajes.API.Database
             return base.SaveChangesAsync(cancellationToken);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ActivityEntity>()
+                .HasOne(a => a.TravelPackage)
+                .WithMany(tp => tp.Activities)
+                .HasForeignKey(a => a.TravelPackageId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<AssessmentEntity>()
+                .HasOne(a => a.TravelPackage)
+                .WithMany(tp => tp.Assessments)
+                .HasForeignKey(a => a.TravelPackageId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<DestinationEntity>()
+                .HasMany(d => d.PointsInterest)
+                .WithOne(pi => pi.Destination)
+                .HasForeignKey(pi => pi.DestinationId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<FlightEntity>()
+                .HasOne(f => f.TypeFlight)
+                .WithMany()
+                .HasForeignKey(f => f.TypeFlightId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FlightEntity>()
+                .HasOne(f => f.Destination)
+                .WithMany()
+                .HasForeignKey(f => f.DestinationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<HostingEntity>()
+                .HasOne(h => h.TypeHosting)
+                .WithMany()
+                .HasForeignKey(h => h.TypeHostingId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<HostingEntity>()
+                .HasOne(h => h.Destination)
+                .WithMany()
+                .HasForeignKey(h => h.DestinationId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ReservationEntity>()
+                .HasOne(r => r.TravelPackage)
+                .WithMany()
+                .HasForeignKey(r => r.TravelPackageId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ReservationEntity>()
+                .HasOne(r => r.Flight)
+                .WithMany()
+                .HasForeignKey(r => r.FlightId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ReservationEntity>()
+                .HasOne(r => r.Hosting)
+                .WithMany()
+                .HasForeignKey(r => r.HostingId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TravelPackageEntity>()
+                .HasOne(tp => tp.Destination)
+                .WithMany()
+                .HasForeignKey(tp => tp.DestinationId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+
         public DbSet<DestinationEntity> Destinations { get; set; }
         public DbSet<PointInterestEntity> PointsInterest { get; set; }
         public DbSet<ActivityEntity> Activities { get; set; }
@@ -50,5 +121,6 @@ namespace ProyectoViajes.API.Database
         public DbSet<TypeFlightEntity> TypesFlight { get; set; }
         public DbSet<FlightEntity> Flights { get; set; }
         public DbSet<AssessmentEntity> Assessments { get; set; }
+        public DbSet<ReservationEntity> Reservations { get; set; }
     }
 }
