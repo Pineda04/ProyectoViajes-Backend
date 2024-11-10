@@ -13,13 +13,15 @@ namespace ProyectoViajes.API.Controllers
         public PointsInterestController(IPointsInterestService pointsInterestService)
         {
             _pointsInterestService = pointsInterestService;
-            
         }
 
         // Traer todos
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> GetAll(){
-            var response = await _pointsInterestService.GetPointsInterestListAsync();
+        public async Task<ActionResult<ResponseDto<List<PointInterestDto>>>> GetAll(
+            string searchTerm = "",
+            int page = 1
+        ){
+            var response = await _pointsInterestService.GetPointsInterestListAsync(searchTerm, page);
             return StatusCode(response.StatusCode, response);
         }
 

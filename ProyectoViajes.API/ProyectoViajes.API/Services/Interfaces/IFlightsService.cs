@@ -6,7 +6,9 @@ namespace ProyectoViajes.API.Services.Interfaces
 {
     public interface IFlightsService
     { 
-        Task<ResponseDto<List<FlightDto>>> GetFlightsListAsync();
+        Task<ResponseDto<PaginationDto<List<FlightDto>>>> GetFlightsListAsync(
+            string searchTerm = "", int page = 1
+        );
         Task<ResponseDto<FlightDto>> GetFlightByIdAsync(Guid id);
         Task<ResponseDto<FlightDto>> CreateAsync(FlightCreateDto dto);
         Task<ResponseDto<FlightDto>> EditAsync(FlightEditDto dto, Guid id);

@@ -13,33 +13,68 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public PointsInterestService(ProyectoViajesContext context, IMapper mapper)
+        public PointsInterestService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
 
-        public async Task<ResponseDto<List<PointInterestDto>>> GetPointsInterestListAsync()
+        public async Task<ResponseDto<PaginationDto<List<PointInterestDto>>>> GetPointsInterestListAsync(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var pointsEntity = await _context.PointsInterest.ToListAsync();
+            int startIndex = (page - 1) * PAGE_SIZE;
 
-            var pointsDto = _mapper.Map<List<PointInterestDto>>(pointsEntity);
+            var pointsQuery = _context.PointsInterest.AsQueryable();
 
-            return new ResponseDto<List<PointInterestDto>>{
-              StatusCode = 200,
-              Status = true,
-              Message = MessagesConstants.RECORDS_FOUND,
-              Data = pointsDto  
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                pointsQuery = pointsQuery
+                    .Where(p => p.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                p.Destination.Name.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await pointsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var pointEntities = await pointsQuery
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .ToListAsync();
+
+            var pointDtos = _mapper.Map<List<PointInterestDto>>(pointEntities);
+
+            return new ResponseDto<PaginationDto<List<PointInterestDto>>>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<PointInterestDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = pointDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
+
 
         public async Task<ResponseDto<PointInterestDto>> GetPointInterestByIdAsync(Guid id)
         {
             var pointsEntity = await _context.PointsInterest.FirstOrDefaultAsync(p => p.Id == id);
 
-            if(pointsEntity == null){
-                return new ResponseDto<PointInterestDto>{
+            if (pointsEntity == null)
+            {
+                return new ResponseDto<PointInterestDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.RECORD_NOT_FOUND
@@ -48,7 +83,8 @@ namespace ProyectoViajes.API.Services
 
             var pointsDto = _mapper.Map<PointInterestDto>(pointsEntity);
 
-            return new ResponseDto<PointInterestDto>{
+            return new ResponseDto<PointInterestDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.RECORD_FOUND,
@@ -66,7 +102,8 @@ namespace ProyectoViajes.API.Services
 
             var pointsDto = _mapper.Map<PointInterestDto>(pointsEntity);
 
-            return new ResponseDto<PointInterestDto>{
+            return new ResponseDto<PointInterestDto>
+            {
                 StatusCode = 201,
                 Status = true,
                 Message = MessagesConstants.CREATE_SUCCESS,
@@ -78,8 +115,10 @@ namespace ProyectoViajes.API.Services
         {
             var pointsEntity = await _context.PointsInterest.FirstOrDefaultAsync(p => p.Id == id);
 
-            if(pointsEntity == null){
-                return new ResponseDto<PointInterestDto>{
+            if (pointsEntity == null)
+            {
+                return new ResponseDto<PointInterestDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.UPDATE_ERROR
@@ -94,7 +133,8 @@ namespace ProyectoViajes.API.Services
 
             var pointsDto = _mapper.Map<PointInterestDto>(pointsEntity);
 
-            return new ResponseDto<PointInterestDto>{
+            return new ResponseDto<PointInterestDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.UPDATE_SUCCESS,
@@ -106,8 +146,10 @@ namespace ProyectoViajes.API.Services
         {
             var pointsEntity = await _context.PointsInterest.FirstOrDefaultAsync(p => p.Id == id);
 
-            if(pointsEntity == null){
-                return new ResponseDto<PointInterestDto>{
+            if (pointsEntity == null)
+            {
+                return new ResponseDto<PointInterestDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.DELETE_ERROR
@@ -118,7 +160,8 @@ namespace ProyectoViajes.API.Services
 
             await _context.SaveChangesAsync();
 
-            return new ResponseDto<PointInterestDto>{
+            return new ResponseDto<PointInterestDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.DELETE_SUCCESS

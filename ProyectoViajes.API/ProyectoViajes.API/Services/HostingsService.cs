@@ -15,38 +15,69 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public HostingsService(ProyectoViajesContext context, IMapper mapper)
+        public HostingsService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
-        
+
         // obtener listado de hospedajes 
-        public async Task<ResponseDto<List<HostingDto>>> GetHostingsListAsync()
+        public async Task<ResponseDto<PaginationDto<List<HostingDto>>>> GetHostingsListAsync(
+            string searchTerm = "", 
+            int page = 1
+        )
         {
-            var hostingEntities = await _context.Hostings
-                .Include(h => h.Destination)         
-                .Include(h => h.TypeHosting)        
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var hostingsQuery = _context.Hostings.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                hostingsQuery = hostingsQuery.Where(h => h.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                                          h.Destination.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                                          h.TypeHosting.Name.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await hostingsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var hostingEntities = await hostingsQuery
+                .Include(h => h.Destination)  
+                .Include(h => h.TypeHosting)  
+                .OrderBy(h => h.CreatedDate)  
+                .Skip(startIndex)  
+                .Take(PAGE_SIZE)
                 .ToListAsync();
 
             var hostingDtos = _mapper.Map<List<HostingDto>>(hostingEntities);
 
-            return new ResponseDto<List<HostingDto>>
+            return new ResponseDto<PaginationDto<List<HostingDto>>>
             {
                 StatusCode = 200,
                 Status = true,
-                Message = MessagesConstants.RECORD_FOUND,
-                Data = hostingDtos
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<HostingDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = hostingDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
 
-         // obtener por id
+        // obtener por id
         public async Task<ResponseDto<HostingDto>> GetHostingByIdAsync(Guid id)
         {
             var hostingEntity = await _context.Hostings
-                .Include(h => h.Destination)       
-                .Include(h => h.TypeHosting)        
+                .Include(h => h.Destination)
+                .Include(h => h.TypeHosting)
                 .FirstOrDefaultAsync(h => h.Id == id);
 
             if (hostingEntity == null)

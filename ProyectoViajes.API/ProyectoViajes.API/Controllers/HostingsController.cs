@@ -18,9 +18,12 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer todos
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<HostingDto>>> GetAll()
+        public async Task<ActionResult<ResponseDto<List<HostingDto>>>> GetAll(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var response = await _hostingsService.GetHostingsListAsync();
+            var response = await _hostingsService.GetHostingsListAsync(searchTerm, page);
 
             return StatusCode(response.StatusCode, response);
         }

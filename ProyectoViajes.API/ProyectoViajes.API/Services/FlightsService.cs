@@ -13,38 +13,67 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public FlightsService(ProyectoViajesContext context, IMapper mapper)
+        public FlightsService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
-        
-        // obtener listado de hospedajes 
-        public async Task<ResponseDto<List<FlightDto>>> GetFlightsListAsync()
+
+        public async Task<ResponseDto<PaginationDto<List<FlightDto>>>> GetFlightsListAsync(string searchTerm = "", int page = 1)
         {
-            var flightEntities = await _context.Flights
-                .Include(h => h.Destination)         
-                .Include(h => h.TypeFlight)
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var flightsQuery = _context.Flights.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                flightsQuery = flightsQuery
+                    .Where(f => f.Airline.ToLower().Contains(searchTerm.ToLower()) ||
+                                f.Origin.ToLower().Contains(searchTerm.ToLower()) ||
+                                f.Destination.Name.ToLower().Contains(searchTerm.ToLower())
+                    );
+            }
+
+            int totalFlights = await flightsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalFlights / PAGE_SIZE);
+
+            var flightEntities = await flightsQuery
+                .Include(f => f.Destination)
+                .Include(f => f.TypeFlight)
+                .OrderByDescending(f => f.CreatedDate)
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
                 .ToListAsync();
 
             var flightDtos = _mapper.Map<List<FlightDto>>(flightEntities);
 
-            return new ResponseDto<List<FlightDto>>
+            return new ResponseDto<PaginationDto<List<FlightDto>>>
             {
                 StatusCode = 200,
                 Status = true,
-                Message = MessagesConstants.RECORD_FOUND,
-                Data = flightDtos
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<FlightDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalFlights,
+                    TotalPages = totalPages,
+                    Items = flightDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
 
-         // obtener por id
+        // obtener por id
         public async Task<ResponseDto<FlightDto>> GetFlightByIdAsync(Guid id)
         {
             var flightEntity = await _context.Flights
-                .Include(h => h.Destination)       
-                .Include(h => h.TypeFlight)        
+                .Include(h => h.Destination)
+                .Include(h => h.TypeFlight)
                 .FirstOrDefaultAsync(h => h.Id == id);
 
             if (flightEntity == null)
