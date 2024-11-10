@@ -13,22 +13,54 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
-        public ActivitiesService(ProyectoViajesContext context, IMapper mapper)
+        private readonly int PAGE_SIZE;
+        public ActivitiesService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
-        public async Task<ResponseDto<List<ActivityDto>>> GetActivitiesListAsync()
+        public async Task<ResponseDto<PaginationDto<List<ActivityDto>>>> GetActivitiesListAsync(
+            string searchTerm = "", 
+            int page = 1)
         {
-            var activitiesEntity = await _context.Activities
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var activitiesQuery = _context.Activities.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                activitiesQuery = activitiesQuery
+                    .Where(x => (x.Name + " " + x.Description)
+                    .ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalActivities = await activitiesQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalActivities / PAGE_SIZE);
+
+            var activitiesEntity = await activitiesQuery
+                .OrderByDescending(x => x.CreatedDate)
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
                 .ToListAsync();
-            var activitiesDtos = _mapper.Map<List<ActivityDto>>(activitiesEntity);
-            return new ResponseDto<List<ActivityDto>>
+
+            var activitiesDto = _mapper.Map<List<ActivityDto>>(activitiesEntity);
+
+            return new ResponseDto<PaginationDto<List<ActivityDto>>>
             {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.RECORDS_FOUND,
-                Data = activitiesDtos
+                Data = new PaginationDto<List<ActivityDto>>
+                {
+                    CurrentPage = page,           
+                    PageSize = PAGE_SIZE,         
+                    TotalItems = totalActivities, 
+                    TotalPages = totalPages,      
+                    Items = activitiesDto,        
+                    HasPreviousPage = page > 1,   
+                    HasNextPage = page < totalPages 
+                }
             };
         }
         public async Task<ResponseDto<ActivityDto>> GetActivityByIdAsync(Guid id)

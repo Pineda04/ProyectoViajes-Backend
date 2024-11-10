@@ -13,24 +13,61 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
-        public AssessmentsService(ProyectoViajesContext context, IMapper mapper)
+        private readonly int PAGE_SIZE;
+
+        public AssessmentsService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
-        public async Task<ResponseDto<List<AssessmentDto>>> GetAssessmentsListAsync()
+
+        public async Task<ResponseDto<PaginationDto<List<AssessmentDto>>>> GetAssessmentsListAsync(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var assessmentsEntity = await _context.Assessments
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var assessmentsQuery = _context.Assessments.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Buscar por comentario o cantidad de estrellas
+                assessmentsQuery = assessmentsQuery
+                    .Where(x => (x.Comment != null && x.Comment.ToLower().Contains(searchTerm.ToLower()))
+                    || x.Stars.ToString().Contains(searchTerm));
+            }
+
+            int totalAssessments = await assessmentsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalAssessments / PAGE_SIZE);
+
+            var assessmentsEntity = await assessmentsQuery
+                .OrderByDescending(x => x.CreatedDate)
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
                 .ToListAsync();
-            var assessmentsDtos = _mapper.Map<List<AssessmentDto>>(assessmentsEntity);
-            return new ResponseDto<List<AssessmentDto>>
+
+            var assessmentsDto = _mapper.Map<List<AssessmentDto>>(assessmentsEntity);
+
+            return new ResponseDto<PaginationDto<List<AssessmentDto>>>
             {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.RECORDS_FOUND,
-                Data = assessmentsDtos
+                Data = new PaginationDto<List<AssessmentDto>>
+                {
+                    CurrentPage = page,           
+                    PageSize = PAGE_SIZE,         
+                    TotalItems = totalAssessments, 
+                    TotalPages = totalPages,      
+                    Items = assessmentsDto,        
+                    HasPreviousPage = page > 1,   
+                    HasNextPage = page < totalPages
+                }
             };
         }
+
         public async Task<ResponseDto<AssessmentDto>> GetAssessmentByIdAsync(Guid id)
         {
             var assessmentEntity = await _context.Assessments
