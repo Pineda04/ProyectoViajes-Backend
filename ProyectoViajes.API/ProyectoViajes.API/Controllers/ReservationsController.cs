@@ -16,9 +16,12 @@ namespace ProyectoViajes.API.Controllers
         }
         // Traer todos
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<List<ReservationDto>>>> GetAll()
+        public async Task<ActionResult<ResponseDto<List<ReservationDto>>>> GetAll(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var response = await _reservationsService.GetAllReservationsAsync();
+            var response = await _reservationsService.GetAllReservationsAsync(searchTerm, page);
             return StatusCode(response.StatusCode, response);
         }
         // Traer por id

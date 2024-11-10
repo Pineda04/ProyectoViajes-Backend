@@ -14,26 +14,57 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public TypesFlightService(ProyectoViajesContext context, IMapper mapper)
+        public TypesFlightService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
 
-        public async Task<ResponseDto<List<TypeFlightDto>>> GetTypesFlightListAsync()
+        public async Task<ResponseDto<PaginationDto<List<TypeFlightDto>>>> GetTypesFlightListAsync(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var typeFlightEntity = await _context.TypesFlight.ToListAsync();
-            var typeFlightDtos = _mapper.Map<List<TypeFlightDto>>(typeFlightEntity);
+            int startIndex = (page - 1) * PAGE_SIZE;
 
-            return new ResponseDto<List<TypeFlightDto>>
+            var typesFlightQuery = _context.TypesFlight.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                typesFlightQuery = typesFlightQuery.Where(t => t.Name.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await typesFlightQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var typesFlightEntities = await typesFlightQuery
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .ToListAsync();
+
+            var typesFlightDtos = _mapper.Map<List<TypeFlightDto>>(typesFlightEntities);
+
+            return new ResponseDto<PaginationDto<List<TypeFlightDto>>>
             {
                 StatusCode = 200,
                 Status = true,
-                Message = MessagesConstants.RECORD_FOUND,
-                Data = typeFlightDtos
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<TypeFlightDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = typesFlightDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
+
         public async Task<ResponseDto<TypeFlightDto>> GetTypeFlightByIdAsync(Guid id)
         {
             var typeFlightEntity = await _context.TypesFlight.FirstOrDefaultAsync(t => t.Id == id);
@@ -57,7 +88,7 @@ namespace ProyectoViajes.API.Services
                 Message = MessagesConstants.RECORD_FOUND,
                 Data = typeFlightDto
             };
-        } 
+        }
         public async Task<ResponseDto<TypeFlightDto>> CreateAsync(TypeFlightCreateDto dto)
         {
             var typeFlightEntity = _mapper.Map<TypeFlightEntity>(dto);
@@ -130,6 +161,6 @@ namespace ProyectoViajes.API.Services
                 Message = MessagesConstants.DELETE_SUCCESS
             };
         }
-       
+
     }
 }

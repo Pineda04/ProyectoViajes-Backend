@@ -14,13 +14,18 @@ namespace ProyectoViajes.API.Controllers
         {
             _travelPackagesService = travelPackagesService;
         }
+
         // Traer todos
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<List<TravelPackageDto>>>> GetAll()
+        public async Task<ActionResult<ResponseDto<List<TravelPackageDto>>>> GetAll(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var response = await _travelPackagesService.GetTravelPackagesListAsync();
+            var response = await _travelPackagesService.GetTravelPackagesListAsync(searchTerm, page);
             return StatusCode(response.StatusCode, response);
         }
+
         // Traer por id
         [HttpGet("{id}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Get(Guid id)
@@ -28,6 +33,7 @@ namespace ProyectoViajes.API.Controllers
             var response = await _travelPackagesService.GetTravelPackageByIdAsync(id);
             return StatusCode(response.StatusCode, response);
         }
+
         // Crear
         [HttpPost]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Create(TravelPackageCreateDto dto)
@@ -35,6 +41,7 @@ namespace ProyectoViajes.API.Controllers
             var response = await _travelPackagesService.CreateAsync(dto);
             return StatusCode(response.StatusCode, response);
         }
+
         // Editar
         [HttpPut("{id}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Edit(TravelPackageEditDto dto, Guid id)
@@ -42,6 +49,7 @@ namespace ProyectoViajes.API.Controllers
             var response = await _travelPackagesService.EditAsync(dto, id);
             return StatusCode(response.StatusCode, response);
         }
+
         // Eliminar
         [HttpDelete("{id}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Delete(Guid id)

@@ -20,9 +20,12 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer todos
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<TypeFlightDto>>> GetAll()
+        public async Task<ActionResult<ResponseDto<TypeFlightDto>>> GetAll(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var response = await _services.GetTypesFlightListAsync();
+            var response = await _services.GetTypesFlightListAsync(searchTerm, page);
 
             return StatusCode(response.StatusCode, response);
         }

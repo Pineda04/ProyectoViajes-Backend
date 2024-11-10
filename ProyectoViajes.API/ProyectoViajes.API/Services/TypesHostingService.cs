@@ -9,31 +9,62 @@ using ProyectoViajes.API.Dtos.TypeHostings;
 using ProyectoViajes.API.Services.Interfaces;
 
 namespace ProyectoViajes.API.Services
-{  
+{
     public class TypesHostingService : ITypesHostingService
-    { 
+    {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public TypesHostingService(ProyectoViajesContext context, IMapper mapper)
+        public TypesHostingService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
 
-        public async Task<ResponseDto<List<TypeHostingDto>>> GetTypesHostingListAsync()
+        public async Task<ResponseDto<PaginationDto<List<TypeHostingDto>>>> GetTypesHostingListAsync(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var typeHostingEntity = await _context.TypesHosting.ToListAsync();
-            var typeHostingDtos = _mapper.Map<List<TypeHostingDto>>(typeHostingEntity);
+            int startIndex = (page - 1) * PAGE_SIZE;
 
-            return new ResponseDto<List<TypeHostingDto>>
+            var typesHostingQuery = _context.TypesHosting.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                typesHostingQuery = typesHostingQuery.Where(t => t.Name.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await typesHostingQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var typesHostingEntities = await typesHostingQuery
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .ToListAsync();
+
+            var typesHostingDtos = _mapper.Map<List<TypeHostingDto>>(typesHostingEntities);
+
+            return new ResponseDto<PaginationDto<List<TypeHostingDto>>>
             {
                 StatusCode = 200,
                 Status = true,
-                Message = MessagesConstants.RECORD_FOUND,
-                Data = typeHostingDtos
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<TypeHostingDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = typesHostingDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
+
         public async Task<ResponseDto<TypeHostingDto>> GetTypeHostingByIdAsync(Guid id)
         {
             var typeHostingEntity = await _context.TypesHosting.FirstOrDefaultAsync(t => t.Id == id);

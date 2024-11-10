@@ -13,24 +13,49 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
+        private readonly int PAGE_SIZE;
 
-        public ReservationsService(ProyectoViajesContext context, IMapper mapper)
+        public ReservationsService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
 
-        public async Task<ResponseDto<List<ReservationDto>>> GetAllReservationsAsync()
+        public async Task<ResponseDto<PaginationDto<List<ReservationDto>>>> GetAllReservationsAsync(
+            string searchTerm = "",
+            int page = 1
+        )
         {
-            var reservationEntity = await _context.Reservations
-            .Include(r => r.TravelPackage) 
-                .Include(r => r.Flight) 
-                .Include(r => r.Hosting) 
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var reservationsQuery = _context.Reservations
+                .Include(r => r.TravelPackage)
+                .Include(r => r.Flight).ThenInclude(f => f.Destination)  
+                .Include(r => r.Hosting).ThenInclude(h => h.Destination)  
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                reservationsQuery = reservationsQuery
+                    .Where(r => r.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()) ||  
+                                r.Flight.Airline.ToLower().Contains(searchTerm.ToLower()) ||     
+                                r.Hosting.Name.ToLower().Contains(searchTerm.ToLower()) ||        
+                                r.Flight.Destination.Name.ToLower().Contains(searchTerm.ToLower()) ||  
+                                r.Hosting.Destination.Name.ToLower().Contains(searchTerm.ToLower()));  
+            }
+
+            int totalItems = await reservationsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var reservationEntities = await reservationsQuery
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
                 .Select(r => new ReservationDto
                 {
                     Id = r.Id,
                     TravelPackageId = r.TravelPackageId,
-                    TravelPackageName = r.TravelPackage.Name, 
+                    TravelPackageName = r.TravelPackage.Name,
                     FlightId = r.FlightId,
                     FlightAirline = r.Flight.Airline,
                     HostingId = r.HostingId,
@@ -38,15 +63,25 @@ namespace ProyectoViajes.API.Services
                     ReservationDate = r.ReservationDate,
                     UserId = r.UserId
                 })
-            .ToListAsync();
+                .ToListAsync();
 
-            var reservationDto = _mapper.Map<List<ReservationDto>>(reservationEntity);
+            var reservationDtos = _mapper.Map<List<ReservationDto>>(reservationEntities);
 
-            return new ResponseDto<List<ReservationDto>>{
-              StatusCode = 200,
-              Status = true,
-              Message = MessagesConstants.RECORDS_FOUND,
-              Data = reservationDto  
+            return new ResponseDto<PaginationDto<List<ReservationDto>>>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<ReservationDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = reservationDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
 
@@ -70,8 +105,10 @@ namespace ProyectoViajes.API.Services
                 })
                 .FirstOrDefaultAsync(r => r.Id == id);
 
-            if(reservationEntity is null){
-                return new ResponseDto<ReservationDto>{
+            if (reservationEntity is null)
+            {
+                return new ResponseDto<ReservationDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.RECORD_NOT_FOUND
@@ -80,7 +117,8 @@ namespace ProyectoViajes.API.Services
 
             var reservationDto = _mapper.Map<ReservationDto>(reservationEntity);
 
-            return new ResponseDto<ReservationDto>{
+            return new ResponseDto<ReservationDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.RECORD_FOUND,
@@ -98,7 +136,8 @@ namespace ProyectoViajes.API.Services
 
             var reservationDto = _mapper.Map<ReservationDto>(reservationEntity);
 
-            return new ResponseDto<ReservationDto>{
+            return new ResponseDto<ReservationDto>
+            {
                 StatusCode = 201,
                 Status = true,
                 Message = MessagesConstants.CREATE_SUCCESS,
@@ -110,8 +149,10 @@ namespace ProyectoViajes.API.Services
         {
             var reservationEntity = await _context.Reservations.FirstOrDefaultAsync(r => r.Id == id);
 
-            if(reservationEntity is null){
-                return new ResponseDto<ReservationDto>{
+            if (reservationEntity is null)
+            {
+                return new ResponseDto<ReservationDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.UPDATE_ERROR
@@ -126,7 +167,8 @@ namespace ProyectoViajes.API.Services
 
             var reservationDto = _mapper.Map<ReservationDto>(reservationEntity);
 
-            return new ResponseDto<ReservationDto>{
+            return new ResponseDto<ReservationDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.UPDATE_SUCCESS,
@@ -138,8 +180,10 @@ namespace ProyectoViajes.API.Services
         {
             var reservationEntity = await _context.Reservations.FirstOrDefaultAsync(r => r.Id == id);
 
-            if(reservationEntity == null){
-                return new ResponseDto<ReservationDto>{
+            if (reservationEntity == null)
+            {
+                return new ResponseDto<ReservationDto>
+                {
                     StatusCode = 404,
                     Status = false,
                     Message = MessagesConstants.DELETE_ERROR
@@ -150,11 +194,12 @@ namespace ProyectoViajes.API.Services
 
             await _context.SaveChangesAsync();
 
-            return new ResponseDto<ReservationDto>{
+            return new ResponseDto<ReservationDto>
+            {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.DELETE_SUCCESS
             };
-        }      
+        }
     }
 }

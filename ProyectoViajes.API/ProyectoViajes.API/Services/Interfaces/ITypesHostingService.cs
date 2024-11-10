@@ -6,7 +6,9 @@ namespace ProyectoViajes.API.Services.Interfaces
 {
     public interface ITypesHostingService
     {
-        Task<ResponseDto<List<TypeHostingDto>>> GetTypesHostingListAsync();
+        Task<ResponseDto<PaginationDto<List<TypeHostingDto>>>> GetTypesHostingListAsync(
+            string searchTerm = "", int page = 1
+        );
         Task<ResponseDto<TypeHostingDto>> GetTypeHostingByIdAsync(Guid id);
         Task<ResponseDto<TypeHostingDto>> CreateAsync(TypeHostingCreateDto dto);
         Task<ResponseDto<TypeHostingDto>> EditAsync(TypeHostingEditDto dto, Guid id);

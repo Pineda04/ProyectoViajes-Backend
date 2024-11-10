@@ -5,7 +5,9 @@ namespace ProyectoViajes.API.Services.Interfaces
 {
     public interface IReservationsService
     {
-        Task<ResponseDto<List<ReservationDto>>> GetAllReservationsAsync();
+        Task<ResponseDto<PaginationDto<List<ReservationDto>>>> GetAllReservationsAsync(
+            string searchTerm = "", int page = 1
+        );
 
         Task<ResponseDto<ReservationDto>> GetReservationByIdAsync(Guid id);
 

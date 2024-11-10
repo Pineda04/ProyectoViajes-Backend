@@ -13,24 +13,65 @@ namespace ProyectoViajes.API.Services
     {
         private readonly ProyectoViajesContext _context;
         private readonly IMapper _mapper;
-        public TravelPackagesService(ProyectoViajesContext context, IMapper mapper)
+        private readonly int PAGE_SIZE;
+
+        public TravelPackagesService(ProyectoViajesContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            PAGE_SIZE = configuration.GetValue<int>("PageSize");
         }
-        public async Task<ResponseDto<List<TravelPackageDto>>> GetTravelPackagesListAsync()
+
+        public async Task<ResponseDto<PaginationDto<List<TravelPackageDto>>>> GetTravelPackagesListAsync(
+            string searchTerm = "",
+            int page = 1
+            )
         {
-            var travelPackagesEntity = await _context.Travels
-                .Include(tp => tp.Activities).Include(tp => tp.Assessments).ToListAsync();
-            var travelPackagesDtos = _mapper.Map<List<TravelPackageDto>>(travelPackagesEntity);
-            return new ResponseDto<List<TravelPackageDto>>
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var travelPackagesQuery = _context.Travels
+                .Include(tp => tp.Activities)
+                .Include(tp => tp.Assessments)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                travelPackagesQuery = travelPackagesQuery
+                    .Where(tp => tp.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                 tp.Description.ToLower().Contains(searchTerm.ToLower()) ||
+                                 tp.Assessments.Any(a => a.Comment.ToLower().Contains(searchTerm.ToLower())) ||
+                                 tp.Assessments.Any(a => a.Stars.ToString().Contains(searchTerm))
+                    );
+            }
+
+            int totalItems = await travelPackagesQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var travelPackageEntities = await travelPackagesQuery
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .ToListAsync();
+
+            var travelPackagesDtos = _mapper.Map<List<TravelPackageDto>>(travelPackageEntities);
+
+            return new ResponseDto<PaginationDto<List<TravelPackageDto>>>
             {
                 StatusCode = 200,
                 Status = true,
                 Message = MessagesConstants.RECORDS_FOUND,
-                Data = travelPackagesDtos
+                Data = new PaginationDto<List<TravelPackageDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = travelPackagesDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
             };
         }
+
         public async Task<ResponseDto<TravelPackageDto>> GetTravelPackageByIdAsync(Guid id)
         {
             var travelPackageEntity = await _context.Travels
@@ -53,6 +94,7 @@ namespace ProyectoViajes.API.Services
                 Data = travelPackageDto
             };
         }
+
         public async Task<ResponseDto<TravelPackageDto>> CreateAsync(TravelPackageCreateDto dto)
         {
             var travelPackageEntity = _mapper.Map<TravelPackageEntity>(dto);
@@ -67,6 +109,7 @@ namespace ProyectoViajes.API.Services
                 Data = travelPackageDto
             };
         }
+
         public async Task<ResponseDto<TravelPackageDto>> EditAsync(TravelPackageEditDto dto, Guid id)
         {
             var travelPackageEntity = await _context.Travels
