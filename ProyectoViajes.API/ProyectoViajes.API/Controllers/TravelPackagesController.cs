@@ -19,10 +19,11 @@ namespace ProyectoViajes.API.Controllers
         [HttpGet]
         public async Task<ActionResult<ResponseDto<List<TravelPackageDto>>>> GetAll(
             string searchTerm = "",
-            int page = 1
+            int page = 1,
+            bool? isPopular = null
         )
         {
-            var response = await _travelPackagesService.GetTravelPackagesListAsync(searchTerm, page);
+            var response = await _travelPackagesService.GetTravelPackagesListAsync(searchTerm, page, isPopular);
             return StatusCode(response.StatusCode, response);
         }
 

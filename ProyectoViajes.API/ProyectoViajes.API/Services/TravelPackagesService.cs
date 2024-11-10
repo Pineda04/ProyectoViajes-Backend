@@ -24,7 +24,8 @@ namespace ProyectoViajes.API.Services
 
         public async Task<ResponseDto<PaginationDto<List<TravelPackageDto>>>> GetTravelPackagesListAsync(
             string searchTerm = "",
-            int page = 1
+            int page = 1,
+            bool? isPopular = null
             )
         {
             int startIndex = (page - 1) * PAGE_SIZE;
@@ -42,6 +43,19 @@ namespace ProyectoViajes.API.Services
                                  tp.Assessments.Any(a => a.Comment.ToLower().Contains(searchTerm.ToLower())) ||
                                  tp.Assessments.Any(a => a.Stars.ToString().Contains(searchTerm))
                     );
+            }
+
+            // Filtro para paquetes populares basados en el número de reservas
+            if (isPopular.HasValue && isPopular.Value)
+            {
+                var popularPackages = await _context.Reservations
+                    .GroupBy(r => r.TravelPackageId)
+                    .Where(g => g.Count() > 3)
+                    .Select(g => g.Key)
+                    .ToListAsync();
+
+                travelPackagesQuery = travelPackagesQuery
+                    .Where(tp => popularPackages.Contains(tp.Id));
             }
 
             int totalItems = await travelPackagesQuery.CountAsync();

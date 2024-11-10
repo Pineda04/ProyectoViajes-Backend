@@ -42,6 +42,19 @@ namespace ProyectoViajes.API
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));
+
+            // CORS Configuration
+            services.AddCors(opt =>
+                {
+                    var allowURLS = Configuration.GetSection("AllowURLS").Get<string[]>();
+
+                    opt.AddPolicy("CorsPolicy", builder => builder
+                        .WithOrigins(allowURLS)
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+                }
+            );
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -55,6 +68,8 @@ namespace ProyectoViajes.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
