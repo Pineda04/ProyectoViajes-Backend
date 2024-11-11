@@ -20,5 +20,11 @@ namespace ProyectoViajes.API.Dtos.PointsInterest
         [Display(Name = "id")]
         [Required(ErrorMessage = "El {0} del destino es requerido.")]
         public Guid DestinationId { get; set; }
+
+        // Imagen
+        [Display(Name = "url de imagen")]
+        [StringLength(500, ErrorMessage = "La {0} del punto de interes debe tener menos de {1} caracteres.")]
+        [Required(ErrorMessage = "La {0} del punto de interes es obligatoria.")]
+        public string ImageUrl { get; set; }
     }
 }

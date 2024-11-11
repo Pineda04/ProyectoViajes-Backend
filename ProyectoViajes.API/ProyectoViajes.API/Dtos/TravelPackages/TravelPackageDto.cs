@@ -12,6 +12,8 @@ namespace ProyectoViajes.API.Dtos.TravelPackages
         public decimal Price { get; set; }
         public int Duration { get; set; }
         public int NumberPerson { get; set; }
+        public string ImageUrl { get; set; }
+        public double AverageStars { get; set; }
         public List<ActivityDto> Activities { get; set; }
         public List<AssessmentDto> Assessments { get; set; }
     }

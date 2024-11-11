@@ -25,8 +25,9 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<PaginationDto<List<TravelPackageDto>>>> GetTravelPackagesListAsync(
             string searchTerm = "",
             int page = 1,
-            bool? isPopular = null
-            )
+            bool? isPopular = null,
+            (double min, double max)? starRange = null
+        )
         {
             int startIndex = (page - 1) * PAGE_SIZE;
 
@@ -35,17 +36,26 @@ namespace ProyectoViajes.API.Services
                 .Include(tp => tp.Assessments)
                 .AsQueryable();
 
+            // Filtrar por término de búsqueda
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 travelPackagesQuery = travelPackagesQuery
                     .Where(tp => tp.Name.ToLower().Contains(searchTerm.ToLower()) ||
                                  tp.Description.ToLower().Contains(searchTerm.ToLower()) ||
-                                 tp.Assessments.Any(a => a.Comment.ToLower().Contains(searchTerm.ToLower())) ||
-                                 tp.Assessments.Any(a => a.Stars.ToString().Contains(searchTerm))
+                                 tp.Assessments.Any(a => a.Comment.ToLower().Contains(searchTerm.ToLower()))
                     );
             }
 
-            // Filtro para paquetes populares basados en el número de reservas
+            // Filtrar por rango de estrellas
+            if (starRange.HasValue)
+            {
+                travelPackagesQuery = travelPackagesQuery
+                    .Where(tp => tp.Assessments.Any() &&
+                                 tp.Assessments.Average(a => a.Stars) >= starRange.Value.min &&
+                                 tp.Assessments.Average(a => a.Stars) <= starRange.Value.max);
+            }
+
+            // Filtrar por paquetes populares
             if (isPopular.HasValue && isPopular.Value)
             {
                 var popularPackages = await _context.Reservations
@@ -66,7 +76,19 @@ namespace ProyectoViajes.API.Services
                 .Take(PAGE_SIZE)
                 .ToListAsync();
 
-            var travelPackagesDtos = _mapper.Map<List<TravelPackageDto>>(travelPackageEntities);
+            var travelPackagesDtos = travelPackageEntities.Select(tp =>
+            {
+                // Calcular el promedio de estrellas 
+                var averageStarsValue = tp.Assessments.Any() ? tp.Assessments.Average(a => a.Stars) : 0;
+                var travelPackageDto = _mapper.Map<TravelPackageDto>(tp);
+
+                // Asignar el promedio de estrellas al DTO
+                travelPackageDto.AverageStars = averageStarsValue;
+
+                travelPackageDto.Price = tp.Price;
+
+                return travelPackageDto;
+            }).ToList();
 
             return new ResponseDto<PaginationDto<List<TravelPackageDto>>>
             {

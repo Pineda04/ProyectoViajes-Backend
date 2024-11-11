@@ -6,7 +6,7 @@ namespace ProyectoViajes.API.Services.Interfaces
     public interface ITravelPackagesService
     {
         Task<ResponseDto<PaginationDto<List<TravelPackageDto>>>> GetTravelPackagesListAsync(
-            string searchTerm = "", int page = 1, bool? isPopular = null
+            string searchTerm = "", int page = 1, bool? isPopular = null, (double min, double max)? starRange = null
         );
         Task<ResponseDto<TravelPackageDto>> GetTravelPackageByIdAsync(Guid id);
         Task<ResponseDto<TravelPackageDto>> CreateAsync(TravelPackageCreateDto dto);

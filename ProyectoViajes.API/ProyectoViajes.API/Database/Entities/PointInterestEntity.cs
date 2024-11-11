@@ -18,6 +18,12 @@ namespace ProyectoViajes.API.Database.Entities
         [Column("description")]
         public string Description { get; set; }
 
+        // Imagen
+        [StringLength(500)]
+        [Required]
+        [Column("image_url")]
+        public string ImageUrl { get; set; }
+
         // Destino Id
         [Required]
         [Column("destination_id")]

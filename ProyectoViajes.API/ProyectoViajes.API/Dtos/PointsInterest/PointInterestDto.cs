@@ -9,5 +9,7 @@ namespace ProyectoViajes.API.Dtos.PointsInterest
         public string Description { get; set; }
 
         public Guid DestinationId { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }

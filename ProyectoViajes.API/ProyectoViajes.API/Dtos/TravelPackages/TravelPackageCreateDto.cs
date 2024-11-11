@@ -26,6 +26,12 @@ namespace ProyectoViajes.API.Dtos.TravelPackages
         [Required]
         public int NumberPerson { get; set; }
 
+        // Imagen
+        [Display(Name = "url de imagen")]
+        [StringLength(500, ErrorMessage = "La {0} del paquete de viajes debe tener menos de {1} caracteres.")]
+        [Required(ErrorMessage = "La {0} del paquete de viajes es obligatoria.")]
+        public string ImageUrl { get; set; }
+
         [Required]
         public Guid DestinationId { get; set; }        
     }

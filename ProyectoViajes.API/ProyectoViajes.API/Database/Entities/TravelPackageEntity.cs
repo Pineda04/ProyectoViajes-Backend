@@ -32,6 +32,12 @@ namespace ProyectoViajes.API.Database.Entities
         [Column("number_person")]
         public int NumberPerson { get; set; }
 
+        // Imagen
+        [Required]
+        [StringLength(500)]
+        [Column("image_url")]
+        public string ImageUrl { get; set; }
+
         // Actividades
         [Column("activities")]
         public virtual IEnumerable<ActivityEntity> Activities { get; set; }
