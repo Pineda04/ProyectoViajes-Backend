@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ProyectoViajes.API.Constants;
 using ProyectoViajes.API.Database;
 using ProyectoViajes.API.Database.Entities;
+using ProyectoViajes.API.Dtos.Assessments;
 using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.TravelPackages;
 using ProyectoViajes.API.Services.Interfaces;
@@ -112,6 +113,7 @@ namespace ProyectoViajes.API.Services
         {
             var travelPackageEntity = await _context.Travels
                 .Include(tp => tp.Activities).Include(tp => tp.Assessments).FirstOrDefaultAsync(tp => tp.Id == id);
+
             if (travelPackageEntity == null)
             {
                 return new ResponseDto<TravelPackageDto>
@@ -121,7 +123,15 @@ namespace ProyectoViajes.API.Services
                     Message = MessagesConstants.RECORD_NOT_FOUND
                 };
             }
+
             var travelPackageDto = _mapper.Map<TravelPackageDto>(travelPackageEntity);
+
+            var averageStarsValue = travelPackageEntity.Assessments.Any()
+                            ? travelPackageEntity.Assessments.Average(a => a.Stars)
+                            : 0;
+            travelPackageDto.AverageStars = averageStarsValue;
+            travelPackageDto.Assessments = _mapper.Map<List<AssessmentDto>>(travelPackageEntity.Assessments);
+
             return new ResponseDto<TravelPackageDto>
             {
                 StatusCode = 200,
