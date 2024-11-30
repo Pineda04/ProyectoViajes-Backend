@@ -35,6 +35,7 @@ namespace ProyectoViajes.API.Services
             var travelPackagesQuery = _context.Travels
                 .Include(tp => tp.Activities)
                 .Include(tp => tp.Assessments)
+                .Include(tp => tp.Destination)
                 .AsQueryable();
 
             // Filtrar por término de búsqueda
@@ -112,7 +113,10 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<TravelPackageDto>> GetTravelPackageByIdAsync(Guid id)
         {
             var travelPackageEntity = await _context.Travels
-                .Include(tp => tp.Activities).Include(tp => tp.Assessments).FirstOrDefaultAsync(tp => tp.Id == id);
+                .Include(tp => tp.Activities)
+                .Include(tp => tp.Assessments)
+                .Include(tp => tp.Destination)
+                .FirstOrDefaultAsync(tp => tp.Id == id);
 
             if (travelPackageEntity == null)
             {
@@ -181,6 +185,68 @@ namespace ProyectoViajes.API.Services
                 Data = travelPackageDto
             };
         }
+
+        public async Task<ResponseDto<PaginationDto<List<TravelPackageDto>>>> GetTravelPackagesByDestinationAsync(
+            Guid destinationId,
+            int page = 1,
+            string searchTerm = ""
+            )
+        {
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var travelPackagesQuery = _context.Travels
+                .Include(tp => tp.Activities)
+                .Include(tp => tp.Assessments)
+                .Include(tp => tp.Destination)
+                .Where(tp => tp.DestinationId == destinationId)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                travelPackagesQuery = travelPackagesQuery
+                    .Where(tp => tp.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                 tp.Description.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await travelPackagesQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var travelPackageEntities = await travelPackagesQuery
+                .OrderBy(tp => tp.Name)
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .ToListAsync();
+
+            var travelPackagesDtos = travelPackageEntities.Select(tp =>
+            {
+                var travelPackageDto = _mapper.Map<TravelPackageDto>(tp);
+
+                // Calcular promedio de estrellas
+                travelPackageDto.AverageStars = tp.Assessments.Any()
+                    ? tp.Assessments.Average(a => a.Stars)
+                    : 0;
+
+                return travelPackageDto;
+            }).ToList();
+
+            return new ResponseDto<PaginationDto<List<TravelPackageDto>>>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<TravelPackageDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = travelPackagesDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
+            };
+        }
+
         public async Task<ResponseDto<TravelPackageDto>> DeleteAsync(Guid id)
         {
             var travelPackageEntity = await _context.Travels

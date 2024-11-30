@@ -16,5 +16,6 @@ namespace ProyectoViajes.API.Dtos.TravelPackages
         public double AverageStars { get; set; }
         public List<ActivityDto> Activities { get; set; }
         public List<AssessmentDto> Assessments { get; set; }
+        public DestinationDto Destinations { get; set; }
     }
 }

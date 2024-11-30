@@ -52,6 +52,22 @@ namespace ProyectoViajes.API.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
+        // Obtener paquetes de viaje por destino
+        [HttpGet("destination/{destinationId}")]
+        public async Task<ActionResult<ResponseDto<PaginationDto<List<TravelPackageDto>>>>> GetByDestination(
+            Guid destinationId,
+            int page = 1,
+            string searchTerm = ""
+        )
+        {
+            var response = await _travelPackagesService.GetTravelPackagesByDestinationAsync(
+                destinationId,
+                page,
+                searchTerm
+            );
+            return StatusCode(response.StatusCode, response);
+        }
+
         // Eliminar
         [HttpDelete("{id}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Delete(Guid id)

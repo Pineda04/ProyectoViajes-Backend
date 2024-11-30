@@ -51,7 +51,8 @@ namespace ProyectoViajes.API.Helpers
         {
             CreateMap<TravelPackageEntity, TravelPackageDto>()
                 .ForMember(tp => tp.Activities, opt => opt.MapFrom(src => src.Activities))
-                .ForMember(tp => tp.Assessments, opt => opt.MapFrom(src => src.Assessments));
+                .ForMember(tp => tp.Assessments, opt => opt.MapFrom(src => src.Assessments))
+                .ForMember(tp => tp.Destinations, opt => opt.MapFrom(src => src.Destination));
             CreateMap<TravelPackageCreateDto, TravelPackageEntity>();
             CreateMap<TravelPackageEditDto, TravelPackageEntity>();
         }
