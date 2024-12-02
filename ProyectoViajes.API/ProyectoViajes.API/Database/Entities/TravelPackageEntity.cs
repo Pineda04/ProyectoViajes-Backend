@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace ProyectoViajes.API.Database.Entities
 {
@@ -50,5 +51,8 @@ namespace ProyectoViajes.API.Database.Entities
         public virtual DestinationEntity Destination { get; set; }
 
         public virtual IEnumerable<AssessmentEntity> Assessments { get; set; }
+
+        public virtual IdentityUser CreatedByUser { get; set; }
+        public virtual IdentityUser UpdatedByUser { get; set; }
     }
 }

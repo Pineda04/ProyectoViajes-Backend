@@ -25,6 +25,6 @@ namespace ProyectoViajes.API.Dtos.Reservations
         public DateTime ReservationDate { get; set; }
 
         // Usuario
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

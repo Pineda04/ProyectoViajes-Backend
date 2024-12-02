@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace ProyectoViajes.API.Database.Entities
 {
@@ -30,5 +31,8 @@ namespace ProyectoViajes.API.Database.Entities
         public Guid DestinationId { get; set; }
         [ForeignKey(nameof(DestinationId))]
         public virtual DestinationEntity Destination { get; set; }
+
+        public virtual IdentityUser CreatedByUser { get; set; }
+        public virtual IdentityUser UpdatedByUser { get; set; }
     }
 }

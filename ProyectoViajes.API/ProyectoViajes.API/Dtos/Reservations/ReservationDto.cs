@@ -10,6 +10,6 @@ namespace ProyectoViajes.API.Dtos.Reservations
         public Guid HostingId { get; set; }
         public string HostingName { get; set; }
         public DateTime ReservationDate { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

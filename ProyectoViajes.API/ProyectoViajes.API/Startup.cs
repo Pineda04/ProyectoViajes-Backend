@@ -1,4 +1,8 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using ProyectoViajes.API.Database;
 using ProyectoViajes.API.Helpers;
 using ProyectoViajes.API.Services;
@@ -40,6 +44,31 @@ namespace ProyectoViajes.API
             services.AddTransient<IAssessmentsService, AssessmentsService>();
             services.AddTransient<IReservationsService, ReservationsService>();
 
+            // Add Identity
+            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+            }).AddEntityFrameworkStores<ProyectoViajesContext>()
+              .AddDefaultTokenProviders();
+            services.AddAuthentication(options => 
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options => 
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters 
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = false,
+                    ValidAudience = Configuration["JWT:ValidAudience"],
+                    ValidIssuer = Configuration["JWT:ValidIssuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
+                };
+            });
+
             // Add AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));
 
@@ -70,6 +99,8 @@ namespace ProyectoViajes.API
             app.UseRouting();
 
             app.UseCors("CorsPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

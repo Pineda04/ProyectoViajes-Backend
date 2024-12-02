@@ -3,300 +3,350 @@
     "id": "3b12f8a4-2a57-4d67-bb0b-0d784c2b9a6b",
     "name": "Templo de Angkor Thom",
     "description": "Una antigua ciudad fortificada, famosa por su arquitectura y los impresionantes relieves de sus muros.",
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://www.tusktravel.com.mx/blog/wp-content/uploads/2022/05/Angkor-Wat-y-Angkor-Thom-1.jpeg"
   },
   {
     "id": "d8bfc30f-9b68-4f7f-b4e2-987b1e2c9b78",
     "name": "Ta Prohm",
     "description": "Conocido por los árboles que crecen entre las ruinas, este templo ofrece una atmósfera mágica y misteriosa.",
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://www.asiakingtravel.com/cuploads/files/Cambodia/Angkor%20Complex/Ta%20Prohm%20Temple/Knia%20tree%20zone.jpg"
   },
   {
     "id": "b13f731c-6b09-4e3b-b5e7-fbcbe8eec8a4",
     "name": "Banteay Srei",
     "description": "Un templo de arenisca conocido por sus intrincados relieves y detalles arquitectónicos excepcionales.",
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://www.siemreapshuttle.com/wp-content/uploads/2023/06/Comprehensive-Guide-To-Banteay-Srei-Temple-The-Citadel-Of-Women.jpg"
   },
   {
     "id": "6b10a7c3-21f4-4195-96cc-b7d3f7f9c456",
     "name": "Lago Tonle Sap",
     "description": "El lago de agua dulce más grande del sudeste asiático, ideal para observar la vida local y los pueblos flotantes.",
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://kampatour.com/pic/blog/images/tonle%20sap%209.jpg"
   },
   {
     "id": "bf1e0a55-f10b-45e4-b00c-56d22315efed",
     "name": "Museo Nacional de Camboya",
     "description": "Un museo que alberga una colección impresionante de arte y artefactos de la historia de Camboya.",
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://www.topasiatour.com/pic/cambodia/Phnom-Phen/attractions/national-museum-2.jpg"
   },
   {
     "id": "b5ef4e4b-bb40-4a61-a18f-43aa09aa9791",
     "name": "Garganta del Diablo",
     "description": "La caída más impresionante de las cascadas, donde el agua cae con gran fuerza y crea un espectáculo visual único.",
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://www.lavozdemisiones.com/wp-content/uploads/2024/07/4CWipIQD2_2000x1500__1.jpg"
   },
   {
     "id": "0cd1f7e3-c28e-4b66-8f7a-06c0d4b1e2e6",
     "name": "Sendero Superior",
     "description": "Un camino que permite observar las cascadas desde diferentes alturas, ideal para fotografías.",
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://s1.wklcdn.com/image_18/549079/18506728/75749659.400x300.jpg"
   },
   {
     "id": "1b9185a3-e8f1-47e6-8ed1-6bcf9d2e6b45",
     "name": "Sendero Inferior",
     "description": "Un recorrido que lleva a la base de las cascadas, ofreciendo una perspectiva cercana a la majestuosidad del lugar.",
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://www.puertoiguazu.net/GaleriaFotos/imgs/galerias/Foto_1764108031.jpg"
   },
   {
     "id": "db9e81cc-1ef6-4de4-a2eb-7408fcda95f0",
     "name": "Isla San Martín",
     "description": "Una isla en el medio del río Iguazú, ideal para hacer un picnic y disfrutar de las vistas.",
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/07/05171535/Isla-St-Martin-1920-1.jpg"
   },
   {
     "id": "e7f2f00d-6a7f-465c-bba4-5c8b9c6b5c48",
     "name": "Parque Nacional Iguazú",
     "description": "Un parque que protege la biodiversidad de la región y ofrece senderos para explorar la naturaleza.",
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://www.conclusion.com.ar/wp-content/uploads/2019/08/iguazu-turismo.jpg"
   },
   {
     "id": "bce6ef88-b647-45ff-970c-828134df38a5",
     "name": "El Coliseo",
     "description": "Un antiguo anfiteatro romano en Italia, famoso por su arquitectura y como símbolo de la historia de Roma.",
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/800px-Colosseo_2020.jpg"
   },
   {
     "id": "12a77b34-7630-4180-b97c-32a69e058f2e",
     "name": "Foro Romano",
     "description": "Una de las áreas más importantes de la antigua Roma, lleno de templos, mercados y edificios públicos.",
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://historia.nationalgeographic.com.es/medio/2021/09/17/vista-del-foro-romano_5c78f93e_1200x630.jpg"
   },
   {
     "id": "7e41c00a-0b5d-44de-8f73-3f651bde4e78",
     "name": "Palatino",
     "description": "La colina donde se dice que se fundó Roma, llena de ruinas y con vistas espectaculares del Foro.",
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://www.disfrutaroma.com/f/italia/roma/guia/palatino-m.jpg"
   },
   {
     "id": "df5f6ef8-464e-4a26-bd3c-89ec2d5a2d39",
     "name": "Arco de Constantino",
     "description": "Un monumental arco triunfal que conmemora las victorias de Constantino, situado cerca del Coliseo.",
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Arch_of_Constantine_at_Night_%28Rome%29.jpg"
   },
   {
     "id": "c5c3f74e-dca4-41f3-8b96-e92e0be2b38c",
     "name": "Circo Máximo",
     "description": "Un antiguo hipódromo donde se celebraban carreras de carros, un lugar emblemático en la historia de Roma.",
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://www.enroma.com/wp-content/uploads/2017/02/Los-origenes-de-la-Antigua-Roma.jpg"
   },
   {
     "id": "c5e9e622-c6eb-4c58-9793-0f8e747e3c73",
     "name": "La Gran Muralla de Jinshanling",
     "description": "Una sección de la Gran Muralla menos concurrida, famosa por sus impresionantes vistas y conservación.",
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jinshangling2.jpg"
   },
   {
     "id": "c547df55-bb7f-414e-92cf-fb65cb5b015b",
     "name": "Puerta de Simatai",
     "description": "Conocida por su impresionante arquitectura, esta puerta ofrece acceso a uno de los mejores tramos de la muralla.",
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://wildgreatwall.com/wp-content/uploads/2024/03/Simatai-Great-Wall-9.jpg"
   },
   {
     "id": "a440c2f2-1c4d-451c-b15f-41f62b59a3b0",
     "name": "Torre de vigilancia de Huanghuacheng",
     "description": "Una de las torres de vigilancia mejor conservadas, que ofrece vistas espectaculares del paisaje circundante.",
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://i.pinimg.com/originals/76/4c/93/764c93909d2e4f577cbe2ca947c07157.jpg"
   },
   {
     "id": "c826f2cb-20e4-4865-bd91-f5ef5d104b7b",
     "name": "Tramo de Mutianyu",
     "description": "Una sección restaurada y accesible de la Gran Muralla, ideal para familias y turistas.",
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://zonadtransito.com/wp-content/uploads/2017/08/0048ChinaFilipinas2017_HDR-2.jpg"
   },
   {
     "id": "e0512c27-4450-4fa1-bd5b-0c38a601657c",
     "name": "Tramo de Badaling",
     "description": "La sección más popular de la Gran Muralla, conocida por su fácil acceso y vistas impresionantes.",
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://espanol.cgtn.com/news/2024-02-12/1756869989967687681/1707705312755.jpg"
   },
   {
     "id": "c4e4340b-8b84-49d4-8350-94c747f58a72",
     "name": "Intihuatana",
     "description": "Un ritual y ceremonial piedra en Machu Picchu, utilizado por los Incas para la agricultura y ceremonias.",
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Intihuatana_in_Machu_Picchu.jpg"
   },
   {
     "id": "4b8406e1-bbd6-4c1a-b7a5-d872d0cb2a54",
     "name": "Templo del Sol",
     "description": "Un templo ceremonial dedicado al dios sol, famoso por su arquitectura y su historia.",
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://imachupicchu.com/wp-content/uploads/templo-sol.jpg"
   },
   {
     "id": "8f8a5a65-ea53-4dcf-81b7-cdbe98763baf",
     "name": "Casa del Inca",
     "description": "Un edificio importante en Machu Picchu que refleja la vida y cultura inca.",
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2022/12/casa-inca-machu-picchu.jpg"
   },
   {
     "id": "75a756fa-1837-4eae-8fc5-2f41a3d39c79",
     "name": "Puente Inca",
     "description": "Un antiguo puente que conecta diferentes áreas de Machu Picchu, con vistas espectaculares.",
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl":"https://viajes.nationalgeographic.com.es/medio/2022/03/18/puente-inca_54995595_1280x851.jpg"
   },
   {
     "id": "75acfc8e-65f3-4e05-b98d-61ff89965069",
     "name": "Huascarán",
     "description": "El pico más alto de Perú, visible desde Machu Picchu, y un lugar ideal para los amantes del montañismo.",
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://parquedelareserva.com.pe/wp-content/uploads/2023/02/Parque-Nacional-Huascaran.jpg"
   },
   {
     "id": "4f62e7e5-87e2-4c79-8d3e-62e731c6e4cc",
     "name": "Cumbre del Monte Fuji",
     "description": "La montaña más alta de Japón, conocida por sus vistas espectaculares y su importancia cultural.",
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://www.nippon.com/es/ncommon/contents/japan-topics/230330/230330.jpg"
   },
   {
     "id": "9bfeeaaf-cae1-4bba-97d7-3a9d04c5d1e6",
     "name": "Lago Kawaguchi",
     "description": "Un hermoso lago que ofrece vistas increíbles del Monte Fuji, ideal para fotografías.",
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://japonismo.com/wp-content/uploads/2019/03/consejos-primavera-japon-japonismo-770x327.jpg"
   },
   {
     "id": "7c76f58c-7032-4822-b15d-823e961dc407",
     "name": "Santuario Fujisan",
     "description": "Un santuario dedicado al Monte Fuji, importante en la cultura japonesa y con rutas de senderismo.",
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl":"https://matteoingiappone.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/Santuario-Fujisan-Sengen-2.jpg"
   },
   {
     "id": "6be77a82-d6a3-4c9d-b86c-08cf89ed1660",
     "name": "Estación de Montaña Fuji",
     "description": "Una base de operaciones para los escaladores que desean conquistar el Monte Fuji.",
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/1c/d4/15.jpg"
   },
   {
     "id": "e0e6a2f5-2376-4ab7-95a2-84f3bb693f4c",
     "name": "Centro de Información del Monte Fuji",
     "description": "Un lugar donde los visitantes pueden aprender sobre la historia y la geografía del monte.",
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://www.porta-y.jp/wp-content/uploads/2017/02/W1024Q75_DSC_0705.jpg"
   },
   {
     "id": "c22a0b38-8c18-4b89-bc68-df7b3cb9e23f",
     "name": "Al-Khazneh (El Tesoro)",
     "description": "La famosa fachada tallada en roca, uno de los monumentos más emblemáticos de Petra.",
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://universes.art/fileadmin/user_upload/Art-Destinations/Jordan/Petra/03-Khazneh/01-1-IMG_6198-A.jpg"
   },
   {
     "id": "ad9a55a2-4a86-4617-b5cd-4bb6e3a3c7b0",
     "name": "El Siq",
     "description": "Un impresionante desfiladero que sirve como entrada a Petra, rodeado de majestuosas formaciones rocosas.",
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://101lugaresincreibles.com/wp-content/uploads/2013/11/como-llegar-al-siq-petra-jordania.jpg"
   },
   {
     "id": "0bc61c1e-037f-4097-9b43-62fd0d4e5b61",
     "name": "El Monasterio (Ad-Deir)",
     "description": "Una de las estructuras más grandes de Petra, famosa por su fachada monumental.",
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/The_Monastery%2C_Petra%2C_Jordan9.jpg"
   },
   {
     "id": "25ffb60e-bb55-4ed2-8c5e-daa8aebc55f4",
     "name": "Teatro Romano de Petra",
     "description": "Un antiguo teatro construido por los nabateos, utilizado para eventos y espectáculos.",
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://turismo.org/wp-content/uploads/2017/09/Teatro-Romano-de-Petra.jpg"
   },
   {
     "id": "f99d45b0-21de-4555-9f78-f432b812c34b",
     "name": "La Tumba de los Reyes",
     "description": "Una impresionante serie de tumbas con elaboradas decoraciones, que refleja la cultura nabatea.",
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Granada-Capilla_Real-7-Sepulcro_de_los_Reyes_Cat%C3%B3licos_%28Domenico_Fancelli%29.jpg/320px-Granada-Capilla_Real-7-Sepulcro_de_los_Reyes_Cat%C3%B3licos_%28Domenico_Fancelli%29.jpg"
   },
   {
     "id": "2f66b7b8-74de-4890-885f-0e469c3c52bc",
     "name": "Amanecer en Oia",
     "description": "Famoso por sus impresionantes vistas del amanecer sobre el mar Egeo, ideal para fotografiar.",
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://www.grecotour.com/img/cms/grecia/santorini/puesta-sol-oia-ia-santorini.jpg"
   },
   {
     "id": "cd66f4b4-1ef1-41e6-b545-87f79f8e0916",
     "name": "Playa de Perissa",
     "description": "Una playa de arena negra única, famosa por sus aguas cristalinas y ambiente vibrante.",
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://www.islasantorini.es/wp-content/uploads/2016/03/playa_perissa_santorini.jpg"
   },
   {
     "id": "5470fcd4-493b-4bb6-8b2b-c5a54c1b3ec8",
     "name": "Pueblo de Fira",
     "description": "La capital de Santorini, con vistas impresionantes y una vida nocturna animada.",
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://www.islasantorini.es/wp-content/uploads/2023/08/santorini-oia.jpg"
   },
   {
     "id": "ebf70c7f-cc9c-4b5f-8eab-f0b066b0e45d",
     "name": "Vistas de Caldera",
     "description": "Un mirador que ofrece impresionantes vistas del volcán y el mar Egeo.",
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://img.freepik.com/foto-gratis/tiro-angulo-alto-cumbre-impresionantes-nubes-que-reflejan-charcos_181624-7157.jpg"
   },
   {
     "id": "e7df1783-2f90-493b-80f4-4cd41bb7f7de",
     "name": "Bodega Santo Wines",
     "description": "Una bodega que ofrece degustaciones de vino con vistas espectaculares del paisaje.",
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://viajonarios.com/wp-content/uploads/2017/10/santo-wines13.jpg"
   },
   {
     "id": "86515482-7a31-41fc-8fa0-65965ea82aa0",
     "name": "Jardines del Taj Mahal",
     "description": "Los hermosos jardines que rodean el Taj Mahal, diseñados simétricamente y perfectos para pasear.",
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://previews.123rf.com/images/carlosneto/carlosneto1210/carlosneto121000174/15687800-descripci%C3%B3n-del-taj-mahal-y-el-jard%C3%ADn-agra-india.jpg"
   },
   {
     "id": "bfe45f6a-9ab1-4644-8bb4-f545ef5bc6d7",
     "name": "Masjid-i Jahan Numa",
     "description": "La mezquita que se encuentra frente al Taj Mahal, ofrece una vista espectacular del monumento.",
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/66/0e.jpg"
   },
   {
     "id": "da774f76-5f9a-40f1-a527-69082b46c721",
     "name": "Museo del Taj Mahal",
     "description": "Un museo dedicado a la historia y la construcción del Taj Mahal.",
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://www.maravillas-del-mundo.com/Taj-Mahal/images/Decouvrir/Musee-du-Taj-Mahal2.jpg"
   },
   {
     "id": "c89e2031-20f5-4cf0-b0d3-5b50f4778c71",
     "name": "La Puerta de la India",
     "description": "Un monumento histórico cercano al Taj Mahal, que conmemora a los soldados caídos.",
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://images.memphistours.com/large/1454411647_33.jpg"
   },
   {
     "id": "f8391fd8-d9f6-4d62-bdf5-bdad88f2c650",
     "name": "Plaza del Mercado de Agra",
     "description": "Un bullicioso mercado donde los visitantes pueden comprar souvenirs y experimentar la cultura local.",
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://thumbs.dreamstime.com/b/mercado-callejero-en-agra-uttar-pradesh-la-india-95827432.jpg"
   },
   {
     "id": "e3c31c3e-4fa9-4666-a428-dab6100de458",
     "name": "Observatorio de París",
     "description": "Una de las mejores vistas de la Torre Eiffel, ideal para una experiencia romántica.",
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://www.diariodecultura.com.ar/wp-content/uploads/2022/04/mg_2993b.jpg"
   },
   {
     "id": "2b305dce-0483-4189-b68e-8c7519c1c764",
     "name": "Champ de Mars",
     "description": "Un amplio parque donde los visitantes pueden relajarse y disfrutar de vistas del monumento.",
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Champ_de_Mars_from_the_Eiffel_Tower_-_July_2006_edit.jpg"
   },
   {
     "id": "68b205ef-90c3-419e-a2d1-6e2ed2efb6d5",
     "name": "Río Sena",
     "description": "Un pintoresco río que ofrece cruceros y paseos para disfrutar de la vista de la ciudad.",
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://www.fundacionaquae.org/wp-content/uploads/2016/02/rio-sena.jpg"
   },
   {
     "id": "8c052d9b-8f51-41c3-8a0a-5c5e84d00cb5",
     "name": "Torre de Montparnasse",
     "description": "Un rascacielos que ofrece vistas panorámicas de París desde su observatorio.",
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://parisando.b-cdn.net/wp-content/uploads/sites/11/2022/03/la-torre-Montparnasse-paris.jpg"
   },
   {
     "id": "6c4e4535-bf12-4897-8a0f-bfd7984231c1",
     "name": "Museo del Louvre",
     "description": "El museo más famoso del mundo, que alberga una extensa colección de arte y antigüedades.",
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://static.wixstatic.com/media/17d563_41373bb388fd499884df24e5fc4b377a~mv2.jpg/v1/fill/w_1480,h_966,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/17d563_41373bb388fd499884df24e5fc4b377a~mv2.jpg"
   }
 ]

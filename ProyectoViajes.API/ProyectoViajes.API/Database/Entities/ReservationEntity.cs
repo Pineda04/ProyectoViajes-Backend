@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace ProyectoViajes.API.Database.Entities
 {
@@ -35,8 +36,11 @@ namespace ProyectoViajes.API.Database.Entities
         // Usuario que realiza la reserva
         [Required]
         [Column("user_id")]
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         // [ForeignKey(nameof(UserId))]
         // public virtual UserEntity User { get; set; }
+
+        public virtual IdentityUser CreatedByUser { get; set; }
+        public virtual IdentityUser UpdatedByUser { get; set; }
     }
 }

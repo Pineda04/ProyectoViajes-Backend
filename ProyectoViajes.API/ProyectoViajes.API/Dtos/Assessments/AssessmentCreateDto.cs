@@ -14,7 +14,7 @@ namespace ProyectoViajes.API.Dtos.Assessments
 
         [Display(Name = "id del usuario")]
         [Required(ErrorMessage = "El {0} es obligatorio.")]
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
 
         [Display(Name = "id del paquete de viaje")]
         [Required(ErrorMessage = "El {0} es obligatorio.")]

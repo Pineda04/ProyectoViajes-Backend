@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace ProyectoViajes.API.Database.Entities
 {
@@ -45,5 +46,8 @@ namespace ProyectoViajes.API.Database.Entities
         [Required]
         [Column("price")]
         public decimal Price { get; set; }
+
+        public virtual IdentityUser CreatedByUser { get; set; }
+        public virtual IdentityUser UpdatedByUser { get; set; }
     }
 }

@@ -6,7 +6,8 @@
     "price": 450,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://www.estiber.com/blog/wp-content/uploads/2022/05/angkor-portaventura-ofertas.jpg"
   },
   {
     "id": "d3f81298-f20a-4f8f-bb49-0e4f6e248b77",
@@ -15,7 +16,8 @@
     "price": 600,
     "duration": 4,
     "numberPerson": 4,
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://vagamundos.com/wp-content/uploads/2014/05/P3230348_DViag_Angkor_tom_puerta_de_la_victoria.jpg"
   },
   {
     "id": "ae2d5e83-78b7-4f8a-8517-7d2fbc8f36f2",
@@ -24,7 +26,8 @@
     "price": 700,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://static1.evcdn.net/images/reduction/121098_w-3840_h-2160_q-70_m-crop.jpg"
   },
   {
     "id": "b19abaf8-e93f-4627-88bc-cb1c4476e3a3",
@@ -33,7 +36,8 @@
     "price": 550,
     "duration": 5,
     "numberPerson": 3,
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/OPTPTJFESRLEPP6AKUHSIT52ME.jpg"
   },
   {
     "id": "5796c6b1-4e5d-487f-9e9f-6a0e0d7a83ed",
@@ -42,7 +46,8 @@
     "price": 300,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a"
+    "destinationId": "a2b5f8e2-8b0c-4c6f-9c85-1a4a5e3b8e3a",
+    "imageUrl": "https://c1.staticflickr.com/9/8718/28156183610_1b49b5a759_h.jpg"
   },
   {
     "id": "ac6e0f29-fd1f-4b99-8656-f0dbb5b77c74",
@@ -51,7 +56,8 @@
     "price": 200,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/71/4e/ec.jpg"
   },
   {
     "id": "7b86c8c0-04d5-4a80-a76b-6124180c6b44",
@@ -60,7 +66,8 @@
     "price": 350,
     "duration": 2,
     "numberPerson": 4,
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://hoteldonhoracio.com/wp-content/uploads/2019/01/iguazu-parq-1.jpg"
   },
   {
     "id": "f0e486f3-df5e-4a3b-8f7f-e5c3bca8e22f",
@@ -69,7 +76,8 @@
     "price": 600,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://s2.wklcdn.com/image_6/208554/2260497/854816.jpg"
   },
   {
     "id": "8a97f44d-21d3-419e-9174-05f509c80c09",
@@ -78,7 +86,8 @@
     "price": 400,
     "duration": 2,
     "numberPerson": 3,
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://cultura.misiones.gob.ar/wp-content/uploads/2021/02/20210224_cem-iguazu-maletas-magicas.jpg"
   },
   {
     "id": "3f62d8d6-d65d-4db4-a4f5-6eb0cb2b06e2",
@@ -87,7 +96,8 @@
     "price": 500,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b"
+    "destinationId": "b8c0a9d2-3f2f-4c6b-8f3b-4e56f9d7d76b",
+    "imageUrl": "https://www.postcardsfromivi.com/wp-content/uploads/2019/12/visitar-las-cataratas-del-iguazu-lado-argentino-guia.jpg"
   },
   {
     "id": "0a374e88-066c-4b25-96f7-89c7c4b5a912",
@@ -96,7 +106,8 @@
     "price": 250,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://s3.abcstatics.com/abc/www/multimedia/historia/2023/10/03/imperio-romano-RhTq2mS9bCe8fCPvCZTNcVK-1200x840@abc.jpg"
   },
   {
     "id": "3a5e8d27-fb3d-438e-9a68-2ac2d5b2d3f3",
@@ -105,7 +116,8 @@
     "price": 300,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://prd-webrepository.firabarcelona.com/wp-content/uploads/sites/69/2022/10/17170448/Aroma_Restaurant-Terrace_2-scaled-1.jpeg"
   },
   {
     "id": "e307c2f4-10e5-4cfc-89d0-95f456f5e122",
@@ -114,7 +126,8 @@
     "price": 400,
     "duration": 4,
     "numberPerson": 4,
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://experienciasviajeras.blog/wp-content/uploads/2019/06/Foro-Romano-y-Palatino.jpg"
   },
   {
     "id": "e9e74cb8-d5de-4f8b-8e31-fbc0de942663",
@@ -123,7 +136,8 @@
     "price": 350,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://romecolosseumtickets.tours/wp-content/uploads/2024/05/colosseum-guided-tour.jpg"
   },
   {
     "id": "b8406b18-d270-4b26-bf37-cfb70e5fcb91",
@@ -132,7 +146,8 @@
     "price": 280,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185"
+    "destinationId": "d9c1e92a-592e-46c5-9d77-b08a6a5c1185",
+    "imageUrl": "https://doeatbetterexperience.com/wp-content/uploads/2020/09/colosseo-roma-768x512.jpg"
   },
   {
     "id": "e0204ed0-1fd1-4e25-85a7-7a4b90a2c82e",
@@ -141,7 +156,8 @@
     "price": 300,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://www.north-korea-travel.com/image-files/unrestored-great-wall-group-hike-900.jpg"
   },
   {
     "id": "fc5865a0-5e3e-41ee-b216-6a285b2c1b3b",
@@ -150,7 +166,8 @@
     "price": 450,
     "duration": 5,
     "numberPerson": 3,
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://guias-viajar.com/wp-content/uploads/sites/3/2016/08/china-gran-muralla-badaling-002.jpg"
   },
   {
     "id": "b5831e99-56eb-4e7c-b0a0-7cf9279f1f89",
@@ -159,7 +176,8 @@
     "price": 550,
     "duration": 4,
     "numberPerson": 2,
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_768/v1683842296/post_images/Pekin-143/Great-Wall-of-China/2213473196_8e88ef8a7b_o_Cropped.jpg"
   },
   {
     "id": "bf23e5f6-6b38-4075-9c94-6a10cd2e03b3",
@@ -168,7 +186,8 @@
     "price": 400,
     "duration": 3,
     "numberPerson": 1,
-    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f"
+    "destinationId": "f8d2c06f-5b35-4f38-9e80-5ef8d1cde31f",
+    "imageUrl": "https://www.thechinaguide.com/uploads/201702/24/58afcb29734f7.jpg"
   },
   {
     "id": "cc799fe8-bc1c-4e7d-8cf5-2c3a4e6828f7",
@@ -177,7 +196,8 @@
     "price": 600,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://trexperienceperu.com/sites/default/files/2022-12/machu-picchu-private-guide-tour-inca-trail-21554-trexperience.jpg"
   },
   {
     "id": "6b6b3537-cc43-463f-b0a7-0ec7fc1c4182",
@@ -186,7 +206,8 @@
     "price": 900,
     "duration": 3,
     "numberPerson": 4,
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2017/04/caminata-huayna-picchu.jpg"
   },
   {
     "id": "7506c7ff-517e-44a1-b98c-1da0f1be042e",
@@ -195,7 +216,8 @@
     "price": 800,
     "duration": 4,
     "numberPerson": 3,
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://www.ollantaytambo.org/img/cusco-sacred-valley-machu-picchu-007-01.jpg"
   },
   {
     "id": "d5b9c763-7fd4-42ea-8d95-c11c9bc54cb2",
@@ -204,7 +226,8 @@
     "price": 650,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://freewalkingtoursperu.com/wp-content/uploads/2020/06/subida-a-huayna-picchu-11.jpg"
   },
   {
     "id": "f12a3bc8-bb37-4e7c-b4ea-098e0e1821ff",
@@ -213,7 +236,8 @@
     "price": 500,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1"
+    "destinationId": "c1e6f8f2-7932-4e9f-8c4f-5e5c5e83c0f1",
+    "imageUrl": "https://blog.howlanders.com/wp-content/uploads/2020/04/amanecer-machu-picchu.jpg"
   },
   {
     "id": "c1b9b3f4-0b32-4590-b0e4-053e7e69ae99",
@@ -222,7 +246,8 @@
     "price": 250,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://japonismo.com/wp-content/uploads/2019/06/yoitabi-travel-cima-monte-fuji-japonismo.jpg"
   },
   {
     "id": "b1574f05-3708-4d51-a64b-7eec2be2a6a4",
@@ -231,7 +256,8 @@
     "price": 400,
     "duration": 2,
     "numberPerson": 4,
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://guiadejapon.es/img/blog_como-subir-monte-fuji.jpg"
   },
   {
     "id": "6a3c02bc-3d3e-4267-8d6d-4d192e54b637",
@@ -240,7 +266,8 @@
     "price": 350,
     "duration": 3,
     "numberPerson": 3,
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://www.descubriendojapon.com/wp-content/uploads/2019/09/Chureito_Pagoda.jpg"
   },
   {
     "id": "bc3be152-9b63-4db7-97c0-b16bcd5cfb87",
@@ -249,7 +276,8 @@
     "price": 500,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4"
+    "destinationId": "e6f9c0f1-0d9b-4d9b-97e1-0e3a3e56b5c4",
+    "imageUrl": "https://japon-secreto.com/wp-content/uploads/2019/07/kaneyamaen01.jpg"
   },
   {
     "id": "1d6a1b3b-04ec-4b4e-b8a3-518dc0b1aa66",
@@ -258,7 +286,8 @@
     "price": 450,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/9f/d1/90.jpg"
   },
   {
     "id": "7d1e5f8c-2f38-4692-9fbd-b5b7e50e2189",
@@ -267,7 +296,8 @@
     "price": 500,
     "duration": 3,
     "numberPerson": 4,
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://viajesnakara.com/wp-content/uploads/pueblo-beduino.jpg"
   },
   {
     "id": "caa75089-8be6-4b8f-bf0e-b0c0469ef745",
@@ -276,7 +306,8 @@
     "price": 300,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://img.freepik.com/fotos-premium/atraccion-turistica-amanecer-petra_1253805-2299.jpg"
   },
   {
     "id": "2dc8e474-05c3-46b2-a41b-5012ed3f7da0",
@@ -285,7 +316,8 @@
     "price": 600,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1"
+    "destinationId": "f0a6c7b3-3b24-45f6-8b6c-8b1a6d46e4c1",
+    "imageUrl": "https://jordaniaexclusiva.com/wp-content/uploads/2023/07/petra-de-noche.jpg"
   },
   {
     "id": "56a77546-4971-4296-9cf2-f77a06d5e8da",
@@ -294,7 +326,8 @@
     "price": 400,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://www.motorhomeland.com/assets/img/blog/main/543/mejores_playas_santorini.jpg"
   },
   {
     "id": "92ef71f3-8a9f-4c62-a453-d571b8bb447b",
@@ -303,7 +336,8 @@
     "price": 300,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://cdn.tourradar.com/s3/tour/1500x800/216315_6068af4d6fed6.jpg"
   },
   {
     "id": "d10dc012-12ed-4894-9e04-b3c465b0e77e",
@@ -312,7 +346,8 @@
     "price": 250,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://www.grecotour.com/img/cms/grecia/santorini/puesta-sol-oia-ia-santorini-grecia.jpg"
   },
   {
     "id": "e7e25f76-3f40-4855-8e9e-e5c4d25a5a48",
@@ -321,7 +356,8 @@
     "price": 350,
     "duration": 3,
     "numberPerson": 4,
-    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531"
+    "destinationId": "a35f7f72-8825-4c68-b1eb-8d10f6f7f531",
+    "imageUrl": "https://memarchoasantorini.com/wp-content/uploads/2017/02/bodegas_santorini.jpg"
   },
   {
     "id": "cd4e44c3-d6d4-40bc-83e6-b7e62c8e3e76",
@@ -330,7 +366,8 @@
     "price": 300,
     "duration": 1,
     "numberPerson": 2,
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://media2.holiplus.com/3840x2880/uploads/excursion/15697/taj-mahal-sunrise-sunset-tour-187.jpeg"
   },
   {
     "id": "6eb3f66b-23a1-4c2c-8f5e-c0a4fc0ffb9e",
@@ -339,7 +376,8 @@
     "price": 400,
     "duration": 2,
     "numberPerson": 4,
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://images.myguide-cdn.com/delhi/companies/from-delhi-taj-mahal-agra-tour-by-gatimaan-express-train/large/from-delhi-taj-mahal-agra-tour-by-gatimaan-express-train-3878319.jpg"
   },
   {
     "id": "f7377ca2-99c0-40c6-93dc-c59cc4e896c7",
@@ -348,7 +386,8 @@
     "price": 500,
     "duration": 3,
     "numberPerson": 3,
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://www.justwotravel.com/wp-content/uploads/2019/11/que-ver-en-agra.jpg"
   },
   {
     "id": "ba672a48-7e35-43c8-b048-e362f4c8a5e5",
@@ -357,7 +396,8 @@
     "price": 600,
     "duration": 2,
     "numberPerson": 1,
-    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84"
+    "destinationId": "c59c0c5e-2f2d-4b76-93b5-9dbf8d5e5c84",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/10/0b/de/bf.jpg"
   },
   {
     "id": "aeb672c1-8a1f-4cb2-bb6e-41c3a7032d29",
@@ -366,7 +406,8 @@
     "price": 350,
     "duration": 2,
     "numberPerson": 2,
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://st3.depositphotos.com/13404340/15887/i/450/depositphotos_158873238-stock-photo-eiffel-tower-at-sunset.jpg"
   },
   {
     "id": "6af77177-21bc-4d3c-8fd9-efad1fc6bc8c",
@@ -375,7 +416,8 @@
     "price": 300,
     "duration": 1,
     "numberPerson": 1,
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://blog-francia.com/wp-content/uploads/2018/10/eiffel-paris-torre-1.jpg"
   },
   {
     "id": "6d2415b6-e8d0-476f-8d68-5bcd8e73c39b",
@@ -384,7 +426,8 @@
     "price": 600,
     "duration": 3,
     "numberPerson": 2,
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://www.francetourisme.fr/media/58_Eiffel_din/diner_tour_eiffel_3.jpg"
   },
   {
     "id": "dabe9a95-0c94-47cc-bf4e-d6347af19e3c",
@@ -393,7 +436,8 @@
     "price": 450,
     "duration": 4,
     "numberPerson": 4,
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1612799644/gftybntm8gwnir4ygrxg.jpg"
   },
   {
     "id": "2e788f77-04c6-47cc-a79e-bd5280e2027a",
@@ -402,6 +446,7 @@
     "price": 400,
     "duration": 3,
     "numberPerson": 3,
-    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5"
+    "destinationId": "d92ef230-672b-43f3-b6d4-9a7c1fef57f5",
+    "imageUrl": "https://viajes.nationalgeographic.com.es/medio/2013/10/17/hms368316_1000x672.jpg"
   }
 ]

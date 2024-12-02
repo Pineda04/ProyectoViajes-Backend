@@ -8,7 +8,7 @@ namespace ProyectoViajes.API.Dtos.Assessments
 
         public string Comment { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
 
         public Guid TravelPackageId { get; set; }
     }
