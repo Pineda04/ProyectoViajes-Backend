@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ProyectoViajes.API.Dtos.Auth
 {
-    public class LoginResponseDto
+    public class RefreshTokenDto
     {
-        public string FullName { get; set; }
-        public string Email { get; set; }
+        [Required(ErrorMessage = "El token es requerido")]
         public string Token { get; set; }
-        public DateTime TokenExpiration { get; set; }
+        [Required(ErrorMessage = "El refresh token es requerido")]
         public string RefreshToken { get; set; }
     }
 }

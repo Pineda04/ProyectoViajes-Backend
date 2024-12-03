@@ -25,7 +25,7 @@ namespace ProyectoViajes.API.Database.Entities
         [ForeignKey(nameof(TravelPackageId))]
         public virtual TravelPackageEntity TravelPackage { get; set; }
 
-        public virtual IdentityUser CreatedByUser { get; set; }
-        public virtual IdentityUser UpdatedByUser { get; set; }
+        public virtual UserEntity CreatedByUser { get; set; }
+        public virtual UserEntity UpdatedByUser { get; set; }
     }
 }

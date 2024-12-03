@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using ProyectoViajes.API;
 using ProyectoViajes.API.Database;
+using ProyectoViajes.API.Database.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,7 @@ using (var scope = app.Services.CreateScope())
     try{
         var context = services.GetRequiredService<ProyectoViajesContext>();
         
-        var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
+        var userManager = services.GetRequiredService<UserManager<UserEntity>>();
         var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
         await ProyectoViajesSeeder.LoadDataAsync(context, loggerFactory, userManager, roleManager);

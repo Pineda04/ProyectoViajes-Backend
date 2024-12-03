@@ -47,7 +47,7 @@ namespace ProyectoViajes.API.Database.Entities
         [Column("price")]
         public decimal Price { get; set; }
 
-        public virtual IdentityUser CreatedByUser { get; set; }
-        public virtual IdentityUser UpdatedByUser { get; set; }
+        public virtual UserEntity CreatedByUser { get; set; }
+        public virtual UserEntity UpdatedByUser { get; set; }
     }
 }

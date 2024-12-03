@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ProyectoViajes.API.Database;
+using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Helpers;
 using ProyectoViajes.API.Services;
 using ProyectoViajes.API.Services.Interfaces;
@@ -47,7 +48,7 @@ namespace ProyectoViajes.API
             services.AddTransient<IAuditService, AuditService>();
 
             // Add Identity
-            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+            services.AddIdentity<UserEntity, IdentityRole>(options => 
             {
                 options.SignIn.RequireConfirmedAccount = false;
             }).AddEntityFrameworkStores<ProyectoViajesContext>()

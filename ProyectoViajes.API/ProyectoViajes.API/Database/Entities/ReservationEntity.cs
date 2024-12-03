@@ -37,10 +37,10 @@ namespace ProyectoViajes.API.Database.Entities
         [Required]
         [Column("user_id")]
         public string UserId { get; set; }
-        // [ForeignKey(nameof(UserId))]
-        // public virtual UserEntity User { get; set; }
+        [ForeignKey(nameof(UserId))]
+        public virtual UserEntity User { get; set; }
 
-        public virtual IdentityUser CreatedByUser { get; set; }
-        public virtual IdentityUser UpdatedByUser { get; set; }
+        public virtual UserEntity CreatedByUser { get; set; }
+        public virtual UserEntity UpdatedByUser { get; set; }
     }
 }

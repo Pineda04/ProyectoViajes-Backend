@@ -11,7 +11,7 @@ namespace ProyectoViajes.API.Database
         public static async Task LoadDataAsync(
             ProyectoViajesContext context, 
             ILoggerFactory loggerFactory,
-            UserManager<IdentityUser> userManager,
+            UserManager<UserEntity> userManager,
             RoleManager<IdentityRole> roleManager
         )
         {
@@ -35,7 +35,7 @@ namespace ProyectoViajes.API.Database
         }
 
         private static async Task LoadRolesAndUsersAsync(
-            UserManager<IdentityUser> userManager, 
+            UserManager<UserEntity> userManager, 
             RoleManager<IdentityRole> roleManager, 
             ILoggerFactory loggerFactory
         )
@@ -50,13 +50,13 @@ namespace ProyectoViajes.API.Database
 
                 if (!await userManager.Users.AnyAsync()) 
                 {
-                    var userAdmin = new IdentityUser 
+                    var userAdmin = new UserEntity 
                     {
                         Email = "admin@proyecto.viajes",
                         UserName = "admin@proyecto.viajes",                        
                     };
                     
-                    var normalUser = new IdentityUser
+                    var normalUser = new UserEntity
                     {
                         Email = "user@proyecto.viajes",
                         UserName = "user@proyecto.viajes",

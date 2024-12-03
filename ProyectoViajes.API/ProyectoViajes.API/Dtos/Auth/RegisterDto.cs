@@ -8,6 +8,17 @@ namespace ProyectoViajes.API.Dtos.Auth
 {
     public class RegisterDto
     {
+        [StringLength(70, MinimumLength = 3, 
+            ErrorMessage = "Los {0} no puede tener mas de {1} y menos de {2} caracteres")]
+        [Display(Name = "Nombres")]
+        [Required(ErrorMessage = "Los {0} es requerido")]
+        public string FirstName { get; set; }
+        [StringLength(70, MinimumLength = 3,
+            ErrorMessage = "Los {0} no puede tener mas de {1} y menos de {2} caracteres")]
+        [Display(Name = "Apellidos")]
+        [Required(ErrorMessage = "Los {0} es requerido")]
+        public string LastName { get; set; }
+
         [Display(Name = "Correo Electrónico")]
         [Required(ErrorMessage = "EL campo {0} es requerido.")]
         [EmailAddress(ErrorMessage = "El campo {0} no es valido.")]
