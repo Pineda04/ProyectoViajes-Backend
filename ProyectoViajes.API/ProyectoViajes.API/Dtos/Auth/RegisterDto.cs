@@ -16,6 +16,10 @@ namespace ProyectoViajes.API.Dtos.Auth
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$", ErrorMessage = "La contraseña debe ser segura y contener al menos 8 caracteres, incluyendo minúsculas, mayúsculas, números y caracteres especiales.")]
         public string Password { get; set; }
+
+        [Display(Name = "Confirmar contraseña")]
+        [Required(ErrorMessage = "El campo {0} es requerido.")]
+        [Compare(nameof(Password), ErrorMessage = "Las contraseñas no coinciden.")]
         public string ConfirmPassword { get; set; }
     }
 }

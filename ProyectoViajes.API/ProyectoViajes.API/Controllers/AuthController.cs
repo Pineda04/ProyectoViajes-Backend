@@ -21,11 +21,20 @@ namespace ProyectoViajes.API.Controllers
         {
             this._authService = authService;
         }
+
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<LoginResponseDto>>> Login(LoginDto dto) 
         {
             var response = await _authService.LoginAsync(dto);
+            return StatusCode(response.StatusCode, response);
+        }
+
+        [HttpPost("register")]
+        [AllowAnonymous]
+        public async Task<ActionResult<ResponseDto<LoginResponseDto>>> Register(RegisterDto dto)
+        {
+            var response = await _authService.RegisterAsync(dto);
             return StatusCode(response.StatusCode, response);
         }
     }
