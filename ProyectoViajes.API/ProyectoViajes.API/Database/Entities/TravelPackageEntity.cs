@@ -1,0 +1,59 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProyectoViajes.API.Database.Entities
+{
+    [Table("travel_packages", Schema = "dbo")]
+    public class TravelPackageEntity : BaseEntity
+    {
+        // Nombre
+        [StringLength(100)]
+        [Required]
+        [Column("name")]
+        public string Name { get; set; }
+
+        // Descripción
+        [StringLength(500)]
+        [Column("description")]
+        public string Description { get; set; }
+
+        // Precio
+        [Required]
+        [Column("price")]
+        public decimal Price { get; set; }
+
+        // Duración
+        [Required]
+        [Column("duration")]
+        public int Duration { get; set; }
+
+        // Numero de personas
+        [Required]
+        [Column("number_person")]
+        public int NumberPerson { get; set; }
+
+        // Imagen
+        [Required]
+        [StringLength(500)]
+        [Column("image_url")]
+        public string ImageUrl { get; set; }
+
+        // Actividades
+        [Column("activities")]
+        public virtual IEnumerable<ActivityEntity> Activities { get; set; }
+
+        // Destino id 
+        [Required]
+        [Column("destination_id")]
+        public Guid DestinationId { get; set; }
+        [ForeignKey(nameof(DestinationId))]
+        public virtual DestinationEntity Destination { get; set; }
+
+        // Lista de las valoraciones
+        public virtual IEnumerable<AssessmentEntity> Assessments { get; set; }
+
+        // Relaciones con el usuario
+        public virtual UserEntity CreatedByUser { get; set; }
+        public virtual UserEntity UpdatedByUser { get; set; }
+    }
+}

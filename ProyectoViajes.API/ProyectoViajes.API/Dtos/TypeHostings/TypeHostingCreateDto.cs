@@ -1,0 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace ProyectoViajes.API.Dtos.TypeHostings
+{
+    public class TypeHostingCreateDto
+    {
+        // Nombre
+        [Display(Name = "nombre")]
+        [StringLength(75, ErrorMessage = "El {0} del tipo de hospedaje debe tener menos de {1} caracteres.")]
+        [Required(ErrorMessage = "El {0} de tipo de hospedaje es obligatorio.")]
+        public string Name { get; set; }
+    }
+}
