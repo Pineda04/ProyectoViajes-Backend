@@ -10,6 +10,7 @@ using ProyectoViajes.API.Dtos.TypeHostings;
 using ProyectoViajes.API.Dtos.TypesFlight;
 using ProyectoViajes.API.Dtos.Assessments;
 using ProyectoViajes.API.Dtos.Reservations;
+using ProyectoViajes.API.Dtos.Dashboard;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -27,6 +28,21 @@ namespace ProyectoViajes.API.Helpers
             MapsForFlights();
             MapsForAssessments();
             MapsForReservations();
+            MapsForDashbooard();
+        }
+
+        private void MapsForDashbooard()
+        {
+            CreateMap<ActivityEntity, DashboardActivityDto>();
+            CreateMap<AssessmentEntity, DashboardAssessmentDto>();
+            CreateMap<DestinationEntity, DashboardDestinationDto>();
+            CreateMap<FlightEntity, DashboardFlightDto>();
+            CreateMap<HostingEntity, DashboardHostingDto>();
+            CreateMap<PointInterestEntity, DashboardPointInterestDto>();
+            CreateMap<ReservationEntity, DashboardReservationDto>();
+            CreateMap<TravelPackageEntity, DashboardTravelPackageDto>();
+            CreateMap<TypeFlightEntity, DashboardTypeFlightDto>();
+            CreateMap<TypeHostingEntity, DashboardTypeHostingDto>();
         }
 
         private void MapsForReservations()

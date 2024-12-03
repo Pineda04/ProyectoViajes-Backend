@@ -46,6 +46,7 @@ namespace ProyectoViajes.API
             services.AddTransient<IAssessmentsService, AssessmentsService>();
             services.AddTransient<IReservationsService, ReservationsService>();
             services.AddTransient<IAuditService, AuditService>();
+            services.AddTransient<IDashboardService, DashboardService>();
 
             // Add Identity
             services.AddIdentity<UserEntity, IdentityRole>(options => 

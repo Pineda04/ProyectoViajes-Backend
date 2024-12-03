@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ProyectoViajes.API.Constants;
 using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.TravelPackages;
 using ProyectoViajes.API.Services.Interfaces;
@@ -7,6 +9,7 @@ namespace ProyectoViajes.API.Controllers
 {
     [ApiController]
     [Route("api/travel_packages")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class TravelPackagesController : ControllerBase
     {
         private readonly ITravelPackagesService _travelPackagesService;
@@ -17,6 +20,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer todos
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<List<TravelPackageDto>>>> GetAll(
             string searchTerm = "",
             int page = 1,
@@ -30,6 +34,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer por id
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Get(Guid id)
         {
             var response = await _travelPackagesService.GetTravelPackageByIdAsync(id);
@@ -38,6 +43,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Crear
         [HttpPost]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Create(TravelPackageCreateDto dto)
         {
             var response = await _travelPackagesService.CreateAsync(dto);
@@ -46,6 +52,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Editar
         [HttpPut("{id}")]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Edit(TravelPackageEditDto dto, Guid id)
         {
             var response = await _travelPackagesService.EditAsync(dto, id);
@@ -54,6 +61,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Obtener paquetes de viaje por destino
         [HttpGet("destination/{destinationId}")]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<PaginationDto<List<TravelPackageDto>>>>> GetByDestination(
             Guid destinationId,
             int page = 1,
@@ -70,6 +78,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Eliminar
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public async Task<ActionResult<ResponseDto<TravelPackageDto>>> Delete(Guid id)
         {
             var response = await _travelPackagesService.DeleteAsync(id);

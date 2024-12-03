@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProyectoViajes.API.Constants;
 using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Services.Interfaces;
@@ -7,6 +9,7 @@ namespace ProyectoViajes.API.Controllers
 {
     [ApiController]
     [Route("api/hostings")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class HostingsController : ControllerBase
     {
         private readonly IHostingsService _hostingsService;
@@ -18,6 +21,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer todos
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<List<HostingDto>>>> GetAll(
             string searchTerm = "",
             int page = 1
@@ -30,6 +34,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer por id
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<HostingDto>>> Get(Guid id)
         {
             var response = await _hostingsService.GetHostingByIdAsync(id);
@@ -39,6 +44,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Crear
         [HttpPost]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<HostingDto>>> Create(HostingCreateDto dto)
         {
             var response = await _hostingsService.CreateAsync(dto);
@@ -48,6 +54,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Editar
         [HttpPut("{id}")]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<HostingDto>>> Edit(HostingEditDto dto, Guid id)
         {
             var response = await _hostingsService.EditAsync(dto, id);
@@ -57,6 +64,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Eliminar
         [HttpDelete("{id}")]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<HostingDto>>> Delete(Guid id)
         {
             var response = await _hostingsService.DeleteAsync(id);

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProyectoViajes.API.Constants;
 using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.Flights;
 using ProyectoViajes.API.Dtos.Hostings;
@@ -9,6 +11,7 @@ namespace ProyectoViajes.API.Controllers
 {
     [Route("api/flights")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class FlightsController : ControllerBase
     {
         private readonly IFlightsService _flightsService;
@@ -20,6 +23,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer todos
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<List<FlightDto>>>> GetAll(
             string searchTerm = "",
             int page = 1
@@ -32,6 +36,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer por id
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<ResponseDto<FlightDto>>> Get(Guid id)
         {
             var response = await _flightsService.GetFlightByIdAsync(id);
@@ -41,6 +46,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Crear
         [HttpPost]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<FlightDto>>> Create(FlightCreateDto dto)
         {
             var response = await _flightsService.CreateAsync(dto);
@@ -50,6 +56,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Editar
         [HttpPut("{id}")]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<FlightDto>>> Edit(FlightEditDto dto, Guid id)
         {
             var response = await _flightsService.EditAsync(dto, id);
@@ -59,6 +66,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Eliminar
         [HttpDelete("{id}")]
+        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<FlightDto>>> Delete(Guid id)
         {
             var response = await _flightsService.DeleteAsync(id);
