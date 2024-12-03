@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProyectoViajes.API.Database.Configuration;
 using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Services.Interfaces;
 
@@ -8,11 +9,11 @@ namespace ProyectoViajes.API.Database
 {
     public class ProyectoViajesContext : IdentityDbContext<IdentityUser> 
     {
-        private readonly IAuthService _authService;
+        private readonly IAuditService _auditService;
 
-        public ProyectoViajesContext(DbContextOptions options, IAuthService authService) : base(options)
+        public ProyectoViajesContext(DbContextOptions options, IAuditService auditService) : base(options)
         {
-            _authService = authService;
+            _auditService = auditService;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +30,28 @@ namespace ProyectoViajes.API.Database
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("users_logins");
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("roles_claims");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("users_tokens");
+
+            modelBuilder.ApplyConfiguration(new ActivityConfiguration());
+            modelBuilder.ApplyConfiguration(new AssessmentConfiguration());
+            modelBuilder.ApplyConfiguration(new DestinationConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightConfiguration());
+            modelBuilder.ApplyConfiguration(new HostingConfiguration());
+            modelBuilder.ApplyConfiguration(new PointInterestConfiguration());
+            modelBuilder.ApplyConfiguration(new ReservationConfiguration());
+            modelBuilder.ApplyConfiguration(new TravelPackageConfiguration());
+            modelBuilder.ApplyConfiguration(new TypeFlightConfiguration());
+            modelBuilder.ApplyConfiguration(new TypeHostingConfiguration());
+
+            // Set FKs OnRestrict
+            var eTypes = modelBuilder.Model.GetEntityTypes();
+            foreach (var type in eTypes) 
+            {
+                var foreignKeys = type.GetForeignKeys();
+                foreach (var foreignKey in foreignKeys) 
+                {
+                    foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+                }
+            }
 
             modelBuilder.Entity<ActivityEntity>()
                 .HasOne(a => a.TravelPackage)
@@ -111,12 +134,12 @@ namespace ProyectoViajes.API.Database
                 {
                     if (entry.State == EntityState.Added)
                     {
-                        entity.CreatedBy = _authService.GetUserId();
+                        entity.CreatedBy = _auditService.GetUserId();
                         entity.CreatedDate = DateTime.Now;
                     }
                     else
                     {
-                        entity.UpdatedBy = _authService.GetUserId();
+                        entity.UpdatedBy = _auditService.GetUserId();
                         entity.UpdatedDate = DateTime.Now;
                     }
                 }

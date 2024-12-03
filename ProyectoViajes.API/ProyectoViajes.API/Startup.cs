@@ -24,6 +24,7 @@ namespace ProyectoViajes.API
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddHttpContextAccessor();
 
             // Add DbContext
             services.AddDbContext<ProyectoViajesContext>(options => options.UseSqlServer(
@@ -43,6 +44,7 @@ namespace ProyectoViajes.API
             services.AddTransient<IFlightsService, FlightsService>();
             services.AddTransient<IAssessmentsService, AssessmentsService>();
             services.AddTransient<IReservationsService, ReservationsService>();
+            services.AddTransient<IAuditService, AuditService>();
 
             // Add Identity
             services.AddIdentity<IdentityUser, IdentityRole>(options => 
