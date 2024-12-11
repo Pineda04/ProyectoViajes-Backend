@@ -25,6 +25,8 @@ namespace ProyectoViajes.API.Services
         }
         public async Task<ResponseDto<DashboardDto>> GetDashboardAsync()
         {
+            var users = await _context.Users.
+                OrderByDescending(p => p.FirstName).Take(5).ToListAsync();
             var activities = await _context.Activities.
                 OrderByDescending(p => p.CreatedDate).Take(5).ToListAsync();
             var assessments = await _context.Assessments.
@@ -60,6 +62,7 @@ namespace ProyectoViajes.API.Services
                 TypesFlightsCount = await _context.TypesFlight.CountAsync(),
                 TypesHostingsCount = await _context.TypesHosting.CountAsync(),
 
+                Users = _mapper.Map<List<DashboardUserDto>>(users),
                 Activities = _mapper.Map<List<DashboardActivityDto>>(activities),
                 Assessments = _mapper.Map<List<DashboardAssessmentDto>>(assessments),
                 Destinations = _mapper.Map<List<DashboardDestinationDto>>(destinations),

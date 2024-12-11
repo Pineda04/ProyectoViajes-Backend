@@ -5,6 +5,8 @@ using ProyectoViajes.API.Database;
 using ProyectoViajes.API.Database.Entities;
 using ProyectoViajes.API.Dtos.Assessments;
 using ProyectoViajes.API.Dtos.Common;
+using ProyectoViajes.API.Dtos.Flights;
+using ProyectoViajes.API.Dtos.Hostings;
 using ProyectoViajes.API.Dtos.TravelPackages;
 using ProyectoViajes.API.Services.Interfaces;
 
@@ -35,7 +37,12 @@ namespace ProyectoViajes.API.Services
             var travelPackagesQuery = _context.Travels
                 .Include(tp => tp.Activities)
                 .Include(tp => tp.Assessments)
+                    .ThenInclude(a => a.User)
                 .Include(tp => tp.Destination)
+                .Include(tp => tp.Flights)
+                    .ThenInclude(f => f.TypeFlight)
+                .Include(tp => tp.Hostings)
+                    .ThenInclude(f => f.TypeHosting)
                 .AsQueryable();
 
             // Filtrar por término de búsqueda
@@ -115,7 +122,12 @@ namespace ProyectoViajes.API.Services
             var travelPackageEntity = await _context.Travels
                 .Include(tp => tp.Activities)
                 .Include(tp => tp.Assessments)
+                    .ThenInclude(a => a.User)
                 .Include(tp => tp.Destination)
+                .Include(tp => tp.Flights)
+                    .ThenInclude(f => f.TypeFlight)
+                .Include(tp => tp.Hostings)
+                    .ThenInclude(f => f.TypeHosting)
                 .FirstOrDefaultAsync(tp => tp.Id == id);
 
             if (travelPackageEntity == null)
@@ -135,6 +147,9 @@ namespace ProyectoViajes.API.Services
                             : 0;
             travelPackageDto.AverageStars = averageStarsValue;
             travelPackageDto.Assessments = _mapper.Map<List<AssessmentDto>>(travelPackageEntity.Assessments);
+
+            travelPackageDto.Flights = _mapper.Map<List<FlightDto>>(travelPackageEntity.Flights);
+            travelPackageDto.Hostings = _mapper.Map<List<HostingDto>>(travelPackageEntity.Hostings);
 
             return new ResponseDto<TravelPackageDto>
             {

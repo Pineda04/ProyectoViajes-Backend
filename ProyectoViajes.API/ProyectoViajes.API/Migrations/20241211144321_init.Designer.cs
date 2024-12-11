@@ -12,8 +12,8 @@ using ProyectoViajes.API.Database;
 namespace ProyectoViajes.API.Migrations
 {
     [DbContext(typeof(ProyectoViajesContext))]
-    [Migration("20241203080700_FixRequiredCreatedByAndUpdatedBy")]
-    partial class FixRequiredCreatedByAndUpdatedBy
+    [Migration("20241211144321_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,71 +77,6 @@ namespace ProyectoViajes.API.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("roles_claims", "security");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("users", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -316,7 +251,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("user_id");
 
                     b.HasKey("Id");
@@ -326,6 +261,8 @@ namespace ProyectoViajes.API.Migrations
                     b.HasIndex("TravelPackageId");
 
                     b.HasIndex("UpdatedBy");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("assessments", "dbo");
                 });
@@ -401,10 +338,6 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("nvarchar(75)")
                         .HasColumnName("airline");
 
-                    b.Property<DateTime>("ArrivalDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("arrival_date");
-
                     b.Property<string>("CreatedBy")
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)")
@@ -414,23 +347,13 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_date");
 
-                    b.Property<DateTime>("DepartureDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("departure_date");
-
-                    b.Property<Guid>("DestinationId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("destination_id");
-
-                    b.Property<string>("Origin")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
-                        .HasColumnName("origin");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price");
+
+                    b.Property<Guid>("TravelPackageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("travel_package_id");
 
                     b.Property<Guid>("TypeFlightId")
                         .HasColumnType("uniqueidentifier")
@@ -449,7 +372,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("CreatedBy");
 
-                    b.HasIndex("DestinationId");
+                    b.HasIndex("TravelPackageId");
 
                     b.HasIndex("TypeFlightId");
 
@@ -480,9 +403,10 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasColumnName("description");
 
-                    b.Property<Guid>("DestinationId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("destination_id");
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("image_url");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -493,6 +417,10 @@ namespace ProyectoViajes.API.Migrations
                     b.Property<decimal>("PricePerNight")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price_per_night");
+
+                    b.Property<Guid>("TravelPackageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("travel_package_id");
 
                     b.Property<Guid>("TypeHostingId")
                         .HasColumnType("uniqueidentifier")
@@ -511,7 +439,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("CreatedBy");
 
-                    b.HasIndex("DestinationId");
+                    b.HasIndex("TravelPackageId");
 
                     b.HasIndex("TypeHostingId");
 
@@ -621,7 +549,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("user_id");
 
                     b.HasKey("Id");
@@ -635,6 +563,8 @@ namespace ProyectoViajes.API.Migrations
                     b.HasIndex("TravelPackageId");
 
                     b.HasIndex("UpdatedBy");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("reservations", "dbo");
                 });
@@ -788,6 +718,96 @@ namespace ProyectoViajes.API.Migrations
                     b.ToTable("types_hosting", "dbo");
                 });
 
+            modelBuilder.Entity("ProyectoViajes.API.Database.Entities.UserEntity", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)")
+                        .HasColumnName("first_name");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("image_url");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)")
+                        .HasColumnName("last_name");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RefreshToken")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("resfesh_token");
+
+                    b.Property<DateTime>("RefreshTokenExpire")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("resfesh_token_expire");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("users", "security");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -799,7 +819,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -808,7 +828,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -823,7 +843,7 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -832,7 +852,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -841,7 +861,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.ActivityEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -852,7 +872,7 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -866,7 +886,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.AssessmentEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -877,26 +897,34 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("CreatedByUser");
 
                     b.Navigation("TravelPackage");
 
                     b.Navigation("UpdatedByUser");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.DestinationEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -908,14 +936,14 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.FlightEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("ProyectoViajes.API.Database.Entities.DestinationEntity", "Destination")
-                        .WithMany()
-                        .HasForeignKey("DestinationId")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
+                        .WithMany("Flights")
+                        .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -925,14 +953,14 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("CreatedByUser");
 
-                    b.Navigation("Destination");
+                    b.Navigation("TravelPackage");
 
                     b.Navigation("TypeFlight");
 
@@ -941,14 +969,14 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.HostingEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("ProyectoViajes.API.Database.Entities.DestinationEntity", "Destination")
-                        .WithMany()
-                        .HasForeignKey("DestinationId")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
+                        .WithMany("Hostings")
+                        .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -958,14 +986,14 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("CreatedByUser");
 
-                    b.Navigation("Destination");
+                    b.Navigation("TravelPackage");
 
                     b.Navigation("TypeHosting");
 
@@ -974,7 +1002,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.PointInterestEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -985,7 +1013,7 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -999,7 +1027,7 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.ReservationEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1022,10 +1050,16 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("CreatedByUser");
 
@@ -1036,11 +1070,13 @@ namespace ProyectoViajes.API.Migrations
                     b.Navigation("TravelPackage");
 
                     b.Navigation("UpdatedByUser");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TravelPackageEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1051,7 +1087,7 @@ namespace ProyectoViajes.API.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1065,12 +1101,12 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TypeFlightEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1082,12 +1118,12 @@ namespace ProyectoViajes.API.Migrations
 
             modelBuilder.Entity("ProyectoViajes.API.Database.Entities.TypeHostingEntity", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UpdatedByUser")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.UserEntity", "UpdatedByUser")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1107,6 +1143,10 @@ namespace ProyectoViajes.API.Migrations
                     b.Navigation("Activities");
 
                     b.Navigation("Assessments");
+
+                    b.Navigation("Flights");
+
+                    b.Navigation("Hostings");
                 });
 #pragma warning restore 612, 618
         }

@@ -19,6 +19,7 @@ namespace ProyectoViajes.API.Dtos.Dashboard
         public int TypesFlightsCount { get; set; }
         public int TypesHostingsCount { get; set; }
 
+        public List<DashboardUserDto> Users { get; set; }
         public List<DashboardActivityDto> Activities { get; set; }
         public List<DashboardAssessmentDto> Assessments { get; set; }
         public List<DashboardDestinationDto> Destinations { get; set; }

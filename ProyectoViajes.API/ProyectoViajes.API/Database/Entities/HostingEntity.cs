@@ -15,11 +15,11 @@ namespace ProyectoViajes.API.Database.Entities
         public virtual TypeHostingEntity TypeHosting { get; set; }
 
         [Required]
-        [Column("destination_id")]
-        public Guid DestinationId { get; set; }
-        [ForeignKey(nameof(DestinationId))]
+        [Column("travel_package_id")]
+        public Guid TravelPackageId { get; set; }
+        [ForeignKey(nameof(TravelPackageId))]
 
-        public virtual DestinationEntity Destination { get; set; }
+        public virtual TravelPackageEntity TravelPackage { get; set; }
 
         [Required]
         [StringLength(75)]
@@ -34,6 +34,10 @@ namespace ProyectoViajes.API.Database.Entities
         [Required]
         [Column("price_per_night")]
         public decimal PricePerNight { get; set; }
+
+        [Required]
+        [Column("image_url")]
+        public string ImageUrl { get; set; }
 
         public virtual UserEntity CreatedByUser { get; set; }
         public virtual UserEntity UpdatedByUser { get; set; }

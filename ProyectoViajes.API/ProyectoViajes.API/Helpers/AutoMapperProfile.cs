@@ -11,6 +11,7 @@ using ProyectoViajes.API.Dtos.TypesFlight;
 using ProyectoViajes.API.Dtos.Assessments;
 using ProyectoViajes.API.Dtos.Reservations;
 using ProyectoViajes.API.Dtos.Dashboard;
+using ProyectoViajes.API.Dtos.Users;
 
 namespace ProyectoViajes.API.Helpers
 {
@@ -29,10 +30,18 @@ namespace ProyectoViajes.API.Helpers
             MapsForAssessments();
             MapsForReservations();
             MapsForDashbooard();
+            MapsForUsers();
+        }
+
+        private void MapsForUsers()
+        {
+            CreateMap<UserEntity, UserDto>();
+            CreateMap<UserEditDto, UserEntity>();
         }
 
         private void MapsForDashbooard()
         {
+            CreateMap<UserEntity, DashboardUserDto>();
             CreateMap<ActivityEntity, DashboardActivityDto>();
             CreateMap<AssessmentEntity, DashboardAssessmentDto>();
             CreateMap<DestinationEntity, DashboardDestinationDto>();
@@ -58,9 +67,13 @@ namespace ProyectoViajes.API.Helpers
 
         private void MapsForAssessments()
         {
-            CreateMap<AssessmentEntity, AssessmentDto>();
+            CreateMap<AssessmentEntity, AssessmentDto>()
+        .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.FirstName + " " + src.User.LastName))
+        .ForMember(dest => dest.UserImageUrl, opt => opt.MapFrom(src => src.User.ImageUrl))
+        .ForMember(dest => dest.TravelPackageName, opt => opt.MapFrom(src => src.TravelPackage.Name));
+
             CreateMap<AssessmentCreateDto, AssessmentEntity>();
-            CreateMap<AssessmentEditDto, AssessmentEntity>();
+    CreateMap<AssessmentEditDto, AssessmentEntity>();
         }
 
         private void MapsForTravelPackages()
@@ -68,7 +81,26 @@ namespace ProyectoViajes.API.Helpers
             CreateMap<TravelPackageEntity, TravelPackageDto>()
                 .ForMember(tp => tp.Activities, opt => opt.MapFrom(src => src.Activities))
                 .ForMember(tp => tp.Assessments, opt => opt.MapFrom(src => src.Assessments))
-                .ForMember(tp => tp.Destinations, opt => opt.MapFrom(src => src.Destination));
+                .ForMember(tp => tp.Destinations, opt => opt.MapFrom(src => src.Destination))
+                .ForMember(tp => tp.Flights, opt => opt.MapFrom(src => src.Flights.Select(f => new FlightDto
+                {
+                    Id = f.Id,
+                    TypeFlightId = f.TypeFlightId,
+                    TravelPackageId = f.TravelPackageId,
+                    Airline = f.Airline,
+                    Price = f.Price
+                })))
+                .ForMember(tp => tp.Hostings, opt => opt.MapFrom(src => src.Hostings.Select(f => new HostingDto
+                {
+                    Id = f.Id,
+                    TypeHostingId = f.TypeHostingId,
+                    TravelPackageId = f.TravelPackageId,
+                    Name = f.Name,
+                    Description = f.Description,
+                    PricePerNight = f.PricePerNight,
+                    ImageUrl = f.ImageUrl
+                })));
+
             CreateMap<TravelPackageCreateDto, TravelPackageEntity>();
             CreateMap<TravelPackageEditDto, TravelPackageEntity>();
         }

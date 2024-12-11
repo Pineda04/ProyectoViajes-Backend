@@ -89,6 +89,9 @@ namespace ProyectoViajes.API.Services
                     new Claim(ClaimTypes.Email, userEntity.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim("UserId", userEntity.Id),
+                    new Claim("UserFirstName", userEntity.FirstName),
+                    new Claim("UserLastName", userEntity.LastName),
+                    new Claim("UserImage", userEntity.ImageUrl ?? "")
                 };
 
             var userRoles = await _userManager.GetRolesAsync(userEntity);
@@ -111,6 +114,9 @@ namespace ProyectoViajes.API.Services
                 var emailClaim = principal.Claims.FirstOrDefault(c => 
                 c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress");
                 var userIdCLaim = principal.Claims.Where(x => x.Type == "UserId").FirstOrDefault();
+                var userFirstNameCLaim = principal.Claims.Where(x => x.Type == "UserFirstName").FirstOrDefault();
+                var userLastNameCLaim = principal.Claims.Where(x => x.Type == "UserLastName").FirstOrDefault();
+                var userImageCLaim = principal.Claims.Where(x => x.Type == "UserImage").FirstOrDefault();
                 //_logger.LogInformation($"Correo del Usuario es: {emailClaim.Value}");
                 //_logger.LogInformation($"Id del Usuario es: {userIdCLaim.Value}");
                 if (emailClaim is null) 

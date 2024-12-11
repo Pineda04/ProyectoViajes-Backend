@@ -23,5 +23,7 @@ namespace ProyectoViajes.API.Database.Entities
         public string RefreshToken { get; set; }
         [Column("resfesh_token_expire")]
         public DateTime RefreshTokenExpire { get; set; }
+        [Column("image_url")]
+        public string ImageUrl { get; set; }
     }
 }

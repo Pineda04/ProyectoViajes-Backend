@@ -16,7 +16,7 @@ namespace ProyectoViajes.API.Dtos.Activities
         public string Description { get; set; }
 
         // Paquete de viaje
-        [Display(Name = "Paquete de Viaje")]
+        [Display(Name = "id del paquete de viaje")]
         [Required(ErrorMessage = "El {0} es requerido.")]
         public Guid TravelPackageId { get; set; }
     }

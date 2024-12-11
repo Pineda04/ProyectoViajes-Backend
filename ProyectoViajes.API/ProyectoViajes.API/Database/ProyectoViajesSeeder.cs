@@ -52,12 +52,16 @@ namespace ProyectoViajes.API.Database
                 {
                     var userAdmin = new UserEntity 
                     {
+                        FirstName = "Administrador",
+                        LastName = "Proyecto Viajes",
                         Email = "admin@proyecto.viajes",
                         UserName = "admin@proyecto.viajes",                        
                     };
                     
                     var normalUser = new UserEntity
                     {
+                        FirstName = "Usuario",
+                        LastName = "Proyecto Viajes",
                         Email = "user@proyecto.viajes",
                         UserName = "user@proyecto.viajes",
                     };

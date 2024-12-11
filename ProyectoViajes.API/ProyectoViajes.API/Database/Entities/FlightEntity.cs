@@ -16,32 +16,16 @@ namespace ProyectoViajes.API.Database.Entities
 
         // obtiene id de destino
         [Required]
-        [Column("destination_id")]
-        public Guid DestinationId { get; set; }
-        [ForeignKey(nameof(DestinationId))]
-        public virtual DestinationEntity Destination { get; set; }
+        [Column("travel_package_id")]
+        public Guid TravelPackageId { get; set; }
+        [ForeignKey(nameof(TravelPackageId))]
+        public virtual TravelPackageEntity TravelPackage { get; set; }
         
         // nombre de aerolinea
         [Required]
         [StringLength(75)]
         [Column("airline")]
         public string Airline { get; set; }
-
-        // lugar de origen 
-        [Required]
-        [StringLength(500)]
-        [Column("origin")]
-        public string Origin { get; set; }
-
-        // fecha de salida 
-        [Required]
-        [Column("departure_date")]
-        public DateTime DepartureDate { get; set; }
-
-        // fecha de llegada
-        [Required]
-        [Column("arrival_date")]
-        public DateTime ArrivalDate { get; set; }
 
         [Required]
         [Column("price")]

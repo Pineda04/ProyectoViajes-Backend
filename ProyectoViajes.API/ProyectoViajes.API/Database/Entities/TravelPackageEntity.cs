@@ -52,6 +52,9 @@ namespace ProyectoViajes.API.Database.Entities
 
         public virtual IEnumerable<AssessmentEntity> Assessments { get; set; }
 
+        public virtual IEnumerable<FlightEntity> Flights { get; set; }
+        public virtual IEnumerable<HostingEntity> Hostings { get; set; }
+
         public virtual UserEntity CreatedByUser { get; set; }
         public virtual UserEntity UpdatedByUser { get; set; }
     }

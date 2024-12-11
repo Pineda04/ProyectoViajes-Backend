@@ -29,7 +29,10 @@ namespace ProyectoViajes.API.Services
         {
             int startIndex = (page - 1) * PAGE_SIZE;
 
-            var assessmentsQuery = _context.Assessments.AsQueryable();
+            var assessmentsQuery = _context.Assessments
+                .Include(a => a.User)
+                .Include(tp => tp.TravelPackage)
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
@@ -71,6 +74,7 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<AssessmentDto>> GetAssessmentByIdAsync(Guid id)
         {
             var assessmentEntity = await _context.Assessments
+                .Include(u => u.User)
                 .FirstOrDefaultAsync(a => a.Id == id);
             if (assessmentEntity == null)
             {

@@ -31,9 +31,7 @@ namespace ProyectoViajes.API.Services
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 flightsQuery = flightsQuery
-                    .Where(f => f.Airline.ToLower().Contains(searchTerm.ToLower()) ||
-                                f.Origin.ToLower().Contains(searchTerm.ToLower()) ||
-                                f.Destination.Name.ToLower().Contains(searchTerm.ToLower())
+                    .Where(f => f.Airline.ToLower().Contains(searchTerm.ToLower())
                     );
             }
 
@@ -41,7 +39,7 @@ namespace ProyectoViajes.API.Services
             int totalPages = (int)Math.Ceiling((double)totalFlights / PAGE_SIZE);
 
             var flightEntities = await flightsQuery
-                .Include(f => f.Destination)
+                .Include(f => f.TravelPackage)
                 .Include(f => f.TypeFlight)
                 .OrderByDescending(f => f.CreatedDate)
                 .Skip(startIndex)
@@ -72,7 +70,7 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<FlightDto>> GetFlightByIdAsync(Guid id)
         {
             var flightEntity = await _context.Flights
-                .Include(h => h.Destination)
+                .Include(h => h.TravelPackage)
                 .Include(h => h.TypeFlight)
                 .FirstOrDefaultAsync(h => h.Id == id);
 
@@ -117,7 +115,7 @@ namespace ProyectoViajes.API.Services
         public async Task<ResponseDto<FlightDto>> EditAsync(FlightEditDto dto, Guid id)
         {
             var flightEntity = await _context.Flights
-                .Include(h => h.Destination)
+                .Include(h => h.TravelPackage)
                 .Include(h => h.TypeFlight)
                 .FirstOrDefaultAsync(h => h.Id == id);
 
@@ -132,7 +130,7 @@ namespace ProyectoViajes.API.Services
             }
 
             // Validar relaciones en caso de que el destino o tipo de hospedaje cambien
-            var destinationExists = await _context.Destinations.AnyAsync(d => d.Id == dto.DestinationId);
+            var destinationExists = await _context.Destinations.AnyAsync(d => d.Id == dto.TravelPackageId);
             var typeFlightExists = await _context.TypesFlight.AnyAsync(th => th.Id == dto.TypeFlightId);
 
             if (!destinationExists || !typeFlightExists)

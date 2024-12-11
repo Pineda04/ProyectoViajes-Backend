@@ -8,7 +8,7 @@ namespace ProyectoViajes.API.Dtos.Hostings
         public Guid TypeHostingId { get; set; }
 
         // Destino id 
-        public Guid DestinationId { get; set; }
+        public Guid TravelPackageId { get; set; }
 
         // nombre
         [Display(Name = "nombre")]
@@ -25,5 +25,8 @@ namespace ProyectoViajes.API.Dtos.Hostings
         //precio por noche 
         [Display(Name = "precio por noche")]
         public decimal PricePerNight { get; set; }
+
+        [Display(Name = "imagen")]
+        public string ImageUrl { get; set; }
     }
 }

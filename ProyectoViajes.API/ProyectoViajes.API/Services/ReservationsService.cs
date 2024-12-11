@@ -31,18 +31,17 @@ namespace ProyectoViajes.API.Services
 
             var reservationsQuery = _context.Reservations
                 .Include(r => r.TravelPackage)
-                .Include(r => r.Flight).ThenInclude(f => f.Destination)  
-                .Include(r => r.Hosting).ThenInclude(h => h.Destination)  
+                .Include(r => r.Flight).ThenInclude(f => f.TravelPackage)  
+                .Include(r => r.Hosting).ThenInclude(h => h.TravelPackage)  
                 .AsQueryable();
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 reservationsQuery = reservationsQuery
-                    .Where(r => r.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()) ||  
-                                r.Flight.Airline.ToLower().Contains(searchTerm.ToLower()) ||     
-                                r.Hosting.Name.ToLower().Contains(searchTerm.ToLower()) ||        
-                                r.Flight.Destination.Name.ToLower().Contains(searchTerm.ToLower()) ||  
-                                r.Hosting.Destination.Name.ToLower().Contains(searchTerm.ToLower()));  
+                    .Where(r => r.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Flight.Airline.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Hosting.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Flight.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()));
             }
 
             int totalItems = await reservationsQuery.CountAsync();

@@ -7,7 +7,7 @@ using ProyectoViajes.API.Services.Interfaces;
 
 namespace ProyectoViajes.API.Database
 {
-    public class ProyectoViajesContext : IdentityDbContext<UserEntity> 
+    public class ProyectoViajesContext : IdentityDbContext<UserEntity>
     {
         private readonly IAuditService _auditService;
 
@@ -22,7 +22,7 @@ namespace ProyectoViajes.API.Database
             modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             modelBuilder.HasDefaultSchema("security");
-            
+
             modelBuilder.Entity<UserEntity>().ToTable("users");
             modelBuilder.Entity<IdentityRole>().ToTable("roles");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("users_roles");
@@ -44,10 +44,10 @@ namespace ProyectoViajes.API.Database
 
             // Set FKs OnRestrict
             var eTypes = modelBuilder.Model.GetEntityTypes();
-            foreach (var type in eTypes) 
+            foreach (var type in eTypes)
             {
                 var foreignKeys = type.GetForeignKeys();
-                foreach (var foreignKey in foreignKeys) 
+                foreach (var foreignKey in foreignKeys)
                 {
                     foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
                 }
@@ -78,9 +78,9 @@ namespace ProyectoViajes.API.Database
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<FlightEntity>()
-                .HasOne(f => f.Destination)
+                .HasOne(f => f.TravelPackage)
                 .WithMany()
-                .HasForeignKey(f => f.DestinationId)
+                .HasForeignKey(f => f.TravelPackageId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<HostingEntity>()
@@ -90,9 +90,9 @@ namespace ProyectoViajes.API.Database
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<HostingEntity>()
-                .HasOne(h => h.Destination)
+                .HasOne(h => h.TravelPackage)
                 .WithMany()
-                .HasForeignKey(h => h.DestinationId)
+                .HasForeignKey(h => h.TravelPackageId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ReservationEntity>()
@@ -118,6 +118,16 @@ namespace ProyectoViajes.API.Database
                 .WithMany()
                 .HasForeignKey(tp => tp.DestinationId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TravelPackageEntity>()
+                .HasMany(tp => tp.Flights)
+                .WithOne(f => f.TravelPackage)
+                .HasForeignKey(f => f.TravelPackageId);
+
+            modelBuilder.Entity<TravelPackageEntity>()
+                .HasMany(tp => tp.Hostings)
+                .WithOne(f => f.TravelPackage)
+                .HasForeignKey(f => f.TravelPackageId);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

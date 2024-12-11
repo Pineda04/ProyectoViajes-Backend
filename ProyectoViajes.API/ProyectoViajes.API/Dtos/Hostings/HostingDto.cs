@@ -7,9 +7,10 @@ namespace ProyectoViajes.API.Dtos.Hostings
     {
         public Guid Id { get; set; }
         public Guid TypeHostingId { get; set; }  
-        public Guid DestinationId { get; set; } 
+        public Guid TravelPackageId { get; set; } 
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal PricePerNight { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

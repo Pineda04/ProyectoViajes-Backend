@@ -40,7 +40,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Crear
         [HttpPost]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
         public async Task<ActionResult<ResponseDto<List<AssessmentDto>>>> Create(AssessmentCreateDto dto){
             var response = await _assessmentsService.CreateAsync(dto);
             return StatusCode(response.StatusCode, response);

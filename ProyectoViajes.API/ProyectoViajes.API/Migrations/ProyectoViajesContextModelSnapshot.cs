@@ -335,10 +335,6 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("nvarchar(75)")
                         .HasColumnName("airline");
 
-                    b.Property<DateTime>("ArrivalDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("arrival_date");
-
                     b.Property<string>("CreatedBy")
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)")
@@ -348,23 +344,13 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_date");
 
-                    b.Property<DateTime>("DepartureDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("departure_date");
-
-                    b.Property<Guid>("DestinationId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("destination_id");
-
-                    b.Property<string>("Origin")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
-                        .HasColumnName("origin");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price");
+
+                    b.Property<Guid>("TravelPackageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("travel_package_id");
 
                     b.Property<Guid>("TypeFlightId")
                         .HasColumnType("uniqueidentifier")
@@ -383,7 +369,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("CreatedBy");
 
-                    b.HasIndex("DestinationId");
+                    b.HasIndex("TravelPackageId");
 
                     b.HasIndex("TypeFlightId");
 
@@ -414,9 +400,10 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasColumnName("description");
 
-                    b.Property<Guid>("DestinationId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("destination_id");
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("image_url");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -427,6 +414,10 @@ namespace ProyectoViajes.API.Migrations
                     b.Property<decimal>("PricePerNight")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("price_per_night");
+
+                    b.Property<Guid>("TravelPackageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("travel_package_id");
 
                     b.Property<Guid>("TypeHostingId")
                         .HasColumnType("uniqueidentifier")
@@ -445,7 +436,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.HasIndex("CreatedBy");
 
-                    b.HasIndex("DestinationId");
+                    b.HasIndex("TravelPackageId");
 
                     b.HasIndex("TypeHostingId");
 
@@ -749,6 +740,10 @@ namespace ProyectoViajes.API.Migrations
                         .HasColumnType("nvarchar(70)")
                         .HasColumnName("first_name");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("image_url");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(70)
@@ -943,9 +938,9 @@ namespace ProyectoViajes.API.Migrations
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("ProyectoViajes.API.Database.Entities.DestinationEntity", "Destination")
-                        .WithMany()
-                        .HasForeignKey("DestinationId")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
+                        .WithMany("Flights")
+                        .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -962,7 +957,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.Navigation("CreatedByUser");
 
-                    b.Navigation("Destination");
+                    b.Navigation("TravelPackage");
 
                     b.Navigation("TypeFlight");
 
@@ -976,9 +971,9 @@ namespace ProyectoViajes.API.Migrations
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("ProyectoViajes.API.Database.Entities.DestinationEntity", "Destination")
-                        .WithMany()
-                        .HasForeignKey("DestinationId")
+                    b.HasOne("ProyectoViajes.API.Database.Entities.TravelPackageEntity", "TravelPackage")
+                        .WithMany("Hostings")
+                        .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -995,7 +990,7 @@ namespace ProyectoViajes.API.Migrations
 
                     b.Navigation("CreatedByUser");
 
-                    b.Navigation("Destination");
+                    b.Navigation("TravelPackage");
 
                     b.Navigation("TypeHosting");
 
@@ -1145,6 +1140,10 @@ namespace ProyectoViajes.API.Migrations
                     b.Navigation("Activities");
 
                     b.Navigation("Assessments");
+
+                    b.Navigation("Flights");
+
+                    b.Navigation("Hostings");
                 });
 #pragma warning restore 612, 618
         }

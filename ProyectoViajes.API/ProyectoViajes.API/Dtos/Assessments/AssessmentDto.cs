@@ -10,6 +10,12 @@ namespace ProyectoViajes.API.Dtos.Assessments
 
         public string UserId { get; set; }
 
+        public string UserName { get; set; } 
+
+        public string UserImageUrl { get; set; }
+
         public Guid TravelPackageId { get; set; }
+
+        public string TravelPackageName { get; set; }
     }
 }
