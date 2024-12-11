@@ -33,7 +33,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer por id
         [HttpGet("{id}")]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER} || {RolesConstant.ADMIN}")]
         public async Task<ActionResult<ResponseDto<UserDto>>> Get(string id)
         {
             var response = await _usersService.GetUserByIdAsync(id);
@@ -42,7 +42,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Editar
         [HttpPut("{id}")]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
         public async Task<ActionResult<ResponseDto<UserDto>>> Edit(UserEditDto dto, string id)
         {
             var response = await _usersService.EditAsync(dto, id);

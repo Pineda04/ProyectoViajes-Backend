@@ -59,7 +59,11 @@ namespace ProyectoViajes.API.Helpers
             CreateMap<ReservationEntity, ReservationDto>()
             .ForMember(dest => dest.TravelPackageName, opt => opt.MapFrom(src => src.TravelPackage.Name))
             .ForMember(dest => dest.FlightAirline, opt => opt.MapFrom(src => src.Flight.Airline))
-            .ForMember(dest => dest.HostingName, opt => opt.MapFrom(src => src.Hosting.Name));
+            .ForMember(dest => dest.HostingName, opt => opt.MapFrom(src => src.Hosting.Name))
+            .ForMember(dest => dest.PriceTravel, opt => opt.MapFrom(src => src.TravelPackage.Price))
+            .ForMember(dest => dest.PriceFlight, opt => opt.MapFrom(src => src.Flight.Price))
+            .ForMember(dest => dest.PriceHosting, opt => opt.MapFrom(src => src.Hosting.PricePerNight));
+
 
             CreateMap<ReservationCreateDto, ReservationEntity>();
             CreateMap<ReservationEditDto, ReservationEntity>();

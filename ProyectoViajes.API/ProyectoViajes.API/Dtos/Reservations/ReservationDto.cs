@@ -11,5 +11,8 @@ namespace ProyectoViajes.API.Dtos.Reservations
         public string HostingName { get; set; }
         public DateTime ReservationDate { get; set; }
         public string UserId { get; set; }
+        public int PriceTravel { get; set; }
+        public int PriceHosting { get; set; }
+        public int PriceFlight { get; set; }
     }
 }

@@ -48,7 +48,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Editar
         [HttpPut("{id}")]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
         public async Task<ActionResult<ResponseDto<List<AssessmentDto>>>> Edit(AssessmentEditDto dto, Guid id){
             var response = await _assessmentsService.EditAsync(dto, id);
             return StatusCode(response.StatusCode, response);
