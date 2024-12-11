@@ -33,7 +33,7 @@ namespace ProyectoViajes.API.Controllers
 
         // Traer por id
         [HttpGet("{id}")]
-        [Authorize(Roles = $"{RolesConstant.USER} || {RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER}")]
         public async Task<ActionResult<ResponseDto<UserDto>>> Get(string id)
         {
             var response = await _usersService.GetUserByIdAsync(id);

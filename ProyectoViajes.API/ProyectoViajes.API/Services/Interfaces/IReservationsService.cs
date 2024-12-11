@@ -16,5 +16,10 @@ namespace ProyectoViajes.API.Services.Interfaces
         Task<ResponseDto<ReservationDto>> EditAsync(ReservationEditDto dto, Guid id);
 
         Task<ResponseDto<ReservationDto>> DeleteAsync(Guid id);
+
+        Task<ResponseDto<PaginationDto<List<ReservationDto>>>> GetReservationsByUserIdAsync(
+        string userId,
+        string searchTerm = "",
+        int page = 1);
     }
 }

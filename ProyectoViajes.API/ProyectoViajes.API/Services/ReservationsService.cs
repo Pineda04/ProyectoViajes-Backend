@@ -200,5 +200,69 @@ namespace ProyectoViajes.API.Services
                 Message = MessagesConstants.DELETE_SUCCESS
             };
         }
+
+        public async Task<ResponseDto<PaginationDto<List<ReservationDto>>>> GetReservationsByUserIdAsync(
+    string userId,
+    string searchTerm = "",
+    int page = 1)
+        {
+            int startIndex = (page - 1) * PAGE_SIZE;
+
+            var reservationsQuery = _context.Reservations
+                .Include(r => r.TravelPackage)
+                .Include(r => r.Flight).ThenInclude(f => f.TravelPackage)
+                .Include(r => r.Hosting).ThenInclude(h => h.TravelPackage)
+                .Where(r => r.UserId == userId)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                reservationsQuery = reservationsQuery
+                    .Where(r => r.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Flight.Airline.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Hosting.Name.ToLower().Contains(searchTerm.ToLower()) ||
+                                r.Flight.TravelPackage.Name.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            int totalItems = await reservationsQuery.CountAsync();
+            int totalPages = (int)Math.Ceiling((double)totalItems / PAGE_SIZE);
+
+            var reservationEntities = await reservationsQuery
+                .OrderByDescending(r => r.ReservationDate)
+                .Skip(startIndex)
+                .Take(PAGE_SIZE)
+                .Select(r => new ReservationDto
+                {
+                    Id = r.Id,
+                    TravelPackageId = r.TravelPackageId,
+                    TravelPackageName = r.TravelPackage.Name,
+                    FlightId = r.FlightId,
+                    FlightAirline = r.Flight.Airline,
+                    HostingId = r.HostingId,
+                    HostingName = r.Hosting.Name,
+                    ReservationDate = r.ReservationDate,
+                    UserId = r.UserId
+                })
+                .ToListAsync();
+
+            var reservationDtos = _mapper.Map<List<ReservationDto>>(reservationEntities);
+
+            return new ResponseDto<PaginationDto<List<ReservationDto>>>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = MessagesConstants.RECORDS_FOUND,
+                Data = new PaginationDto<List<ReservationDto>>
+                {
+                    CurrentPage = page,
+                    PageSize = PAGE_SIZE,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    Items = reservationDtos,
+                    HasPreviousPage = page > 1,
+                    HasNextPage = page < totalPages
+                }
+            };
+        }
     }
 }

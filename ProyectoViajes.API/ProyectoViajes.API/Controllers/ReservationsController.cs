@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProyectoViajes.API.Constants;
 using ProyectoViajes.API.Dtos.Common;
 using ProyectoViajes.API.Dtos.Reservations;
+using ProyectoViajes.API.Services;
 using ProyectoViajes.API.Services.Interfaces;
 
 namespace ProyectoViajes.API.Controllers
@@ -17,9 +18,23 @@ namespace ProyectoViajes.API.Controllers
         {
             _reservationsService = reservationsService;
         }
+        [HttpGet("user/{userId}")]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
+
+
+        public async Task<IActionResult> GetReservationsByUser(
+    string userId,
+    string searchTerm = "",
+    int page = 1)
+        {
+            var result = await _reservationsService.GetReservationsByUserIdAsync(userId, searchTerm, page);
+            return Ok(result);
+        }
+
         // Traer todos
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
+
         public async Task<ActionResult<ResponseDto<List<ReservationDto>>>> GetAll(
             string searchTerm = "",
             int page = 1
@@ -30,7 +45,8 @@ namespace ProyectoViajes.API.Controllers
         }
         // Traer por id
         [HttpGet("{id}")]
-        [AllowAnonymous]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
+
         public async Task<ActionResult<ResponseDto<ReservationDto>>> Get(Guid id)
         {
             var response = await _reservationsService.GetReservationByIdAsync(id);
@@ -38,7 +54,8 @@ namespace ProyectoViajes.API.Controllers
         }
         // Crear
         [HttpPost]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
+
         public async Task<ActionResult<ResponseDto<ReservationDto>>> Create(ReservationCreateDto dto)
         {
             var response = await _reservationsService.CreateAsync(dto);
@@ -46,7 +63,7 @@ namespace ProyectoViajes.API.Controllers
         }
         // Editar
         [HttpPut("{id}")]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
         public async Task<ActionResult<ResponseDto<ReservationDto>>> Edit(ReservationEditDto dto, Guid id)
         {
             var response = await _reservationsService.EditAsync(dto, id);
@@ -54,7 +71,7 @@ namespace ProyectoViajes.API.Controllers
         }
         // Eliminar
         [HttpDelete("{id}")]
-        [Authorize(Roles = $"{RolesConstant.ADMIN}")]
+        [Authorize(Roles = $"{RolesConstant.USER},{RolesConstant.ADMIN} ")]
         public async Task<ActionResult<ResponseDto<ReservationDto>>> Delete(Guid id)
         {
             var response = await _reservationsService.DeleteAsync(id);
